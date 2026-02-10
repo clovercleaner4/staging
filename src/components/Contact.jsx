@@ -24,27 +24,39 @@ const Contact = () => {
         setStatus('submitting');
         setFeedbackMessage('');
 
+        const form = e.target;
+        const data = new FormData(form);
+        const payload = {
+            accessKey: 'sf_2f76059311430f0k7bhngcna',
+            subject: '【クローバークリーナー】ウェブサイトからのお問い合わせ',
+            name: data.get('name'),
+            email: data.get('email'),
+            message: data.get('message'),
+            replyTo: '@', // Default to email field
+            honeypot: data.get('honeypot')
+        };
+
+        // StaticForms specific: use email as replyTo
+        if (payload.email) {
+            payload.replyTo = payload.email;
+        }
+
         try {
             const response = await fetch('https://api.staticforms.xyz/submit', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({
-                    accessKey: 'sf_2f76059311430f0k7bhngcna',
-                    subject: 'Contact Form Submission',
-                    name: formData.name,
-                    email: formData.email,
-                    message: formData.message,
-                }),
+                body: JSON.stringify(payload),
             });
 
-            const data = await response.json();
+            const result = await response.json();
 
-            if (data.success) {
+            if (result.success) {
                 setStatus('success');
                 setFeedbackMessage('お問い合わせありがとうございます！メールを送信しました。');
                 setFormData({ name: '', email: '', message: '' });
+                form.reset();
             } else {
                 setStatus('error');
                 setFeedbackMessage('送信に失敗しました。もう一度お試しください。');
@@ -111,6 +123,9 @@ const Contact = () => {
                             Webからのお問い合わせ
                         </h3>
                         <form onSubmit={handleSubmit} className="space-y-4">
+                            {/* Honeypot */}
+                            <input type="text" name="honeypot" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
+
                             <div>
                                 <label className="block text-sm font-medium text-slate-700 mb-1">お名前 <span className="text-red-500">*</span></label>
                                 <input
