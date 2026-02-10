@@ -59,20 +59,25 @@ const Contact = () => {
                             <Mail className="text-secondary" />
                             Webからのお問い合わせ
                         </h3>
-                        <form className="space-y-4">
+                        <form action="https://api.staticforms.xyz/submit" method="post" className="space-y-4">
+                            {/* Static Forms Configuration */}
+                            <input type="hidden" name="accessKey" value="sf_2f76059311430f0k7bhngcna" />
+                            <input type="hidden" name="subject" value="Contact Form Submission" />
+                            <input type="hidden" name="redirectTo" value="" />
+
                             <div>
                                 <label className="block text-sm font-medium text-slate-700 mb-1">お名前 <span className="text-red-500">*</span></label>
-                                <input type="text" className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all" placeholder="例：春日井 太郎" />
+                                <input type="text" name="name" required className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all" placeholder="例：春日井 太郎" />
                             </div>
                             <div>
                                 <label className="block text-sm font-medium text-slate-700 mb-1">メールアドレス <span className="text-red-500">*</span></label>
-                                <input type="email" className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all" placeholder="example@email.com" />
+                                <input type="email" name="email" required className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all" placeholder="example@email.com" />
                             </div>
                             <div>
                                 <label className="block text-sm font-medium text-slate-700 mb-1">ご相談内容</label>
-                                <textarea rows="4" className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all" placeholder="お気軽にどうぞ"></textarea>
+                                <textarea name="message" rows="4" className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all" placeholder="お気軽にどうぞ"></textarea>
                             </div>
-                            <button type="button" className="w-full py-4 bg-secondary hover:bg-secondary-light text-white font-bold rounded-lg shadow-lg flex items-center justify-center gap-2 transition-all hover:-translate-y-1 active:translate-y-0">
+                            <button type="submit" className="w-full py-4 bg-secondary hover:bg-secondary-light text-white font-bold rounded-lg shadow-lg flex items-center justify-center gap-2 transition-all hover:-translate-y-1 active:translate-y-0">
                                 送信する
                                 <ArrowRight size={18} />
                             </button>
