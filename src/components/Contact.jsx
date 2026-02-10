@@ -1,9 +1,60 @@
-import React from 'react';
-import { Phone, Mail, ArrowRight, MessageCircle } from 'lucide-react';
+import React, { useState } from 'react';
+import { Phone, Mail, ArrowRight, MessageCircle, CheckCircle, AlertCircle } from 'lucide-react';
 import heroStaff from '../assets/hero_staff.png'; // Use real staff image
 import { IMAGES } from '../constants';
 
 const Contact = () => {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+    const [status, setStatus] = useState('idle'); // 'idle' | 'submitting' | 'success' | 'error'
+    const [feedbackMessage, setFeedbackMessage] = useState('');
+
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setStatus('submitting');
+        setFeedbackMessage('');
+
+        try {
+            const response = await fetch('https://api.staticforms.xyz/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    accessKey: 'sf_2f76059311430f0k7bhngcna',
+                    subject: 'Contact Form Submission',
+                    name: formData.name,
+                    email: formData.email,
+                    message: formData.message,
+                }),
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                setStatus('success');
+                setFeedbackMessage('お問い合わせありがとうございます！メールを送信しました。');
+                setFormData({ name: '', email: '', message: '' });
+            } else {
+                setStatus('error');
+                setFeedbackMessage('送信に失敗しました。もう一度お試しください。');
+            }
+        } catch (error) {
+            setStatus('error');
+            setFeedbackMessage('送信に失敗しました。インターネット接続を確認してください。');
+        }
+    };
+
     return (
         <section id="contact" className="py-24 relative bg-slate-50">
             <div className="absolute inset-x-0 bottom-0 h-2/3 bg-slate-900 z-0" />
@@ -59,27 +110,67 @@ const Contact = () => {
                             <Mail className="text-secondary" />
                             Webからのお問い合わせ
                         </h3>
-                        <form action="https://api.staticforms.xyz/submit" method="post" className="space-y-4">
-                            {/* Static Forms Configuration */}
-                            <input type="hidden" name="accessKey" value="sf_2f76059311430f0k7bhngcna" />
-                            <input type="hidden" name="subject" value="Contact Form Submission" />
-                            <input type="hidden" name="redirectTo" value="" />
-
+                        <form onSubmit={handleSubmit} className="space-y-4">
                             <div>
                                 <label className="block text-sm font-medium text-slate-700 mb-1">お名前 <span className="text-red-500">*</span></label>
-                                <input type="text" name="name" required className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all" placeholder="例：春日井 太郎" />
+                                <input
+                                    type="text"
+                                    name="name"
+                                    value={formData.name}
+                                    onChange={handleChange}
+                                    required
+                                    disabled={status === 'submitting'}
+                                    className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all disabled:opacity-50"
+                                    placeholder="例：春日井 太郎"
+                                />
                             </div>
                             <div>
                                 <label className="block text-sm font-medium text-slate-700 mb-1">メールアドレス <span className="text-red-500">*</span></label>
-                                <input type="email" name="email" required className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all" placeholder="example@email.com" />
+                                <input
+                                    type="email"
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    required
+                                    disabled={status === 'submitting'}
+                                    className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all disabled:opacity-50"
+                                    placeholder="example@email.com"
+                                />
                             </div>
                             <div>
                                 <label className="block text-sm font-medium text-slate-700 mb-1">ご相談内容</label>
-                                <textarea name="message" rows="4" className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all" placeholder="お気軽にどうぞ"></textarea>
+                                <textarea
+                                    name="message"
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    rows="4"
+                                    disabled={status === 'submitting'}
+                                    className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all disabled:opacity-50"
+                                    placeholder="お気軽にどうぞ"
+                                ></textarea>
                             </div>
-                            <button type="submit" className="w-full py-4 bg-secondary hover:bg-secondary-light text-white font-bold rounded-lg shadow-lg flex items-center justify-center gap-2 transition-all hover:-translate-y-1 active:translate-y-0">
-                                送信する
-                                <ArrowRight size={18} />
+
+                            {/* Feedback Message */}
+                            {status === 'success' && (
+                                <div className="flex items-center gap-2 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700">
+                                    <CheckCircle size={20} />
+                                    <p className="text-sm font-medium">{feedbackMessage}</p>
+                                </div>
+                            )}
+                            {status === 'error' && (
+                                <div className="flex items-center gap-2 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700">
+                                    <AlertCircle size={20} />
+                                    <p className="text-sm font-medium">{feedbackMessage}</p>
+                                </div>
+                            )}
+
+                            <button
+                                type="submit"
+                                disabled={status === 'submitting'}
+                                className="w-full py-4 bg-secondary hover:bg-secondary-light text-white font-bold rounded-lg shadow-lg flex items-center justify-center gap-2 transition-all hover:-translate-y-1 active:translate-y-0 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                            >
+                                {status === 'submitting' ? '送信中...' : '送信する'}
+                                {status !== 'submitting' && <ArrowRight size={18} />}
                             </button>
                         </form>
                     </div>
@@ -91,3 +182,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
