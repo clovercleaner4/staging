@@ -1,10 +1,30 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { MapPin, Navigation } from 'lucide-react';
+import { MapContainer, TileLayer, Circle, Marker, Popup } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+import L from 'leaflet';
+
+// Fix for Leaflet marker icons in React
+import icon from 'leaflet/dist/images/marker-icon.png';
+import iconShadow from 'leaflet/dist/images/marker-shadow.png';
+
+let DefaultIcon = L.icon({
+    iconUrl: icon,
+    shadowUrl: iconShadow,
+    iconSize: [25, 41],
+    iconAnchor: [12, 41]
+});
+
+L.Marker.prototype.options.icon = DefaultIcon;
 
 const Area = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+    // Kasugai City Coordinates (Approx center/city hall)
+    const position = [35.2493, 136.9677];
+    const radius = 30000; // 30km in meters
 
     return (
         <section id="area" className="py-20 bg-stone-50 relative overflow-hidden">
@@ -29,33 +49,33 @@ const Area = () => {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
-                    {/* Cloud/List Representation */}
+                    {/* Map Representation - Leaflet */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         animate={isInView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 0.6 }}
-                        className="bg-white rounded-3xl p-8 shadow-xl border-4 border-white/50 relative"
+                        className="bg-white rounded-3xl overflow-hidden shadow-xl border-4 border-white/50 relative h-[400px] z-0"
                     >
-                        <div className="absolute -top-4 -left-4 bg-primary text-white font-bold px-4 py-2 rounded-lg shadow-lg rotate-[-5deg]">
+                        <div className="absolute top-4 left-4 z-[400] bg-primary text-white font-bold px-4 py-2 rounded-lg shadow-lg">
                             春日井市拠点
                         </div>
 
-                        <div className="flex flex-wrap gap-3 justify-center content-center h-full min-h-[200px]">
-                            {['春日井市', '小牧市', '名古屋市守山区', '北名古屋市', '豊山町', '尾張旭市', '瀬戸市', '多治見市', '江南市', '岩倉市', '犬山市'].map((city, index) => (
-                                <span
-                                    key={city}
-                                    className={`
-                                        px-4 py-2 rounded-full font-bold text-slate-600 bg-slate-100 border border-slate-200
-                                        ${index < 3 ? 'text-lg bg-green-50 text-green-700 border-green-200' : 'text-sm'}
-                                    `}
-                                >
-                                    {city}
-                                </span>
-                            ))}
-                            <span className="px-4 py-2 rounded-full font-bold text-slate-400 text-sm border border-dashed border-slate-300">
-                                その他周辺エリア
-                            </span>
-                        </div>
+                        <MapContainer center={position} zoom={9} scrollWheelZoom={false} style={{ height: '100%', width: '100%' }}>
+                            <TileLayer
+                                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                            />
+                            <Marker position={position}>
+                                <Popup>
+                                    クローバークリーナー<br />拠点: 春日井市
+                                </Popup>
+                            </Marker>
+                            <Circle
+                                center={position}
+                                radius={radius}
+                                pathOptions={{ color: '#00C2CB', fillColor: '#00C2CB', fillOpacity: 0.1 }}
+                            />
+                        </MapContainer>
                     </motion.div>
 
                     {/* Text / Promise */}

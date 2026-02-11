@@ -13,9 +13,12 @@ const Footer = () => {
                             <span className="text-xl font-bold text-white tracking-tight">Clover Cleaner</span>
                         </div>
                         <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
-                            春日井市を中心とした地域密着のハウスクリーニング・便利屋サービス。<br />
                             「家の困りごとなら、なんでも解決」をモットーに、プロの技術と親切な対応をお届けします。
                         </p>
+                        <div className="mt-4 text-sm text-slate-500 font-medium">
+                            <p>〒486-0808</p>
+                            <p>愛知県春日井市堀ノ内町北1-65</p>
+                        </div>
                     </div>
 
                     {/* Links */}
