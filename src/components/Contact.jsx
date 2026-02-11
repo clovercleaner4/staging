@@ -1,8 +1,71 @@
+import React, { useState } from 'react';
+import { Mail, ArrowRight, MessageCircle, CheckCircle, AlertCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import cleanLivingRoom from '../assets/clean_living_room.png';
 
 const Contact = () => {
-    // ... (state lines 7-68 remain same)
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+    const [status, setStatus] = useState('idle'); // 'idle' | 'submitting' | 'success' | 'error'
+    const [feedbackMessage, setFeedbackMessage] = useState('');
+
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setStatus('submitting');
+        setFeedbackMessage('');
+
+        const form = e.target;
+        const data = new FormData(form);
+        const payload = {
+            accessKey: 'sf_2f76059311430f0k7bhngcna',
+            subject: '【クローバークリーナー】ウェブサイトからのお問い合わせ',
+            name: data.get('name'),
+            email: data.get('email'),
+            message: data.get('message'),
+            replyTo: '@', // Default to email field
+            honeypot: data.get('honeypot')
+        };
+
+        // StaticForms specific: use email as replyTo
+        if (payload.email) {
+            payload.replyTo = payload.email;
+        }
+
+        try {
+            const response = await fetch('https://api.staticforms.xyz/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(payload),
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                setStatus('success');
+                setFeedbackMessage('お問い合わせありがとうございます！メールを送信しました。');
+                setFormData({ name: '', email: '', message: '' });
+                form.reset();
+            } else {
+                setStatus('error');
+                setFeedbackMessage('送信に失敗しました。もう一度お試しください。');
+            }
+        } catch (error) {
+            setStatus('error');
+            setFeedbackMessage('送信に失敗しました。インターネット接続を確認してください。');
+        }
+    };
 
     return (
         <section id="contact" className="py-24 relative bg-slate-50">
@@ -35,7 +98,7 @@ const Contact = () => {
 
                             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                                 <p className="text-white font-bold mb-4">LINEで写真を送って、すぐにお見積もり！</p>
-                                <a href="https://lin.ee/0KObu0H" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 w-full py-4 bg-[#06C755] text-white rounded-xl font-bold text-lg shadow-lg hover:bg-[#05b34c] transition-all">
+                                <a href="https://lin.ee/0KObu0H" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 w-full py-4 bg-[#06C755] text-white rounded-xl font-bold text-lg shadow-lg hover:bg-[#05b34c] transition-all transform hover:scale-105">
                                     <MessageCircle size={24} className="fill-current" />
                                     LINEで相談する
                                 </a>
@@ -124,11 +187,10 @@ const Contact = () => {
                         </form>
                     </div>
 
+                </motion.div>
             </div>
-        </div>
-        </section >
+        </section>
     );
 };
 
 export default Contact;
-
