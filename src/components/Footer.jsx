@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/logo-v2.png';
+import logo from '../assets/cloverlogo.png';
 
 const Footer = () => {
     return (
@@ -14,7 +14,8 @@ const Footer = () => {
                         <p className="text-sm leading-relaxed max-w-sm">
                             〒486-0828 愛知県春日井市堀ノ内町北一丁目６５番地<br />
                             代表：野村　貴典<br /><br />
-                            清掃業務をメインとしたビルメンテナンス業。最新技術とプロフェッショナルの技で、快適で美しい空間を創造する清掃のスペシャリストです。
+                            春日井市を中心としたハウスクリーニング・便利屋サービス。<br />
+                            「困った」を解決し、快適な暮らしをお届けします。
                         </p>
                     </div>
 

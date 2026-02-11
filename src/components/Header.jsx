@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import logo from '../assets/logo-v2.png';
+import logo from '../assets/cloverlogo.png';
 
 const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -24,8 +24,8 @@ const Header = () => {
                 {/* Desktop Navigation */}
                 <div className="hidden md:flex items-center gap-8">
                     <a href="#area" className="text-base font-bold text-slate-600 hover:text-primary transition-colors">対応エリア</a>
-                    <a href="#services" className="text-base font-bold text-slate-600 hover:text-primary transition-colors">サービス</a>
-                    <a href="#why-us" className="text-base font-bold text-slate-600 hover:text-primary transition-colors">こだわり</a>
+                    <a href="#services" className="text-base font-bold text-slate-600 hover:text-primary transition-colors">サービス料金</a>
+                    <a href="#why-us" className="text-base font-bold text-slate-600 hover:text-primary transition-colors">選ばれる理由</a>
 
                     <a
                         href="#contact"

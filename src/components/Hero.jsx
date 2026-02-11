@@ -18,26 +18,26 @@ const Hero = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7 }}
                         >
-                            {/* Badge */}
-                            <div className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full bg-orange-100 text-orange-800 font-bold border border-orange-200">
-                                <CheckCircle size={18} className="fill-current text-orange-500" />
-                                <span className="tracking-wide text-sm md:text-base">春日井の小さなお掃除屋さん</span>
+                            {/* Brand Tagline */}
+                            <div className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full bg-green-100 text-green-800 font-bold border border-green-200">
+                                <CheckCircle size={18} className="fill-current text-green-600" />
+                                <span className="tracking-wide text-sm md:text-base">春日井市のお困りごと解決隊</span>
                             </div>
 
                             {/* Main Headline */}
                             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-800 mb-6 leading-[1.2] tracking-tight">
-                                丁寧な<span className="text-secondary relative inline-block">
-                                    手仕事
+                                家の<span className="text-secondary relative inline-block">
+                                    困りごと
                                     <span className="absolute bottom-1 left-0 w-full h-3 bg-secondary/20 -z-10 rounded-sm"></span>
-                                </span>で、<br />
-                                居心地のよい場所へ。
+                                </span>なら、<br />
+                                なんでも解決。
                             </h1>
 
                             {/* Subtext */}
                             <p className="text-slate-600 mb-8 text-lg md:text-xl font-medium leading-relaxed max-w-lg mx-auto lg:mx-0">
-                                地元・春日井の皆様の<br className="hidden md:block" />
-                                <span className="font-bold text-slate-800">「困った」</span>にすぐ駆けつけます。<br />
-                                頑固な汚れも、私たちにお任せください。
+                                エアコン掃除から不用品回収まで。<br />
+                                <span className="font-bold text-slate-800">春日井市から30km圏内</span>、すぐに駆けつけます。<br />
+                                あなたの暮らしを、もっと快適に。
                             </p>
 
                             {/* CTA Buttons */}
@@ -55,7 +55,7 @@ const Hero = () => {
                             <div className="mt-8 flex flex-wrap justify-center lg:justify-start gap-4 md:gap-8 text-sm text-slate-500 font-bold">
                                 <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm border border-stone-100">
                                     <Star size={18} className="text-yellow-400 fill-current" />
-                                    <span>地域口コミ高評価</span>
+                                    <span>見積もり無料</span>
                                 </div>
                                 <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm border border-stone-100">
                                     <ShieldCheck size={18} className="text-green-500" />
@@ -75,24 +75,24 @@ const Hero = () => {
                             className="relative"
                         >
                             {/* Blob Background Effect */}
-                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-blue-100 to-orange-100 rounded-full blur-3xl opacity-60 -z-10" />
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-green-100 to-blue-100 rounded-full blur-3xl opacity-60 -z-10" />
 
                             {/* Image Container with Mask/Shape */}
                             <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white transform rotate-1 hover:rotate-0 transition-transform duration-500">
                                 <img
-                                    src={honnin04}
-                                    alt="Friendly Staff"
+                                    src="src/assets/clean_living_room_1770812426866.png"
+                                    alt="Clean Living Room"
                                     className="w-full h-auto object-cover object-center"
                                 />
 
                                 {/* Floating Badge on Image */}
                                 <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur px-5 py-3 rounded-2xl shadow-lg border border-white/50 flex items-center gap-3">
                                     <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-2xl">
-                                        🌿
+                                        ✨
                                     </div>
                                     <div className="flex flex-col">
-                                        <span className="text-xs font-bold text-slate-500">お掃除のプロ</span>
-                                        <span className="text-sm font-extrabold text-slate-800">わたくし野村がお伺いします</span>
+                                        <span className="text-xs font-bold text-slate-500">プロの仕上がり</span>
+                                        <span className="text-sm font-extrabold text-slate-800">清潔な空間をお届け</span>
                                     </div>
                                 </div>
                             </div>

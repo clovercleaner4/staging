@@ -16,11 +16,11 @@ const Area = () => {
                 >
                     <span className="text-primary font-bold tracking-wider uppercase mb-2 block bg-white/50 inline-block px-4 py-1 rounded-full text-sm">Service Area</span>
                     <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-                        春日井市から、<br className="sm:hidden" />すぐに駆けつけます
+                        春日井市から<br className="sm:hidden" />30km圏内対応
                     </h2>
                     <p className="text-slate-600 max-w-2xl mx-auto">
-                        地元企業だからできる、細やかでスピーディーな対応。<br />
-                        「ちょっと困った」も、お気軽にご相談ください。
+                        春日井市を中心に、小牧市・名古屋市守山区など近隣エリアへ。<br />
+                        フットワーク軽く、最短即日で駆けつけます。
                     </p>
                 </motion.div>
 
