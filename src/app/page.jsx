@@ -11,6 +11,7 @@ import Footer from '../components/Footer';
 const Area = dynamic(() => import('../components/Area'), { ssr: false });
 import Services from '../components/Services';
 import WhyUs from '../components/WhyUs';
+import InstagramFeed from '../components/InstagramFeed';
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Hero />
       <div className="bg-slate-50 relative z-10">
         <Area />
+        <InstagramFeed />
         <Services />
         <WhyUs />
         <Testimonials />
