@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, Mail, ArrowRight, MessageCircle, CheckCircle, AlertCircle } from 'lucide-react';
 import heroStaff from '../assets/hero_staff.png';
-import lineImage from '../assets/LINE.jpg';
 import { IMAGES } from '../constants';
 
 const Contact = () => {
@@ -92,13 +91,14 @@ const Contact = () => {
                             </p>
 
                             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                                <p className="text-white font-bold mb-4 text-center">LINEで写真を送って、すぐにお見積もり！</p>
-                                <a href="https://line.me/ti/p/3M2k5t0i6_" target="_blank" rel="noopener noreferrer" className="block w-full overflow-hidden rounded-xl bg-white shadow-lg hover:opacity-90 transition-opacity">
-                                    {/* Placeholder for LINE Image - Replacing with actual image import below */}
-                                    <img src={lineImage} alt="LINEで相談" className="w-full h-auto" />
+                                <p className="text-white font-bold mb-4">LINEで写真を送って、すぐにお見積もり！</p>
+                                <a href="https://line.me/ti/p/YOUR_LINE_ID" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 w-full py-4 bg-[#06C755] text-white rounded-xl font-bold text-lg shadow-lg hover:bg-[#05b34c] transition-all">
+                                    <MessageCircle size={24} className="fill-current" />
+                                    LINEで相談する
                                 </a>
-                                <p className="text-white/70 text-xs text-center mt-3">
-                                    上の画像をタップするとLINEが起動します
+                                <p className="text-white/70 text-xs mt-3">
+                                    ※上のボタンを押すとLINEが起動します。<br />
+                                    ID検索の場合: <strong>@YOUR_LINE_ID</strong>
                                 </p>
                             </div>
                         </div>
