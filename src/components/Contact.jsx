@@ -92,13 +92,12 @@ const Contact = () => {
 
                             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                                 <p className="text-white font-bold mb-4">LINEで写真を送って、すぐにお見積もり！</p>
-                                <a href="https://line.me/ti/p/YOUR_LINE_ID" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 w-full py-4 bg-[#06C755] text-white rounded-xl font-bold text-lg shadow-lg hover:bg-[#05b34c] transition-all">
+                                <a href="https://lin.ee/0KObu0H" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 w-full py-4 bg-[#06C755] text-white rounded-xl font-bold text-lg shadow-lg hover:bg-[#05b34c] transition-all">
                                     <MessageCircle size={24} className="fill-current" />
                                     LINEで相談する
                                 </a>
-                                <p className="text-white/70 text-xs mt-3">
-                                    ※上のボタンを押すとLINEが起動します。<br />
-                                    ID検索の場合: <strong>@YOUR_LINE_ID</strong>
+                                <p className="text-white/70 text-xs mt-3 text-center">
+                                    上のボタンをタップするとLINEが起動します
                                 </p>
                             </div>
                         </div>

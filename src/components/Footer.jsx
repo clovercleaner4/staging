@@ -9,7 +9,7 @@ const Footer = () => {
                     {/* Brand Info */}
                     <div className="col-span-1 md:col-span-2">
                         <div className="flex items-center gap-3 mb-4">
-                            <img src={logo} alt="Clover Cleaner Logo" className="w-10 h-10 object-contain brightness-0 invert" />
+                            <img src={logo} alt="Clover Cleaner Logo" className="w-10 h-10 object-contain" />
                             <span className="text-xl font-bold text-white tracking-tight">Clover Cleaner</span>
                         </div>
                         <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
