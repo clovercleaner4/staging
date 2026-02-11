@@ -3,45 +3,46 @@ import logo from '../assets/cloverlogo.png';
 
 const Footer = () => {
     return (
-        <footer className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <footer className="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
             <div className="container mx-auto px-4">
                 <div className="grid md:grid-cols-4 gap-8 mb-8">
+                    {/* Brand Info */}
                     <div className="col-span-1 md:col-span-2">
-                        <div className="flex items-center gap-2 mb-4">
-                            <img src={logo} alt="Clover Cleaner Logo" className="w-8 h-8 object-contain" />
-                            <span className="text-xl font-bold text-white tracking-tight">クローバークリーナー</span>
+                        <div className="flex items-center gap-3 mb-4">
+                            <img src={logo} alt="Clover Cleaner Logo" className="w-10 h-10 object-contain brightness-0 invert" />
+                            <span className="text-xl font-bold text-white tracking-tight">Clover Cleaner</span>
                         </div>
-                        <p className="text-sm leading-relaxed max-w-sm">
-                            〒486-0828 愛知県春日井市堀ノ内町北一丁目６５番地<br />
-                            代表：野村　貴典<br /><br />
-                            春日井市を中心としたハウスクリーニング・便利屋サービス。<br />
-                            「困った」を解決し、快適な暮らしをお届けします。
+                        <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
+                            春日井市を中心とした地域密着のハウスクリーニング・便利屋サービス。<br />
+                            「家の困りごとなら、なんでも解決」をモットーに、プロの技術と親切な対応をお届けします。
                         </p>
                     </div>
 
+                    {/* Links */}
                     <div>
-                        <h4 className="text-white font-bold mb-4">Service</h4>
+                        <h4 className="font-bold text-lg mb-4 text-white">メニュー</h4>
                         <ul className="space-y-2 text-sm">
-                            <li><a href="#services" className="hover:text-secondary transition-colors">定期清掃</a></li>
-                            <li><a href="#services" className="hover:text-secondary transition-colors">フロアメンテナンス</a></li>
-                            <li><a href="#services" className="hover:text-secondary transition-colors">ガラス・外壁清掃</a></li>
-                            <li><a href="#services" className="hover:text-secondary transition-colors">日常清掃代行</a></li>
+                            <li><a href="#hero" className="hover:text-primary transition-colors">トップページ</a></li>
+                            <li><a href="#services" className="hover:text-primary transition-colors">サービス・料金</a></li>
+                            <li><a href="#area" className="hover:text-primary transition-colors">対応エリア</a></li>
+                            <li><a href="#why-us" className="hover:text-primary transition-colors">選ばれる理由</a></li>
                         </ul>
                     </div>
 
+                    {/* Contact Info */}
                     <div>
-                        <h4 className="text-white font-bold mb-4">Company</h4>
-                        <ul className="space-y-2 text-sm">
-                            <li><a href="#" className="hover:text-secondary transition-colors">会社概要</a></li>
-                            <li><a href="#" className="hover:text-secondary transition-colors">採用情報</a></li>
-                            <li><a href="#" className="hover:text-secondary transition-colors">プライバシーポリシー</a></li>
-                            <li><a href="#contact" className="hover:text-secondary transition-colors">お問い合わせ</a></li>
-                        </ul>
+                        <h4 className="font-bold text-lg mb-4 text-white">お問い合わせ</h4>
+                        <div className="flex flex-col gap-3">
+                            <a href="#contact" className="hover:text-primary transition-colors">お問い合わせフォーム</a>
+                            <p className="text-slate-500 text-xs mt-2">
+                                ※お電話での受付は行っておりません。<br />LINEまたはフォームよりご連絡ください。
+                            </p>
+                        </div>
                     </div>
                 </div>
 
-                <div className="pt-8 border-t border-slate-800 text-center text-xs">
-                    &copy; {new Date().getFullYear()} Clover Cleaner. All Rights Reserved.
+                <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+                    <p>&copy; {new Date().getFullYear()} Clover Cleaner. All rights reserved.</p>
                 </div>
             </div>
         </footer>

@@ -81,13 +81,13 @@ const Services = () => {
         },
         {
             id: 'other',
-            title: 'その他・困りごと',
+            title: 'その他・困りごと（便利屋サービス）',
             subtitle: 'Handyman Service',
             icon: Hammer,
             color: 'text-green-500',
             bgColor: 'bg-green-50',
-            description: '「どこに頼めばいいかわからない」そんな小さなお困りごとも解決します。',
-            merit: '電球1個から対応・地域密着の安心感',
+            description: '「掃除屋さんに頼んでもいいの？」ということでも大歓迎。便利屋として、暮らしの小さなお困りごとを解決します。',
+            merit: '電球1個から対応・地域密着の柔軟性',
             items: [
                 { name: '家具組み立て・移動', price: '3,000円〜 / 1時間' },
                 { name: '不用品回収', price: '要見積もり' },

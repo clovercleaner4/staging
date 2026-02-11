@@ -29,10 +29,9 @@ const Header = () => {
 
                     <a
                         href="#contact"
-                        className="flex items-center gap-2 px-6 py-2.5 bg-secondary text-white rounded-full font-bold text-sm shadow-md hover:bg-secondary-light hover:shadow-lg transition-all transform hover:-translate-y-0.5"
+                        className="flex items-center gap-2 px-6 py-2.5 bg-[#06C755] text-white rounded-full font-bold text-sm shadow-md hover:bg-[#05b34c] hover:shadow-lg transition-all transform hover:-translate-y-0.5"
                     >
-                        <Phone size={18} className="fill-current" />
-                        お問い合わせ
+                        LINE / お問い合わせ
                     </a>
                 </div>
 
@@ -59,9 +58,8 @@ const Header = () => {
                             <a href="#services" className="text-slate-700 font-bold py-3 px-4 hover:bg-slate-50 rounded-lg transition-colors" onClick={() => setIsMobileMenuOpen(false)}>サービス</a>
                             <a href="#why-us" className="text-slate-700 font-bold py-3 px-4 hover:bg-slate-50 rounded-lg transition-colors" onClick={() => setIsMobileMenuOpen(false)}>こだわり</a>
                             <div className="pt-2">
-                                <a href="#contact" className="flex items-center justify-center gap-2 w-full py-4 bg-secondary text-white rounded-xl font-bold text-lg shadow-md" onClick={() => setIsMobileMenuOpen(false)}>
-                                    <Phone size={20} className="fill-current" />
-                                    お問い合わせ
+                                <a href="#contact" className="flex items-center justify-center gap-2 w-full py-4 bg-[#06C755] text-white rounded-xl font-bold text-lg shadow-md" onClick={() => setIsMobileMenuOpen(false)}>
+                                    LINE / お問い合わせ
                                 </a>
                             </div>
                         </div>

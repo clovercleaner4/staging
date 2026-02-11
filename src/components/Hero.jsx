@@ -37,8 +37,9 @@ const Hero = () => {
                             <p className="text-slate-600 mb-8 text-lg md:text-xl font-medium leading-relaxed max-w-lg mx-auto lg:mx-0">
                                 エアコン・水回りのお掃除から、<br />
                                 <span className="text-slate-800 font-bold">遺品整理・特殊清掃</span>まで。<br />
-                                <span className="font-bold text-slate-800">春日井市から30km圏内</span>、最短即日で駆けつけます。<br />
-                                どのような状態でも、まずはご相談ください。
+                                <span className="font-bold text-slate-800">春日井市からおよそ30km圏内</span>。<br />
+                                まずはお気軽にご相談ください。<br />
+                                <span className="text-sm text-slate-500 mt-2 block">※掃除以外のお困りごとも、便利屋として柔軟に対応します！</span>
                             </p>
 
                             {/* CTA Buttons */}

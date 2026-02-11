@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Phone, Mail, ArrowRight, MessageCircle, CheckCircle, AlertCircle } from 'lucide-react';
-import heroStaff from '../assets/hero_staff.png'; // Use real staff image
+import heroStaff from '../assets/hero_staff.png';
+import lineImage from '../assets/LINE.jpg';
 import { IMAGES } from '../constants';
 
 const Contact = () => {
@@ -84,21 +85,22 @@ const Contact = () => {
                             <h2 className="text-3xl md:text-4xl font-bold mb-6">
                                 お見積り・ご相談<br />無料です
                             </h2>
-                            <p className="text-white/90 mb-8 font-medium">
+                            <p className="text-white/90 mb-8 font-medium leading-relaxed">
                                 「いくらくらいかかる？」「こんなこと頼める？」<br />
-                                まずは、LINEまたはフォームからお気軽にご連絡ください。<br />
+                                掃除以外のことでも、便利屋感覚でお気軽にご相談ください。<br />
                                 しつこい営業は一切いたしません。
                             </p>
 
-                            <a href="#" className="flex items-center gap-4 mb-8 bg-[#06C755] p-4 rounded-xl hover:bg-[#05b34c] transition-colors cursor-pointer text-white shadow-lg border border-white/10">
-                                <div className="w-12 h-12 rounded-full bg-white text-[#06C755] flex items-center justify-center flex-shrink-0">
-                                    <MessageCircle size={24} />
-                                </div>
-                                <div>
-                                    <p className="text-xs text-white/90">LINEで手軽に相談</p>
-                                    <p className="text-xl font-bold tracking-wide">公式LINEはこちら</p>
-                                </div>
-                            </a>
+                            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                                <p className="text-white font-bold mb-4 text-center">LINEで写真を送って、すぐにお見積もり！</p>
+                                <a href="https://line.me/ti/p/3M2k5t0i6_" target="_blank" rel="noopener noreferrer" className="block w-full overflow-hidden rounded-xl bg-white shadow-lg hover:opacity-90 transition-opacity">
+                                    {/* Placeholder for LINE Image - Replacing with actual image import below */}
+                                    <img src={lineImage} alt="LINEで相談" className="w-full h-auto" />
+                                </a>
+                                <p className="text-white/70 text-xs text-center mt-3">
+                                    上の画像をタップするとLINEが起動します
+                                </p>
+                            </div>
                         </div>
 
                         <div className="relative z-10 mt-8">
