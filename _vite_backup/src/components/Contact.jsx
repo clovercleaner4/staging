@@ -1,4 +1,3 @@
-'use client';
 import React, { useState } from 'react';
 import { Mail, ArrowRight, MessageCircle, CheckCircle, AlertCircle } from 'lucide-react';
 import { motion } from 'framer-motion';

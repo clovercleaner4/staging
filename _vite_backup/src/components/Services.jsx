@@ -1,4 +1,3 @@
-'use client';
 import React, { useState } from 'react';
 import { Wind, Droplets, Home, Hammer, ChevronDown, Building2, Briefcase, ArrowRight, CheckCircle2, Phone } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
