@@ -2,8 +2,31 @@ import React from 'react';
 import { Building2, Home, Sparkles, Wind, Droplets, Wrench, Hammer, Grid, CheckCircle2 } from 'lucide-react';
 import sagyo01 from '../assets/sagyo01.jpg';
 import sagyo02 from '../assets/sagyo02.jpg';
+import sagyo03 from '../assets/sagyo03.jpg';
 
 const Services = () => {
+    // Original 3 cards data
+    const mainServices = [
+        {
+            title: "日常のお掃除",
+            desc: "忙しいあなたに代わって、掃除機がけや拭き掃除を行います。",
+            img: sagyo01,
+            price: "5,500円 / 1時間",
+        },
+        {
+            title: "お店の床・ガラス",
+            desc: "小さなお店や事務所の美観維持。定期的な訪問も可能です。",
+            img: sagyo02,
+            price: "要見積もり",
+        },
+        {
+            title: "スポット清掃",
+            desc: "「ここだけキレイにしたい」というご要望もお気軽に。",
+            img: sagyo03,
+            price: "8,800円〜 / 1箇所",
+        }
+    ];
+
     const corporateServices = [
         { name: "床ワックス", icon: Sparkles },
         { name: "ガラス清掃", icon: Grid },
@@ -33,76 +56,86 @@ const Services = () => {
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-                    {/* Corporate Section */}
-                    <div className="bg-slate-50 rounded-3xl p-8 border border-slate-100 shadow-sm relative overflow-hidden group hover:shadow-md transition-all">
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-bl-full -mr-8 -mt-8 opacity-50"></div>
-
-                        <div className="flex items-center gap-4 mb-8 relative z-10">
-                            <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-primary">
-                                <Building2 size={24} strokeWidth={2} />
+                {/* Restored Main 3 Cards */}
+                <div className="grid md:grid-cols-3 gap-8 mb-20">
+                    {mainServices.map((service, index) => (
+                        <div key={index} className="bg-stone-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
+                            <div className="h-48 relative">
+                                <img
+                                    src={service.img}
+                                    alt={service.title}
+                                    className={`w-full h-full object-cover ${index === 0 ? 'object-center' : 'object-top'}`}
+                                />
+                                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-slate-800 shadow-sm">
+                                    {service.price}
+                                </div>
                             </div>
-                            <div>
-                                <h3 className="text-xl font-bold text-slate-800">企業様向け</h3>
-                                <p className="text-sm text-slate-500">オフィス・店舗の美観維持</p>
+                            <div className="p-6 flex-grow flex flex-col">
+                                <h3 className="text-lg font-bold text-slate-800 mb-2">
+                                    {service.title}
+                                </h3>
+                                <p className="text-slate-600 text-sm mb-4 flex-grow">
+                                    {service.desc}
+                                </p>
+                                <div className="pt-4 border-t border-stone-200 mt-auto">
+                                    <span className="block text-xs text-slate-500 mb-1">参考料金</span>
+                                    <span className="text-xl font-bold text-primary">{service.price}</span>
+                                </div>
                             </div>
                         </div>
+                    ))}
+                </div>
 
-                        <ul className="space-y-4 relative z-10">
-                            {corporateServices.map((service, index) => (
-                                <li key={index} className="flex items-center gap-3 bg-white p-4 rounded-xl shadow-sm border border-slate-100/50">
-                                    <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center text-primary flex-shrink-0">
-                                        <service.icon size={16} />
-                                    </div>
-                                    <span className="font-bold text-slate-700">{service.name}</span>
-                                </li>
-                            ))}
-                        </ul>
-
-                        <div className="mt-8 pt-6 border-t border-slate-200">
-                            <p className="text-sm text-slate-600 leading-relaxed">
-                                定期清掃からスポット対応まで、ビジネス環境を清潔に保つお手伝いをいたします。
-                            </p>
-                        </div>
+                {/* Detailed List Section (Corporate & Individual) */}
+                <div className="bg-slate-50 rounded-3xl p-8 md:p-12">
+                    <div className="text-center mb-10">
+                        <h3 className="text-2xl font-bold text-slate-800">取り扱いサービス一覧</h3>
+                        <p className="text-slate-500 mt-2">上記以外にも様々な対応が可能です</p>
                     </div>
 
-                    {/* Individual Section */}
-                    <div className="bg-orange-50/50 rounded-3xl p-8 border border-orange-100 shadow-sm relative overflow-hidden group hover:shadow-md transition-all">
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-orange-100 rounded-bl-full -mr-8 -mt-8 opacity-50"></div>
-
-                        <div className="flex items-center gap-4 mb-8 relative z-10">
-                            <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-orange-500">
-                                <Home size={24} strokeWidth={2} />
+                    <div className="grid md:grid-cols-2 gap-8 lg:gap-16">
+                        {/* Corporate */}
+                        <div>
+                            <div className="flex items-center gap-3 mb-6">
+                                <Building2 className="text-primary" size={28} />
+                                <h4 className="text-xl font-bold text-slate-800">企業様・店舗様</h4>
                             </div>
-                            <div>
-                                <h3 className="text-xl font-bold text-slate-800">個人のお客様</h3>
-                                <p className="text-sm text-slate-500">快適な住まいづくり</p>
-                            </div>
+                            <ul className="space-y-3">
+                                {corporateServices.map((service, index) => (
+                                    <li key={index} className="flex items-center gap-3 bg-white p-3 rounded-lg border border-slate-200">
+                                        <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center text-primary flex-shrink-0">
+                                            <service.icon size={16} />
+                                        </div>
+                                        <span className="font-medium text-slate-700">{service.name}</span>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
 
-                        <ul className="space-y-4 relative z-10">
-                            {individualServices.map((service, index) => (
-                                <li key={index} className="flex items-center gap-3 bg-white p-4 rounded-xl shadow-sm border border-orange-100/50">
-                                    <div className="w-8 h-8 rounded-full bg-orange-50 flex items-center justify-center text-orange-500 flex-shrink-0">
-                                        <service.icon size={16} />
-                                    </div>
-                                    <span className="font-bold text-slate-700">{service.name}</span>
-                                </li>
-                            ))}
-                        </ul>
-
-                        <div className="mt-8 pt-6 border-t border-orange-200/50">
-                            <p className="text-sm text-slate-600 leading-relaxed">
-                                普段のお掃除から専門的なクリーニング・修繕まで、お住まいの困りごとを解決します。
-                            </p>
+                        {/* Individual */}
+                        <div>
+                            <div className="flex items-center gap-3 mb-6">
+                                <Home className="text-orange-500" size={28} />
+                                <h4 className="text-xl font-bold text-slate-800">個人のお客様</h4>
+                            </div>
+                            <ul className="space-y-3">
+                                {individualServices.map((service, index) => (
+                                    <li key={index} className="flex items-center gap-3 bg-white p-3 rounded-lg border border-orange-200">
+                                        <div className="w-8 h-8 rounded-full bg-orange-50 flex items-center justify-center text-orange-500 flex-shrink-0">
+                                            <service.icon size={16} />
+                                        </div>
+                                        <span className="font-medium text-slate-700">{service.name}</span>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
                     </div>
                 </div>
 
                 <div className="mt-16 text-center">
-                    <div className="inline-flex items-center gap-2 bg-slate-100 px-6 py-3 rounded-full text-slate-600 text-sm font-medium">
+                    <div className="inline-flex items-center gap-2 bg-blue-50 px-6 py-4 rounded-full text-slate-700 text-sm font-medium border border-blue-100">
                         <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                        お見積もりは無料です。お気軽にご相談ください。
+                        「こんなこと頼める？」もお気軽にご相談ください
                     </div>
                 </div>
             </div>
