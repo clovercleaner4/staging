@@ -35,9 +35,10 @@ const Hero = () => {
 
                             {/* Subtext */}
                             <p className="text-slate-600 mb-8 text-lg md:text-xl font-medium leading-relaxed max-w-lg mx-auto lg:mx-0">
-                                エアコン掃除から不用品回収まで。<br />
-                                <span className="font-bold text-slate-800">春日井市から30km圏内</span>、すぐに駆けつけます。<br />
-                                あなたの暮らしを、もっと快適に。
+                                エアコン・水回りのお掃除から、<br />
+                                <span className="text-slate-800 font-bold">遺品整理・特殊清掃</span>まで。<br />
+                                <span className="font-bold text-slate-800">春日井市から30km圏内</span>、最短即日で駆けつけます。<br />
+                                どのような状態でも、まずはご相談ください。
                             </p>
 
                             {/* CTA Buttons */}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Wind, Droplets, Home, Hammer, ChevronDown, ChevronUp, AlertCircle, Phone, CheckCircle2 } from 'lucide-react';
+import { Wind, Droplets, Home, Hammer, ChevronDown, ChevronUp, AlertCircle, Phone, CheckCircle2, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Services = () => {
@@ -16,7 +16,7 @@ const Services = () => {
             icon: Wind,
             color: 'text-blue-500',
             bgColor: 'bg-blue-50',
-            description: 'プロの技術で内部のカビやホコリを徹底洗浄。',
+            description: 'プロの技術で内部のカビやホコリを徹底洗浄。空気も気分もスッキリと。',
             items: [
                 { name: '壁掛けタイプ（お掃除機能なし）', price: '12,000円〜' },
                 { name: '壁掛けタイプ（お掃除機能付き）', price: '18,000円〜' },
@@ -31,7 +31,7 @@ const Services = () => {
             icon: Droplets,
             color: 'text-cyan-500',
             bgColor: 'bg-cyan-50',
-            description: 'キッチン、浴室、トイレなど、水垢や油汚れをピカピカに。',
+            description: '頑固な水垢や油汚れもプロの技でピカピカに。毎日使う場所だからこそ清潔に。',
             items: [
                 { name: 'キッチン（換気扇・レンジフード除く）', price: '15,000円〜' },
                 { name: 'レンジフード（換気扇）', price: '13,000円〜' },
@@ -47,7 +47,7 @@ const Services = () => {
             icon: Home,
             color: 'text-orange-500',
             bgColor: 'bg-orange-50',
-            description: 'フローリングや窓、ベランダなど、お部屋全体をこれっぽっちも汚しません。',
+            description: '熟練の技術でフローリングも窓も美しく蘇らせます。',
             items: [
                 { name: 'フローリング洗浄・ワックス', price: '1,000円〜 / 1帖' },
                 { name: '窓ガラス・サッシ', price: '3,000円〜 / 1枠' },
@@ -61,10 +61,10 @@ const Services = () => {
             icon: Hammer,
             color: 'text-green-500',
             bgColor: 'bg-green-50',
-            description: '電球交換から家具の組み立て、不用品回収まで。',
+            description: '「どこに頼めばいいかわからない」そんな小さなお困りごとも解決します。',
             items: [
-                { name: '不用品回収・遺品整理', price: '要見積もり' },
                 { name: '家具組み立て・移動', price: '3,000円〜 / 1時間' },
+                { name: '不用品回収', price: '要見積もり' },
                 { name: '電球交換', price: '1,000円〜 / 1箇所' },
                 { name: '草むしり・剪定', price: '3,000円〜 / 1時間' },
                 { name: 'その他、「ちょっと手伝って」', price: '要相談' },
@@ -86,6 +86,60 @@ const Services = () => {
                     </p>
                 </div>
 
+                {/* Special Featured Service - Highlighted */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="mb-16 bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden shadow-2xl"
+                >
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+
+                    <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <span className="inline-block px-4 py-1 rounded-full bg-secondary/20 text-secondary border border-secondary/30 text-sm font-bold mb-4">
+                                専門スタッフ対応
+                            </span>
+                            <h3 className="text-2xl md:text-4xl font-bold mb-4 leading-tight">
+                                遺品整理・特殊清掃<br />
+                                <span className="text-slate-300 text-lg md:text-xl font-medium block mt-2">Special Cleaning / Memento Sorting</span>
+                            </h3>
+                            <p className="text-slate-300 mb-6 leading-relaxed">
+                                「遠方で整理に行けない」「精神的に辛い」「汚れが酷くて手がつけられない」...<br />
+                                そんなお悩みにも、経験豊富なスタッフが心に寄り添い対応いたします。<br />
+                                秘密厳守・迅速丁寧をお約束します。
+                            </p>
+                            <a href="#contact" className="inline-flex items-center gap-2 text-white font-bold border-b border-secondary hover:text-secondary transition-colors pb-1">
+                                まずは無料相談から <ArrowRight size={18} />
+                            </a>
+                        </div>
+                        <div className="bg-white/10 rounded-2xl p-6 backdrop-blur-sm border border-white/10">
+                            <ul className="space-y-4">
+                                <li className="flex items-start gap-3">
+                                    <CheckCircle2 className="text-secondary shrink-0 mt-1" size={20} />
+                                    <span>遺品整理・生前整理</span>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <CheckCircle2 className="text-secondary shrink-0 mt-1" size={20} />
+                                    <span>孤独死・事故現場の特殊清掃</span>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <CheckCircle2 className="text-secondary shrink-0 mt-1" size={20} />
+                                    <span>ゴミ屋敷の片付け・消臭消毒</span>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <CheckCircle2 className="text-secondary shrink-0 mt-1" size={20} />
+                                    <span>仏壇のご供養・お焚き上げ代行</span>
+                                </li>
+                            </ul>
+                            <div className="mt-6 pt-4 border-t border-white/10 text-center">
+                                <span className="text-2xl font-bold">要お見積もり</span>
+                                <span className="text-sm text-slate-400 block mt-1">現地調査無料</span>
+                            </div>
+                        </div>
+                    </div>
+                </motion.div>
+
                 <div className="grid gap-6">
                     {categories.map((category, index) => (
                         <motion.div
@@ -94,14 +148,14 @@ const Services = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="bg-white border border-stone-100 rounded-2xl shadow-sm overflow-hidden"
+                            className="bg-white border border-stone-100 rounded-2xl shadow-sm overflow-hidden group hover:border-primary/20 transition-all"
                         >
                             <button
                                 onClick={() => toggleCategory(index)}
                                 className="w-full flex items-center justify-between p-6 md:p-8 hover:bg-stone-50 transition-colors text-left"
                             >
                                 <div className="flex items-center gap-6">
-                                    <div className={`hidden md:flex w-16 h-16 rounded-2xl ${category.bgColor} items-center justify-center ${category.color}`}>
+                                    <div className={`hidden md:flex w-16 h-16 rounded-2xl ${category.bgColor} items-center justify-center ${category.color} group-hover:scale-110 transition-transform duration-300`}>
                                         <category.icon size={32} />
                                     </div>
                                     <div>
