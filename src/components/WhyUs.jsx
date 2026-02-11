@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, Zap, Smile } from 'lucide-react';
-import honnin02 from '../assets/honnnin02.jpg'; // Import custom image
+import honnin04 from '../assets/honninn04.jpg'; // Import custom image
 
 const WhyUs = () => {
     const reasons = [
@@ -89,18 +89,15 @@ const WhyUs = () => {
                         transition={{ duration: 0.8 }}
                         className="order-1 lg:order-2 relative"
                     >
-                        {/* Main Image - Using honnin02 for specific request */}
+                        {/* Main Image - Using honninn04 for specific request */}
                         <div className="relative z-10 rounded-[2rem] overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500 border-4 border-white">
-                            <img src={honnin02} alt="Trustworthy Staff at work" className="w-full h-auto" />
+                            <img src={honnin04} alt="Representative Nomura" className="w-full h-auto" />
 
-                            {/* Overlay Card - Technique/Quality Focus */}
-                            <div className="absolute bottom-6 right-6 bg-white/95 backdrop-blur px-5 py-3 rounded-xl shadow-lg border border-slate-100 flex items-center gap-3">
-                                <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-primary">
-                                    <Zap size={20} className="fill-current" />
-                                </div>
+                            {/* Overlay Card - Reassurance */}
+                            <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur px-6 py-4 rounded-xl shadow-lg border border-slate-100 flex items-center gap-4 max-w-xs">
                                 <div className="flex flex-col">
-                                    <span className="text-xs font-bold text-slate-500">プロの技術</span>
-                                    <span className="text-sm font-extrabold text-slate-800">頑固な汚れも解決</span>
+                                    <span className="text-xs font-bold text-slate-500 mb-1">代表：野村 貴典</span>
+                                    <span className="text-lg font-extrabold text-primary">「私がお伺い致します」</span>
                                 </div>
                             </div>
                         </div>
