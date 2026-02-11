@@ -87,23 +87,30 @@ const WhyUs = () => {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="order-1 lg:order-2 relative"
+                        className="order-1 lg:order-2 flex flex-col items-center justify-center relative"
                     >
-                        {/* Main Image - Using honninn04 for specific request */}
-                        <div className="relative z-10 rounded-[2rem] overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500 border-4 border-white">
-                            <img src={honnin04} alt="Representative Nomura" className="w-full h-auto" />
+                        {/* Decorative Background for Profile */}
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-br from-green-50 to-blue-50 rounded-full blur-2xl -z-10"></div>
 
-                            {/* Overlay Card - Reassurance */}
-                            <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur px-6 py-4 rounded-xl shadow-lg border border-slate-100 flex items-center gap-4 max-w-xs">
-                                <div className="flex flex-col">
-                                    <span className="text-xs font-bold text-slate-500 mb-1">代表：野村 貴典</span>
-                                    <span className="text-lg font-extrabold text-primary">「私がお伺い致します」</span>
-                                </div>
-                            </div>
+                        {/* Profile Image Container - Circle with Border */}
+                        <div className="relative w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden shadow-2xl border-4 border-white mb-6">
+                            <img src={honnin04} alt="Representative Nomura" className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" />
                         </div>
 
-                        {/* Decorative Elements */}
-                        <div className="absolute -z-10 top-10 -right-10 w-full h-full bg-secondary/10 rounded-[2rem] -rotate-3"></div>
+                        {/* Text Card - Floating Effect */}
+                        <motion.div
+                            initial={{ y: 20, opacity: 0 }}
+                            whileInView={{ y: 0, opacity: 1 }}
+                            transition={{ delay: 0.3 }}
+                            className="bg-white/95 backdrop-blur px-8 py-4 rounded-2xl shadow-lg border border-slate-100 flex flex-col items-center text-center relative z-10 max-w-xs"
+                        >
+                            <span className="text-xs font-bold text-slate-500 mb-1 tracking-wider uppercase">Rep. Takanori Nomura</span>
+                            <h3 className="text-sm font-bold text-slate-700 mb-2">代表：野村 貴典</h3>
+                            <div className="w-8 h-1 bg-secondary rounded-full mb-3"></div>
+                            <p className="text-lg font-extrabold text-primary leading-tight">
+                                「私が責任を持って<br />お伺い致します」
+                            </p>
+                        </motion.div>
 
                     </motion.div>
 
