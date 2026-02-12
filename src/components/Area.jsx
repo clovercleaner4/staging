@@ -33,12 +33,7 @@ const Area = () => {
 
     return (
         <section id="area" className="py-20 bg-stone-50 relative overflow-hidden">
-            {/* Background Map Element (Abstract) */}
-            <div className="absolute bottom-0 left-0 right-0 h-[300px] md:inset-0 md:h-full opacity-5 pointer-events-none">
-                <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                    <path d="M0 100 C 20 0 50 0 100 100 Z" fill="currentColor" className="text-primary" />
-                </svg>
-            </div>
+
 
             <div className="container mx-auto px-4 relative z-10" ref={ref}>
                 <div className="text-center mb-16">
