@@ -35,7 +35,7 @@ const Header = () => {
                 <div className="flex items-center gap-4">
                     <a
                         href="#contact"
-                        className="hidden md:flex items-center gap-2 px-6 py-2.5 bg-secondary text-white rounded-full font-bold text-sm shadow-md hover:bg-secondary-light hover:shadow-lg transition-all transform hover:-translate-y-0.5"
+                        className="hidden md:flex items-center gap-2 px-6 py-2.5 bg-primary text-white rounded-full font-bold text-sm shadow-md hover:bg-primary-light hover:shadow-lg transition-all transform hover:-translate-y-0.5"
                     >
                         無料お見積り・ご相談
                     </a>

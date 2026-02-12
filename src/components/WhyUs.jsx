@@ -71,10 +71,7 @@ const WhyUs = () => {
                                 transition={{ delay: 0.6, duration: 0.6 }}
                                 className="mt-8 pt-8 border-t border-slate-200"
                             >
-                                <h4 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-2">保有資格</h4>
-                                <p className="text-sm font-bold text-slate-700 mb-4">
-                                    プロとして、以下の資格・許可を取得しています
-                                </p>
+                                <h4 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">保有資格</h4>
                                 <div className="flex flex-wrap gap-2">
                                     {["ビルクリーニング技能士", "建築物環境衛生管理技術者", "防犯設備士", "古物商"].map((qual, idx) => (
                                         <span key={idx} className="inline-flex items-center px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200">
