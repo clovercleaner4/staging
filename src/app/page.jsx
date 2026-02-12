@@ -12,6 +12,8 @@ const Area = dynamic(() => import('../components/Area'), { ssr: false });
 import Services from '../components/Services';
 import WhyUs from '../components/WhyUs';
 import InstagramFeed from '../components/InstagramFeed';
+import FAQ from '../components/FAQ';
+import CompanyProfile from '../components/CompanyProfile';
 
 import ScrollToTop from '../components/ScrollToTop';
 import FloatingCTA from '../components/FloatingCTA';
@@ -26,7 +28,10 @@ export default function Home() {
         <InstagramFeed />
         <Services />
         <WhyUs />
+        <WhyUs />
         <Testimonials />
+        <FAQ />
+        <CompanyProfile />
         <Contact />
       </div>
       <Footer />

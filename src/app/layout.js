@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "春日井市のエアコンクリーニング｜クローバークリーナー【女性スタッフ同行可】",
-  description: "春日井市・小牧市でエアコンクリーニングやキッチン清掃をお探しなら、クローバークリーナーへ。プロの技術と「顔が見える」安心感で、しつこい汚れも徹底洗浄。見積もり無料・最短即日対応も可能です。",
+  description: "春日井市を中心に、小牧・名古屋へ出張。夫婦で営む丁寧なお掃除屋です。エアコン、水回り、遺品整理まで対応。損害保険加入済み。",
 };
 
 export default function RootLayout({ children }) {

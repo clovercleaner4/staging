@@ -94,6 +94,7 @@ const Services = () => {
                 { name: '家具組み立て・移動', price: '3,000円〜 / 1時間' },
                 { name: '不用品回収', price: '要見積もり' },
                 { name: '電球交換', price: '1,000円〜 / 1箇所' },
+                { name: '網戸の張り替え', price: '3,000円〜 / 1枚' },
                 { name: '草むしり・剪定', price: '3,000円〜 / 1時間' },
                 { name: 'その他、「ちょっと手伝って」', price: '要相談' },
             ]
@@ -451,7 +452,7 @@ const Services = () => {
                         <p><span className="font-bold text-slate-800 block mb-1">駐車場代について</span> 駐車スペースがない場合は、付近のコインパーキング代を実費でご負担いただきます。</p>
                         <p><span className="font-bold text-slate-800 block mb-1">お支払い方法</span> 現金、またはPayPayがご利用いただけます。法人様は請求書払いも可能です（要相談）。</p>
                         <p><span className="font-bold text-slate-800 block mb-1">キャンセルについて</span> 作業前日17時までのご連絡でキャンセル料はかかりません。</p>
-                        <p><span className="font-bold text-slate-800 block mb-1">保険について</span> 万が一の破損等に備え、損害賠償保険に加入しております。安心してご依頼ください。</p>
+                        <p><span className="font-bold text-slate-800 block mb-1">保険について</span> 万が一の破損等に備え、三井住友海上 賠償責任保険に加入しております。安心してご依頼ください。</p>
                     </div>
                 </div>
 

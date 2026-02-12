@@ -20,6 +20,9 @@ const Footer = () => {
                         <div className="mt-4 text-sm text-slate-500 font-medium">
                             <p>〒486-0808</p>
                             <p>愛知県春日井市堀ノ内町北1-65</p>
+                            <p className="mt-2 text-xs text-slate-400">
+                                対応エリア：春日井市、小牧市、名古屋市（北区・守山区・名東区など）、多治見市、瀬戸市
+                            </p>
                         </div>
                     </div>
 
