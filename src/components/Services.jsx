@@ -156,11 +156,16 @@ const Services = () => {
 
                     <div className="p-6 md:p-10">
                         {/* 1. Strong Points */}
-                        <div className="grid md:grid-cols-3 gap-6 mb-8">
+                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                             <div className="bg-blue-50 p-6 rounded-2xl text-center">
                                 <span className="text-4xl mb-3 block">💧</span>
                                 <h4 className="font-bold text-slate-800 mb-2">高圧洗浄で徹底除去</h4>
                                 <p className="text-sm text-slate-600">市販のスプレーでは落ちない奥のカビまで洗い流します。</p>
+                            </div>
+                            <div className="bg-blue-50 p-6 rounded-2xl text-center">
+                                <span className="text-4xl mb-3 block">🌱</span>
+                                <h4 className="font-bold text-slate-800 mb-2">エコ洗剤で安心</h4>
+                                <p className="text-sm text-slate-600">哺乳瓶も洗える安全な洗剤を使用。ペットや赤ちゃんにも安心です。</p>
                             </div>
                             <div className="bg-blue-50 p-6 rounded-2xl text-center">
                                 <span className="text-4xl mb-3 block">🛡️</span>
@@ -296,7 +301,10 @@ const Services = () => {
                                 </div>
                                 <p className="font-bold text-slate-700 leading-relaxed text-sm md:text-base">
                                     衝撃の黒い水！<br />
-                                    <span className="text-slate-600 font-normal text-xs md:text-sm">これがカビや悪臭の正体です。<br className="md:hidden" />根こそぎ洗い流しました。</span>
+                                    <span className="text-slate-600 font-normal text-xs md:text-sm">
+                                        これがカビや悪臭の正体です。根こそぎ洗い流しました。<br />
+                                        <span className="font-bold text-red-600">喘息の原因や、最近何故か体調が優れない…その理由はここにあるかもしれません。</span>
+                                    </span>
                                 </p>
                             </div>
 
