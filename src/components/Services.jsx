@@ -279,31 +279,45 @@ const Services = () => {
                         </div>
 
                         {/* Photo Opportunities for User */}
-                        <div className="grid md:grid-cols-2 gap-4 mb-6">
-                            <div className="bg-slate-200 rounded-xl aspect-video flex items-center justify-center border-2 border-dashed border-red-400 relative overflow-hidden group hover:border-red-500 transition-colors p-6">
-                                <div className="text-center">
-                                    <p className="font-bold text-slate-700 mb-2 text-sm leading-relaxed">
-                                        ここに<br />
-                                        <span className="text-red-600 text-lg">【真っ黒な汚水のアップ】</span><br />
-                                        の写真（Before）
-                                    </p>
-                                    <p className="text-xs text-slate-600 bg-white/50 p-2 rounded inline-block">
-                                        なるべく<span className="font-bold text-red-600">明るい場所</span>で撮ってください！
-                                    </p>
+                        <div className="grid md:grid-cols-2 gap-6 mb-6">
+                            {/* Left: Dirty Water */}
+                            <div className="text-center">
+                                <div className="bg-slate-200 rounded-xl aspect-video flex items-center justify-center border-2 border-dashed border-slate-400 relative overflow-hidden mb-4">
+                                    <div className="text-center p-4">
+                                        <p className="font-bold text-slate-600 mb-1">
+                                            <span className="text-xl block mb-2">😱</span>
+                                            ここに<span className="font-bold text-slate-800">【真っ黒な汚水】</span><br />
+                                            の写真
+                                        </p>
+                                        <p className="text-[10px] text-slate-500 mt-2">
+                                            （明るい場所で撮影すると◎）
+                                        </p>
+                                    </div>
                                 </div>
+                                <p className="font-bold text-slate-700 leading-relaxed text-sm md:text-base">
+                                    衝撃の黒い水！<br />
+                                    <span className="text-slate-600 font-normal text-xs md:text-sm">これがカビや悪臭の正体です。<br className="md:hidden" />根こそぎ洗い流しました。</span>
+                                </p>
                             </div>
-                            <div className="bg-slate-200 rounded-xl aspect-video flex items-center justify-center border-2 border-dashed border-red-400 relative overflow-hidden group hover:border-red-500 transition-colors p-6">
-                                <div className="text-center">
-                                    <p className="font-bold text-slate-700 mb-2 text-sm leading-relaxed">
-                                        ここに<br />
-                                        <span className="text-red-600 text-lg">【洗浄後のピカピカな内部】</span><br />
-                                        の写真（After）
-                                    </p>
-                                    <p className="text-xs text-slate-600 bg-white/50 p-2 rounded inline-block">
-                                        アルミフィン（金属部分）や吹き出し口の<br /><span className="font-bold text-red-600">輝いている様子</span>を撮ってください！<br />
-                                        <span className="font-bold text-blue-600 mt-1 block">カビのニオイが消えただけでなく、風速も回復し節電にも繋がります。</span>
-                                    </p>
+
+                            {/* Right: Clean Parts */}
+                            <div className="text-center">
+                                <div className="bg-slate-200 rounded-xl aspect-video flex items-center justify-center border-2 border-dashed border-primary/50 relative overflow-hidden mb-4">
+                                    <div className="text-center p-4">
+                                        <p className="font-bold text-slate-600 mb-1">
+                                            <span className="text-xl block mb-2">✨</span>
+                                            ここに<span className="font-bold text-slate-800">【洗浄後の内部】</span><br />
+                                            の写真
+                                        </p>
+                                        <p className="text-[10px] text-slate-500 mt-2">
+                                            （輝きが伝わるように！）
+                                        </p>
+                                    </div>
                                 </div>
+                                <p className="font-bold text-primary leading-relaxed text-sm md:text-base">
+                                    新品のような輝き！<br />
+                                    <span className="text-slate-600 font-normal text-xs md:text-sm">風速も回復し、節電効果も期待できます。</span>
+                                </p>
                             </div>
                         </div>
 
