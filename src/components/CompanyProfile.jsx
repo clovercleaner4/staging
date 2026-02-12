@@ -7,7 +7,7 @@ const CompanyProfile = () => {
         <section className="py-16 bg-white border-t border-slate-100">
             <div className="container mx-auto px-4 max-w-4xl">
                 <div className="text-center mb-10">
-                    <span className="text-primary font-bold text-sm block mb-2 tracking-wider">dw</span>
+                    <span className="text-primary font-bold text-sm block mb-2 tracking-wider">COMPANY</span>
                     <h2 className="text-2xl md:text-3xl font-bold text-slate-800">
                         会社概要
                     </h2>
