@@ -300,7 +300,8 @@ const Services = () => {
                                         の写真（After）
                                     </p>
                                     <p className="text-xs text-slate-600 bg-white/50 p-2 rounded inline-block">
-                                        アルミフィン（金属部分）や吹き出し口の<br /><span className="font-bold text-red-600">輝いている様子</span>を撮ってください！
+                                        アルミフィン（金属部分）や吹き出し口の<br /><span className="font-bold text-red-600">輝いている様子</span>を撮ってください！<br />
+                                        <span className="font-bold text-blue-600 mt-1 block">カビのニオイが消えただけでなく、風速も回復し節電にも繋がります。</span>
                                     </p>
                                 </div>
                             </div>
@@ -445,16 +446,6 @@ const Services = () => {
                 </div>
 
 
-                {/* Additional Info Box */}
-                <div className="mt-20 bg-stone-100 rounded-2xl p-6 md:p-10">
-                    <h4 className="font-bold text-slate-700 mb-6 border-b border-stone-300 pb-2 inline-block">ご利用案内</h4>
-                    <div className="grid md:grid-cols-2 gap-y-4 gap-x-12 text-sm md:text-base text-slate-600">
-                        <p><span className="font-bold text-slate-800 block mb-1">駐車場代について</span> 駐車スペースがない場合は、付近のコインパーキング代を実費でご負担いただきます。</p>
-                        <p><span className="font-bold text-slate-800 block mb-1">お支払い方法</span> 現金、またはPayPayがご利用いただけます。法人様は請求書払いも可能です（要相談）。</p>
-                        <p><span className="font-bold text-slate-800 block mb-1">キャンセルについて</span> 作業前日17時までのご連絡でキャンセル料はかかりません。</p>
-                        <p><span className="font-bold text-slate-800 block mb-1">保険について</span> 万が一の破損等に備え、三井住友海上 賠償責任保険に加入しております。安心してご依頼ください。</p>
-                    </div>
-                </div>
 
                 <div className="mt-16 text-center">
                     <p className="text-slate-600 mb-6 font-medium text-lg">メニューにない作業もお気軽にご相談ください</p>

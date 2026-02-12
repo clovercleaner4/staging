@@ -28,7 +28,6 @@ export default function Home() {
         <InstagramFeed />
         <Services />
         <WhyUs />
-        <WhyUs />
         <Testimonials />
         <FAQ />
         <CompanyProfile />
