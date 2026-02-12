@@ -15,7 +15,7 @@ const Footer = () => {
                             <span className="text-xl font-bold text-white tracking-tight">Clover Cleaner</span>
                         </div>
                         <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
-                            「家の困りごとなら、なんでも解決」をモットーに、プロの技術と親切な対応をお届けします。
+                            「エアコン・水回りの汚れ、プロの技術で徹底洗浄。」
                         </p>
                         <div className="mt-4 text-sm text-slate-500 font-medium">
                             <p>〒486-0808</p>
@@ -52,7 +52,7 @@ const Footer = () => {
                     <p>&copy; 2026 Clover Cleaner. All rights reserved.</p>
                 </div>
             </div>
-        </footer>
+        </footer >
     );
 };
 

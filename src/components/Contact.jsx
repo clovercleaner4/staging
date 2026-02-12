@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Mail, ArrowRight, MessageCircle, CheckCircle, AlertCircle } from 'lucide-react';
+import { Mail, ArrowRight, MessageCircle, CheckCircle, AlertCircle, Building2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import cleanLivingRoom from '../assets/clean_living_room.png';
 
@@ -115,6 +115,13 @@ const Contact = () => {
 
                     {/* Right: Simple Form */}
                     <div className="md:w-1/2 p-12 bg-white">
+                        <div className="mb-6 bg-blue-50 border border-blue-100 p-4 rounded-xl">
+                            <p className="text-sm text-blue-800 font-bold flex items-center gap-2">
+                                <Building2 size={18} />
+                                法人・店舗様は、以下のフォームより詳細をお送りください
+                            </p>
+                        </div>
+
                         <h3 className="text-xl font-bold text-slate-800 mb-6 flex items-center gap-2">
                             <Mail className="text-secondary" />
                             Webからのお問い合わせ

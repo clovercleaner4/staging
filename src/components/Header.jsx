@@ -37,8 +37,7 @@ const Header = () => {
                         href="#contact"
                         className="hidden md:flex items-center gap-2 px-6 py-2.5 bg-secondary text-white rounded-full font-bold text-sm shadow-md hover:bg-secondary-light hover:shadow-lg transition-all transform hover:-translate-y-0.5"
                     >
-                        <Mail size={18} className="fill-current" />
-                        お問い合わせ
+                        無料お見積り・ご相談
                     </a>
 
                     {/* Mobile Menu Button */}
@@ -67,8 +66,7 @@ const Header = () => {
                             <a href="#why-us" className="text-slate-700 font-bold py-3 px-4 hover:bg-slate-50 rounded-lg transition-colors" onClick={() => setIsMobileMenuOpen(false)}>こだわり</a>
                             <div className="pt-2">
                                 <a href="#contact" className="flex items-center justify-center gap-2 w-full py-4 bg-secondary text-white rounded-xl font-bold text-lg shadow-md" onClick={() => setIsMobileMenuOpen(false)}>
-                                    <Mail size={20} className="fill-current" />
-                                    お問い合わせ
+                                    無料お見積り・ご相談
                                 </a>
                             </div>
                         </div>

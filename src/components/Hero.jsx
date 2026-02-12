@@ -43,7 +43,7 @@ const Hero = () => {
                             {/* CTA Buttons */}
                             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
                                 <a href="#contact" className="inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:bg-primary-dark transition-all transform hover:-translate-y-1">
-                                    無料お見積もり
+                                    無料お見積り・ご相談
                                 </a>
                                 <a href="#services" className="inline-flex items-center justify-center gap-2 bg-white text-slate-700 border-2 border-slate-200 px-8 py-4 rounded-full font-bold text-lg hover:border-primary hover:text-primary transition-all">
                                     サービス一覧
