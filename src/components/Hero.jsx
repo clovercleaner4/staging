@@ -1,8 +1,9 @@
 'use client';
 import React from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Phone, CheckCircle, Star, ShieldCheck } from 'lucide-react';
-import cleanRoom from '../assets/clean_living_room.png';
+import honnin04 from '../assets/honninn04.jpg';
 
 const Hero = () => {
     return (
@@ -12,7 +13,7 @@ const Hero = () => {
                 <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16">
 
                     {/* Content Side (Left on Desktop, Bottom on Mobile) */}
-                    <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left z-10">
+                    <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left z-10 lg:pl-12 xl:pl-20">
 
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -21,82 +22,78 @@ const Hero = () => {
                         >
                             {/* Brand Tagline */}
                             <div className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full bg-green-100 text-green-800 font-bold border border-green-200">
-                                <CheckCircle size={18} className="fill-current text-green-600" />
-                                <span className="tracking-wide text-sm md:text-base">春日井市のお困りごと解決隊</span>
+                                <span className="tracking-wide text-sm md:text-base">名古屋・近隣エリア相談可</span>
                             </div>
 
                             {/* Main Headline */}
-                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-800 mb-6 leading-[1.2] tracking-tight">
-                                家の<span className="text-secondary relative inline-block">
-                                    困りごと
-                                    <span className="absolute bottom-1 left-0 w-full h-3 bg-secondary/20 -z-10 rounded-sm"></span>
-                                </span>なら、<br />
-                                なんでも解決。
+                            <h1 className="text-3xl md:text-5xl lg:text-5xl font-extrabold text-slate-800 mb-6 leading-[1.4] tracking-tight">
+                                エアコン・水回りの<span className="text-primary relative inline-block">
+                                    汚れ
+                                    <span className="absolute bottom-1 left-0 w-full h-3 bg-primary/20 -z-10 rounded-sm"></span>
+                                </span>、<br />
+                                プロの技術で徹底洗浄。
                             </h1>
 
                             {/* Subtext */}
-                            <p className="text-slate-600 mb-8 text-lg md:text-xl font-medium leading-relaxed max-w-lg mx-auto lg:mx-0">
-                                エアコン・水回りのお掃除から、<br />
-                                <span className="text-slate-800 font-bold">遺品整理・特殊清掃</span>まで。<br />
-                                <span className="font-bold text-slate-800">春日井市からおよそ30km圏内</span>。<br />
-                                まずはお気軽にご相談ください。<br />
-                                <span className="text-sm text-slate-500 mt-2 block">※掃除以外のお困りごとも、便利屋として柔軟に対応します！</span>
+                            <p className="text-slate-600 mb-8 text-base md:text-xl font-medium leading-relaxed max-w-lg mx-auto lg:mx-0">
+                                お掃除から、プチ修繕・遺品整理まで。<br />
+                                フットワーク軽く対応いたします。
                             </p>
 
                             {/* CTA Buttons */}
-                            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center w-full">
-                                <a
-                                    href="#services"
-                                    className="px-8 py-4 bg-secondary hover:bg-secondary-light text-white rounded-full font-bold text-lg shadow-xl shadow-secondary/30 transition-all hover:-translate-y-1 active:translate-y-0 w-full sm:w-auto flex items-center justify-center gap-3"
-                                >
-                                    <Star size={22} />
-                                    サービス・料金を見る
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
+                                <a href="#contact" className="inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:bg-primary-dark transition-all transform hover:-translate-y-1">
+                                    無料お見積もり
+                                </a>
+                                <a href="#services" className="inline-flex items-center justify-center gap-2 bg-white text-slate-700 border-2 border-slate-200 px-8 py-4 rounded-full font-bold text-lg hover:border-primary hover:text-primary transition-all">
+                                    サービス一覧
                                 </a>
                             </div>
 
-                            {/* Trust Indicators */}
-                            <div className="mt-8 flex flex-wrap justify-center lg:justify-start gap-4 md:gap-8 text-sm text-slate-500 font-bold">
-                                <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm border border-stone-100">
-                                    <Star size={18} className="text-yellow-400 fill-current" />
-                                    <span>見積もり無料</span>
+                            {/* Trust Badges */}
+                            <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8 lg:mb-0">
+                                <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100">
+                                    <CheckCircle className="text-green-500" size={18} />
+                                    <span className="text-sm font-bold text-slate-600">損害保険加入済</span>
                                 </div>
-                                <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm border border-stone-100">
-                                    <ShieldCheck size={18} className="text-green-500" />
-                                    <span>損害保険加入済</span>
+                                <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100">
+                                    <Star className="text-yellow-400" size={18} />
+                                    <span className="text-sm font-bold text-slate-600">口コミ高評価</span>
                                 </div>
                             </div>
-
                         </motion.div>
                     </div>
 
                     {/* Image Side (Right on Desktop, Top on Mobile) */}
                     <div className="w-full lg:w-1/2 relative z-0">
+                        {/* Right Content - Hero Image */}
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            animate={{ opacity: 1, scale: 1 }}
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            className="relative"
+                            className="relative w-full max-w-lg mx-auto lg:max-w-none lg:mx-0"
                         >
-                            {/* Blob Background Effect */}
-                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-green-100 to-blue-100 rounded-full blur-3xl opacity-60 -z-10" />
+                            {/* Decorative Background for Profile */}
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-96 bg-gradient-to-br from-green-50 to-blue-50 rounded-3xl blur-2xl -z-10"></div>
 
                             {/* Image Container with Mask/Shape */}
-                            <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white transform rotate-1 hover:rotate-0 transition-transform duration-500">
-                                <img
-                                    src={cleanRoom}
-                                    alt="Clean Living Room"
-                                    className="w-full h-auto object-cover object-center"
+                            <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white transform rotate-1 hover:rotate-0 transition-transform duration-500 aspect-square max-w-md mx-auto">
+                                <Image
+                                    src={honnin04}
+                                    alt="代表：野村貴典"
+                                    fill
+                                    className="object-cover object-top"
+                                    priority
                                 />
 
-                                {/* Floating Badge on Image */}
-                                <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur px-5 py-3 rounded-2xl shadow-lg border border-white/50 flex items-center gap-3">
-                                    <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-2xl">
-                                        ✨
-                                    </div>
-                                    <div className="flex flex-col">
-                                        <span className="text-xs font-bold text-slate-500">プロの仕上がり</span>
-                                        <span className="text-sm font-extrabold text-slate-800">清潔な空間をお届け</span>
-                                    </div>
+                                {/* Floating Badge on Image - Expanded for Couple Info */}
+                                <div className="absolute bottom-3 left-3 right-3 bg-white/90 backdrop-blur-md p-3 rounded-xl shadow-xl border border-white/50 flex flex-col gap-1">
+                                    <h3 className="font-bold text-slate-800 text-xs md:text-sm border-b border-slate-200 pb-1 mb-0.5">
+                                        夫婦で営む、地域密着のお掃除屋さん
+                                    </h3>
+                                    <p className="text-[10px] md:text-xs text-slate-600 leading-normal font-medium">
+                                        春日井で夫婦で活動するアットホームなお店です。大手にはない<br className="md:hidden" />家族のような親しみやすさと責任感で、丁寧に作業します。
+                                    </p>
                                 </div>
                             </div>
                         </motion.div>

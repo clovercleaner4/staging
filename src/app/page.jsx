@@ -13,6 +13,9 @@ import Services from '../components/Services';
 import WhyUs from '../components/WhyUs';
 import InstagramFeed from '../components/InstagramFeed';
 
+import ScrollToTop from '../components/ScrollToTop';
+import FloatingCTA from '../components/FloatingCTA';
+
 export default function Home() {
   return (
     <div className="bg-white min-h-screen">
@@ -27,6 +30,8 @@ export default function Home() {
         <Contact />
       </div>
       <Footer />
+      <FloatingCTA />
+      <ScrollToTop />
     </div>
   );
 }

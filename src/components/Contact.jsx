@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { Mail, ArrowRight, MessageCircle, CheckCircle, AlertCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import cleanLivingRoom from '../assets/clean_living_room.png';
@@ -84,7 +85,7 @@ const Contact = () => {
                     {/* Left: Contact Info & Image */}
                     <div className="md:w-1/2 relative bg-primary-dark text-white p-12 flex flex-col justify-between overflow-hidden">
                         <div className="absolute inset-0 opacity-20 mix-blend-overlay">
-                            <img src={cleanLivingRoom} alt="Clean Living Room" className="w-full h-full object-cover" />
+                            <Image src={cleanLivingRoom} alt="Clean Living Room" className="w-full h-full object-cover" />
                         </div>
                         <div className="relative z-10">
                             <span className="text-white/80 font-bold tracking-wider uppercase mb-2 block">Contact Us</span>
@@ -109,9 +110,7 @@ const Contact = () => {
                             </div>
                         </div>
 
-                        <div className="relative z-10 mt-8">
-                            <p className="text-xs text-white/60">春日井市・小牧市・名古屋市守山区周辺</p>
-                        </div>
+                        {/* Area text removed */}
                     </div>
 
                     {/* Right: Simple Form */}

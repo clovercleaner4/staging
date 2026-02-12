@@ -40,11 +40,12 @@ const Services = () => {
             merit: '除菌・消臭・素材を傷つけないプロの洗浄',
             items: [
                 { name: 'キッチン（換気扇・レンジフード除く）', price: '15,000円〜' },
+                { name: 'キッチン・換気扇セット', price: '25,000円〜' },
                 { name: 'レンジフード（換気扇）', price: '13,000円〜' },
-                { name: '浴室（バスルーム）', price: '16,000円〜' },
+                { name: '浴室クリーニング', price: '15,000円〜' },
+                { name: 'トイレ清掃', price: '8,000円〜' },
                 { name: '洗面所', price: '8,000円〜' },
-                { name: 'トイレ', price: '8,000円〜' },
-                { name: '水回り数点セット（お得です）', price: '要見積もり' },
+                { name: '※セットで頼むとお得です！ご相談ください。', price: '' },
             ]
         },
         {
@@ -133,7 +134,6 @@ const Services = () => {
         <section id="services" className="py-20 bg-white">
             <div className="container mx-auto px-4 max-w-6xl">
 
-                {/* Section Header */}
                 <div className="text-center mb-16">
                     <span className="text-primary font-bold text-sm block mb-2 tracking-wider">SERVICE MENU</span>
                     <h2 className="text-3xl md:text-5xl font-extrabold text-slate-800 mb-6">
@@ -143,6 +143,174 @@ const Services = () => {
                         個人のお客様から法人・店舗様まで。<br />
                         明確な料金とプロの技術で、あらゆる「キレイ」と「解決」をお届けします。
                     </p>
+                </div>
+
+                {/* --- FEATURED SERVICE: AIR CONDITIONER --- */}
+                <div className="bg-white rounded-3xl shadow-xl border border-blue-100 overflow-hidden mb-24 relative">
+                    <div className="bg-blue-600 text-white p-6 md:p-8 text-center relative overflow-hidden">
+                        <div className="absolute top-0 left-0 w-full h-full bg-blue-500 opacity-50 pattern-grid-lg"></div>
+                        <h3 className="text-2xl md:text-4xl font-extrabold relative z-10 mb-2">エアコンクリーニング</h3>
+                        <p className="text-blue-100 font-bold relative z-10">春日井市内で年間実績多数！<br className="md:hidden" />カビとニオイを徹底除去</p>
+                    </div>
+
+                    <div className="p-6 md:p-10">
+                        {/* 1. Strong Points */}
+                        <div className="grid md:grid-cols-3 gap-6 mb-8">
+                            <div className="bg-blue-50 p-6 rounded-2xl text-center">
+                                <span className="text-4xl mb-3 block">💧</span>
+                                <h4 className="font-bold text-slate-800 mb-2">高圧洗浄で徹底除去</h4>
+                                <p className="text-sm text-slate-600">市販のスプレーでは落ちない奥のカビまで洗い流します。</p>
+                            </div>
+                            <div className="bg-blue-50 p-6 rounded-2xl text-center">
+                                <span className="text-4xl mb-3 block">🛡️</span>
+                                <h4 className="font-bold text-slate-800 mb-2">防カビコート無料</h4>
+                                <p className="text-sm text-slate-600">キレイな状態を長持ちさせるコーティングを標準仕上げとしています。</p>
+                            </div>
+                            <div className="bg-blue-50 p-6 rounded-2xl text-center">
+                                <span className="text-4xl mb-3 block">🚚</span>
+                                <h4 className="font-bold text-slate-800 mb-2">出張費無料（半径30km）</h4>
+                                <p className="text-sm text-slate-600">拠点（春日井）から30km圏内は無料！その他のエリアもお気軽にご相談ください。</p>
+                            </div>
+                        </div>
+
+                        {/* Season Tip */}
+                        <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 flex items-start gap-3">
+                            <div className="bg-amber-100 p-2 rounded-full shrink-0 text-amber-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><line x1="12" x2="12" y1="8" y2="12" /><line x1="12" x2="12.01" y1="16" y2="16" /></svg>
+                            </div>
+                            <div>
+                                <h5 className="font-bold text-amber-800 mb-1">エアコン掃除は「春（2月〜4月）」がチャンス！</h5>
+                                <p className="text-sm text-amber-700 leading-relaxed">
+                                    夏本番（5月以降）は予約が殺到します。<br className="hidden md:block" />
+                                    <strong>今の時期</strong>なら希望日で予約が取りやすく、本格的な暑さが来る前にカビをリセットできるベストシーズンです。
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* 2. Pricing */}
+                        <div className="mb-10">
+                            <h4 className="text-xl font-bold text-slate-800 border-l-4 border-blue-500 pl-4 mb-6">料金表（税込）</h4>
+                            <div className="overflow-x-auto">
+                                <table className="w-full text-left border-collapse">
+                                    <thead>
+                                        <tr className="bg-slate-50 border-b border-slate-200 text-slate-500 text-sm">
+                                            <th className="p-4 font-medium">タイプ</th>
+                                            <th className="p-4 font-medium">料金目安</th>
+                                            <th className="p-4 font-medium">作業時間</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="text-slate-700">
+                                        <tr className="border-b border-stone-100">
+                                            <td className="p-4 font-bold">通常壁掛けタイプ（お掃除機能なし）</td>
+                                            <td className="p-4 font-bold text-blue-600 text-lg">12,000円〜</td>
+                                            <td className="p-4 text-sm">約90分</td>
+                                        </tr>
+                                        <tr className="border-b border-stone-100">
+                                            <td className="p-4 font-bold">お掃除機能付きタイプ</td>
+                                            <td className="p-4 font-bold text-blue-600 text-lg">18,000円〜</td>
+                                            <td className="p-4 text-sm">約120分〜</td>
+                                        </tr>
+                                        <tr className="border-b border-stone-100">
+                                            <td className="p-4 font-bold">天井埋め込みタイプ</td>
+                                            <td className="p-4 font-bold text-blue-600 text-lg">25,000円〜</td>
+                                            <td className="p-4 text-sm">約150分〜</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="p-4 font-bold">室外機洗浄</td>
+                                            <td className="p-4 font-bold text-slate-600">3,000円 / 台</td>
+                                            <td className="p-4 text-sm">約15分</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p className="text-xs text-slate-400 mt-2">※汚れ具合や設置状況により、作業時間は前後する場合がございます。</p>
+                        </div>
+
+                        {/* 3. Process Flow */}
+                        <div>
+                            <h4 className="text-xl font-bold text-slate-800 border-l-4 border-blue-500 pl-4 mb-6">作業の流れ</h4>
+                            <div className="grid md:grid-cols-4 gap-4">
+                                <div className="text-center">
+                                    <div className="bg-slate-100 rounded-xl aspect-video mb-3 flex items-center justify-center p-2 border-2 border-dashed border-slate-300">
+                                        <p className="font-bold text-slate-500 text-[10px] leading-tight">
+                                            ここに<br />
+                                            <span className="text-red-500 text-xs">【養生・分解中】</span><br />
+                                            の写真
+                                        </p>
+                                    </div>
+                                    <p className="font-bold text-slate-700 mb-1">1. 養生・分解</p>
+                                    <p className="text-xs text-slate-500">周りを汚さないようしっかり保護し、カバーを外します。</p>
+                                </div>
+                                <div className="text-center">
+                                    <div className="bg-slate-100 rounded-xl aspect-video mb-3 flex items-center justify-center p-2 border-2 border-dashed border-slate-300">
+                                        <p className="font-bold text-slate-500 text-[10px] leading-tight">
+                                            ここに<br />
+                                            <span className="text-red-500 text-xs">【高圧洗浄中】</span><br />
+                                            の写真
+                                        </p>
+                                    </div>
+                                    <p className="font-bold text-slate-700 mb-1">2. 高圧洗浄</p>
+                                    <p className="text-xs text-slate-500">専用の洗剤と高圧洗浄機で、内部の汚れを一気に洗い流します。</p>
+                                </div>
+                                <div className="text-center">
+                                    <div className="bg-slate-100 rounded-xl aspect-video mb-3 flex items-center justify-center p-2 border-2 border-dashed border-slate-300">
+                                        <p className="font-bold text-slate-500 text-[10px] leading-tight">
+                                            ここに<br />
+                                            <span className="text-red-500 text-xs">【パーツ洗浄中】</span><br />
+                                            の写真
+                                        </p>
+                                    </div>
+                                    <p className="font-bold text-slate-700 mb-1">3. パーツ洗浄</p>
+                                    <p className="text-xs text-slate-500">外したカバーなどのパーツも、浴室や外の洗い場をお借りしてきれいに洗います。</p>
+                                </div>
+                                <div className="text-center">
+                                    <div className="bg-slate-100 rounded-xl aspect-video mb-3 flex items-center justify-center p-2 border-2 border-dashed border-slate-300">
+                                        <p className="font-bold text-slate-500 text-[10px] leading-tight">
+                                            ここに<br />
+                                            <span className="text-red-500 text-xs">【防カビコーティング中】</span><br />
+                                            の写真
+                                        </p>
+                                    </div>
+                                    <p className="font-bold text-slate-700 mb-1">4. 防カビ・組立</p>
+                                    <p className="text-xs text-slate-500">仕上げに防カビコート（無料）を行い、元通りに組み立てます。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Photo Opportunities for User */}
+                        <div className="grid md:grid-cols-2 gap-4 mb-6">
+                            <div className="bg-slate-200 rounded-xl aspect-video flex items-center justify-center border-2 border-dashed border-red-400 relative overflow-hidden group hover:border-red-500 transition-colors p-6">
+                                <div className="text-center">
+                                    <p className="font-bold text-slate-700 mb-2 text-sm leading-relaxed">
+                                        ここに<br />
+                                        <span className="text-red-600 text-lg">【真っ黒な汚水のアップ】</span><br />
+                                        の写真（Before）
+                                    </p>
+                                    <p className="text-xs text-slate-600 bg-white/50 p-2 rounded inline-block">
+                                        なるべく<span className="font-bold text-red-600">明るい場所</span>で撮ってください！
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="bg-slate-200 rounded-xl aspect-video flex items-center justify-center border-2 border-dashed border-red-400 relative overflow-hidden group hover:border-red-500 transition-colors p-6">
+                                <div className="text-center">
+                                    <p className="font-bold text-slate-700 mb-2 text-sm leading-relaxed">
+                                        ここに<br />
+                                        <span className="text-red-600 text-lg">【洗浄後のピカピカな内部】</span><br />
+                                        の写真（After）
+                                    </p>
+                                    <p className="text-xs text-slate-600 bg-white/50 p-2 rounded inline-block">
+                                        アルミフィン（金属部分）や吹き出し口の<br /><span className="font-bold text-red-600">輝いている様子</span>を撮ってください！
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div className="bg-blue-50 p-4 text-center border-t border-blue-100">
+                        <p className="text-blue-800 font-bold text-sm md:text-base">
+                            「もっと早く頼めばよかった！」<br className="md:hidden" />そんな感動をお届けします。
+                        </p>
+                    </div>
                 </div>
 
                 {/* --- INDIVIDUAL SERVICES --- */}
@@ -293,7 +461,6 @@ const Services = () => {
                         href="#contact"
                         className="inline-flex items-center gap-3 px-10 py-5 bg-primary text-white rounded-full font-bold text-xl shadow-xl shadow-primary/30 hover:bg-primary-light transition-all transform hover:-translate-y-1"
                     >
-                        <Phone size={24} className="fill-current" />
                         無料お見積もり・ご相談
                     </a>
                 </div>

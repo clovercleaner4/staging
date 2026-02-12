@@ -41,7 +41,7 @@ const Testimonials = () => {
                         お客様からの<span className="text-primary">嬉しいお言葉</span>
                     </h2>
                     <p className="text-slate-500 mt-4 max-w-2xl mx-auto">
-                        春日井・小牧エリアのお客様からたくさんの「ありがとう」をいただいています。
+                        お客様からたくさんの「ありがとう」をいただいています。
                     </p>
                 </div>
 

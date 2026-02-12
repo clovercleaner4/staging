@@ -1,31 +1,32 @@
 'use client';
 import React from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Users, Zap, Smile } from 'lucide-react';
-import honnin04 from '../assets/honninn04.jpg'; // Import custom image
+import representative from '../assets/representative.jpg'; // Import custom image
 
 const WhyUs = () => {
     const reasons = [
         {
             icon: Users,
-            title: "顔が見えるお付き合い",
-            text: "担当スタッフが責任を持って対応します。「野村さん、いつもありがとう」と言っていただける関係を目指しています。"
+            title: "夫婦で営む安心感",
+            text: "「知らない男性を家に入れるのは不安…」という方もご安心ください。女性スタッフ（妻）の同行も可能ですので、女性の一人暮らしでも気軽に頼んでいただけます。"
         },
         {
             icon: Zap,
             title: "プロならではの仕上がり",
-            text: "家庭用洗剤では落ちない汚れも、業務用の機材とノウハウで徹底的にキレイにします。"
+            text: "家庭用洗剤では落ちない汚れも、業務用の機材とノウハウで徹底的にキレイにします。春日井の水回り・エアコンはお任せを。"
         },
         {
             icon: Smile,
             title: "気持ちのよい挨拶とマナー",
-            text: "清掃技術だけでなく、挨拶や身だしなみも大切にしています。安心して任せていただけるスタッフがお伺いします。"
+            text: "清掃技術だけでなく、挨拶や身だしなみも大切にしています。地元・春日井の皆様に安心して任せていただけるスタッフがお伺いします。"
         }
     ];
 
     return (
         <section id="why-us" className="py-24 bg-sky-50 relative overflow-hidden">
-            <div className="container mx-auto px-4 relative z-10">
+            <div className="container mx-auto px-4 lg:pl-16 relative z-10">
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
                     <motion.div
@@ -91,11 +92,11 @@ const WhyUs = () => {
                         className="order-1 lg:order-2 flex flex-col items-center justify-center relative"
                     >
                         {/* Decorative Background for Profile */}
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-br from-green-50 to-blue-50 rounded-full blur-2xl -z-10"></div>
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-96 bg-gradient-to-br from-green-50 to-blue-50 rounded-3xl blur-2xl -z-10"></div>
 
-                        {/* Profile Image Container - Circle with Border */}
-                        <div className="relative w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden shadow-2xl border-4 border-white mb-6">
-                            <img src={honnin04} alt="Representative Nomura" className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" />
+                        {/* Profile Image Container - Rounded Rectangle */}
+                        <div className="relative w-72 h-[26rem] md:w-80 md:h-[28rem] rounded-3xl overflow-hidden shadow-2xl border-4 border-white mb-6">
+                            <Image src={representative} alt="Representative Nomura" className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" />
                         </div>
 
                         {/* Text Card - Floating Effect */}
@@ -105,11 +106,10 @@ const WhyUs = () => {
                             transition={{ delay: 0.3 }}
                             className="bg-white/95 backdrop-blur px-8 py-4 rounded-2xl shadow-lg border border-slate-100 flex flex-col items-center text-center relative z-10 max-w-xs"
                         >
-                            <span className="text-xs font-bold text-slate-500 mb-1 tracking-wider uppercase">Rep. Takanori Nomura</span>
-                            <h3 className="text-sm font-bold text-slate-700 mb-2">代表：野村 貴典</h3>
+                            <h3 className="text-sm font-bold text-slate-700 mb-2 mt-1">代表：野村 貴典</h3>
                             <div className="w-8 h-1 bg-secondary rounded-full mb-3"></div>
-                            <p className="text-lg font-extrabold text-primary leading-tight">
-                                「私が責任を持って<br />お伺い致します」
+                            <p className="text-base font-bold text-slate-600 leading-relaxed">
+                                ひと仕事、ひと手間を<br />大切にします。
                             </p>
                         </motion.div>
 
