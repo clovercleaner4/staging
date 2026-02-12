@@ -22,7 +22,7 @@ const CompanyProfile = () => {
                             </tr>
                             <tr className="border-b border-slate-100">
                                 <th className="bg-slate-50 py-4 px-6 font-bold text-slate-600">代表者</th>
-                                <td className="py-4 px-6 text-slate-800">代表スタッフ</td>
+                                <td className="py-4 px-6 text-slate-800">野村 貴典</td>
                             </tr>
                             <tr className="border-b border-slate-100">
                                 <th className="bg-slate-50 py-4 px-6 font-bold text-slate-600">所在地</th>
