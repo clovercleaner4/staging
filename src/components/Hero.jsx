@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Phone, CheckCircle, Star, ShieldCheck } from 'lucide-react';
-import topImage from '../assets/top.jpg';
+import topImage from '../assets/top2.png';
 
 const Hero = () => {
     return (
