@@ -28,31 +28,46 @@ const Contact = () => {
 
         const form = e.target;
         const data = new FormData(form);
-        const payload = {
+
+        // 1. Prepare StaticForms Payload
+        const staticFormsPayload = {
             accessKey: 'sf_2f76059311430f0k7bhngcna',
             subject: '【クローバークリーナー】ウェブサイトからのお問い合わせ',
             name: data.get('name'),
             email: data.get('email'),
             message: data.get('message'),
-            replyTo: '@', // Default to email field
+            replyTo: '@',
             honeypot: data.get('honeypot')
         };
 
-        // StaticForms specific: use email as replyTo
-        if (payload.email) {
-            payload.replyTo = payload.email;
+        if (staticFormsPayload.email) {
+            staticFormsPayload.replyTo = staticFormsPayload.email;
         }
 
-        try {
-            const response = await fetch('https://api.staticforms.xyz/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(payload),
-            });
+        // 2. Prepare GAS Payload
+        const gasUrl = 'https://script.google.com/macros/s/AKfycbwQK4sZm3ctXWcLUyaKb0OXAgXyn2Dx5tjT_fTMJv16pZYhDULsRIks6TAlB44P3Xkn/exec';
+        const gasFormData = new FormData();
+        gasFormData.append('name', data.get('name'));
+        gasFormData.append('email', data.get('email'));
+        gasFormData.append('message', data.get('message'));
 
-            const result = await response.json();
+        try {
+            // Execute both requests in parallel
+            // Note: GAS request is 'no-cors', so we can't read the response, but we await it to ensure it's sent.
+            const [staticFormsResponse, _gasResponse] = await Promise.all([
+                fetch('https://api.staticforms.xyz/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(staticFormsPayload),
+                }),
+                fetch(gasUrl, {
+                    method: 'POST',
+                    mode: 'no-cors', // Required for Google Apps Script Web App
+                    body: gasFormData,
+                }).catch(err => console.error('GAS submission failed', err)) // Catch GAS errors silently so email still sends
+            ]);
+
+            const result = await staticFormsResponse.json();
 
             if (result.success) {
                 setStatus('success');
@@ -64,6 +79,7 @@ const Contact = () => {
                 setFeedbackMessage('送信に失敗しました。もう一度お試しください。');
             }
         } catch (error) {
+            console.error('Submission error:', error);
             setStatus('error');
             setFeedbackMessage('送信に失敗しました。インターネット接続を確認してください。');
         }
