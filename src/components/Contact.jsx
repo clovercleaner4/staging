@@ -29,22 +29,7 @@ const Contact = () => {
         const form = e.target;
         const data = new FormData(form);
 
-        // 1. Prepare StaticForms Payload
-        const staticFormsPayload = {
-            accessKey: 'sf_2f76059311430f0k7bhngcna',
-            subject: '【クローバークリーナー】ウェブサイトからのお問い合わせ',
-            name: data.get('name'),
-            email: data.get('email'),
-            message: data.get('message'),
-            replyTo: '@',
-            honeypot: data.get('honeypot')
-        };
-
-        if (staticFormsPayload.email) {
-            staticFormsPayload.replyTo = staticFormsPayload.email;
-        }
-
-        // 2. Prepare GAS Payload
+        // GAS Payload
         const gasUrl = 'https://script.google.com/macros/s/AKfycbwQK4sZm3ctXWcLUyaKb0OXAgXyn2Dx5tjT_fTMJv16pZYhDULsRIks6TAlB44P3Xkn/exec';
         const gasFormData = new FormData();
         gasFormData.append('name', data.get('name'));
@@ -52,32 +37,21 @@ const Contact = () => {
         gasFormData.append('message', data.get('message'));
 
         try {
-            // Execute both requests in parallel
-            // Note: GAS request is 'no-cors', so we can't read the response, but we await it to ensure it's sent.
-            const [staticFormsResponse, _gasResponse] = await Promise.all([
-                fetch('https://api.staticforms.xyz/submit', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(staticFormsPayload),
-                }),
-                fetch(gasUrl, {
-                    method: 'POST',
-                    mode: 'no-cors', // Required for Google Apps Script Web App
-                    body: gasFormData,
-                }).catch(err => console.error('GAS submission failed', err)) // Catch GAS errors silently so email still sends
-            ]);
+            // Execute GAS request
+            // Note: GAS request is 'no-cors', so we can't read the response.
+            // We assume success if no network error is thrown.
+            await fetch(gasUrl, {
+                method: 'POST',
+                mode: 'no-cors', // Required for Google Apps Script Web App
+                body: gasFormData,
+            });
 
-            const result = await staticFormsResponse.json();
+            // Since we can't check response.ok in no-cors, we assume success here.
+            setStatus('success');
+            setFeedbackMessage('お問い合わせありがとうございます！');
+            setFormData({ name: '', email: '', message: '' });
+            form.reset();
 
-            if (result.success) {
-                setStatus('success');
-                setFeedbackMessage('お問い合わせありがとうございます！メールを送信しました。');
-                setFormData({ name: '', email: '', message: '' });
-                form.reset();
-            } else {
-                setStatus('error');
-                setFeedbackMessage('送信に失敗しました。もう一度お試しください。');
-            }
         } catch (error) {
             console.error('Submission error:', error);
             setStatus('error');
