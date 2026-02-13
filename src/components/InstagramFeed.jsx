@@ -4,6 +4,12 @@ import React from 'react';
 import { Instagram } from 'lucide-react';
 
 const InstagramFeed = () => {
+    React.useEffect(() => {
+        const d = document, s = d.createElement("script");
+        s.type = "module";
+        s.src = "https://w.behold.so/widget.js";
+        d.head.append(s);
+    }, []);
     return (
         <section id="instagram" className="py-20 bg-white relative overflow-hidden">
             <div className="container mx-auto px-4 relative z-10">
@@ -16,22 +22,9 @@ const InstagramFeed = () => {
                         作業実績・日々の様子
                     </h2>
 
-                    {/* Elfsight Platform Script */}
-                    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-
-                    {/* Widget Container */}
-                    <div className="mt-8 max-w-6xl mx-auto min-h-[400px] flex items-center justify-center bg-slate-50 rounded-2xl border-2 border-dashed border-slate-300">
-                        <div className="text-center p-8">
-                            <p className="text-lg font-bold text-slate-600 mb-2">Instagramウィジェット設置エリア</p>
-                            <p className="text-slate-500 mb-4">Elfsightなどの外部ツールで発行したコードをここに貼り付けると表示されます。</p>
-                            <a
-                                href="https://elfsight.com/instagram-feed-instalink/"
-                                target="_blank"
-                                className="inline-block bg-primary text-white px-6 py-2 rounded-full text-sm hover:bg-primary-dark transition-colors"
-                            >
-                                ウィジェットを作成する（無料）
-                            </a>
-                        </div>
+                    {/* Behold Widget */}
+                    <div className="mt-8">
+                        <behold-widget feed-id="paIXvyuWhGgcRB2rhoS1"></behold-widget>
                     </div>
 
                     <div className="mt-8 text-center">
