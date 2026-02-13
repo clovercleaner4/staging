@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Phone, CheckCircle, Star, ShieldCheck } from 'lucide-react';
-import honnin04 from '../assets/honninn04.jpg';
+import topImage from '../assets/top.jpg';
 
 const Hero = () => {
     return (
@@ -79,7 +79,7 @@ const Hero = () => {
                             {/* Image Container with Mask/Shape */}
                             <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white transform rotate-1 hover:rotate-0 transition-transform duration-500 aspect-square max-w-md mx-auto">
                                 <Image
-                                    src={honnin04}
+                                    src={topImage}
                                     alt="代表：野村貴典"
                                     fill
                                     className="object-cover object-top"
