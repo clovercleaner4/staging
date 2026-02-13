@@ -29,13 +29,13 @@ const InstagramFeed = () => {
 
                     <div className="mt-8 text-center">
                         <a
-                            href="https://www.instagram.com/show_327/"
+                            href="https://www.instagram.com/clovercleaner4/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center gap-2 text-primary font-bold hover:underline"
                         >
                             <Instagram size={20} />
-                            @show_327 をフォローする
+                            @clovercleaner4 をフォローする
                         </a>
                     </div>
                 </div>
