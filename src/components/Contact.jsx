@@ -31,10 +31,11 @@ const Contact = () => {
 
         // GAS Payload
         const gasUrl = 'https://script.google.com/macros/s/AKfycbwQK4sZm3ctXWcLUyaKb0OXAgXyn2Dx5tjT_fTMJv16pZYhDULsRIks6TAlB44P3Xkn/exec';
-        const gasFormData = new FormData();
-        gasFormData.append('name', data.get('name'));
-        gasFormData.append('email', data.get('email'));
-        gasFormData.append('message', data.get('message'));
+        const payload = {
+            name: data.get('name'),
+            email: data.get('email'),
+            message: data.get('message')
+        };
 
         try {
             // Execute GAS request
@@ -44,9 +45,9 @@ const Contact = () => {
                 method: 'POST',
                 mode: 'no-cors',
                 headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Content-Type': 'application/json',
                 },
-                body: new URLSearchParams(data).toString(),
+                body: JSON.stringify(payload),
             });
 
             // Since we can't check response.ok in no-cors, we assume success here.
