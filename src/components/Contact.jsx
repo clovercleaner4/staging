@@ -31,7 +31,7 @@ const Contact = () => {
         const data = new FormData(form);
 
         // GAS Payload
-        const gasUrl = 'https://script.google.com/macros/s/AKfycbw7F0Kr1wyW-dITdq3E6FMz19biXqadNwlQfkNjnktfZ-S4wJ0EhM7TDWhGF9izva5X/exec';
+        const gasUrl = 'https://script.google.com/macros/s/AKfycbxhiVoFdRh_D2mk4FK1uPYCgm-Jc5s2CozUJgm5B2bT_0gHaTsT9UepM4FuoWAK_qtP/exec';
         const payload = {
             name: data.get('name'),
             email: data.get('email'),
