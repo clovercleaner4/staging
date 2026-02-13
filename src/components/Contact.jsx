@@ -9,6 +9,7 @@ const Contact = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
+        subject: '',
         message: ''
     });
     const [status, setStatus] = useState('idle'); // 'idle' | 'submitting' | 'success' | 'error'
@@ -34,6 +35,7 @@ const Contact = () => {
         const payload = {
             name: data.get('name'),
             email: data.get('email'),
+            subject: data.get('subject'),
             message: data.get('message')
         };
 
@@ -53,7 +55,8 @@ const Contact = () => {
             // Since we can't check response.ok in no-cors, we assume success here.
             setStatus('success');
             setFeedbackMessage('お問い合わせありがとうございます！');
-            setFormData({ name: '', email: '', message: '' });
+            setFeedbackMessage('お問い合わせありがとうございます！');
+            setFormData({ name: '', email: '', subject: '', message: '' });
             form.reset();
 
         } catch (error) {
@@ -141,6 +144,18 @@ const Contact = () => {
                                     disabled={status === 'submitting'}
                                     className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all disabled:opacity-50"
                                     placeholder="example@email.com"
+                                />
+                            </div>
+                            <div>
+                                <label className="block text-sm font-medium text-slate-700 mb-1">件名</label>
+                                <input
+                                    type="text"
+                                    name="subject"
+                                    value={formData.subject}
+                                    onChange={handleChange}
+                                    disabled={status === 'submitting'}
+                                    className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all disabled:opacity-50"
+                                    placeholder="お掃除について"
                                 />
                             </div>
                             <div>
