@@ -42,8 +42,11 @@ const Contact = () => {
             // We assume success if no network error is thrown.
             await fetch(gasUrl, {
                 method: 'POST',
-                mode: 'no-cors', // Required for Google Apps Script Web App
-                body: gasFormData,
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: new URLSearchParams(data).toString(),
             });
 
             // Since we can't check response.ok in no-cors, we assume success here.
