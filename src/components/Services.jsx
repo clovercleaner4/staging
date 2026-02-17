@@ -209,7 +209,7 @@ const Services = () => {
                                         <tr className="border-b border-stone-100">
                                             <td className="p-4 font-bold">通常壁掛けタイプ（お掃除機能なし）</td>
                                             <td className="p-4 font-bold text-blue-600 text-lg">8,000円〜</td>
-                                            <td className="p-4 text-sm"></td>
+                                            <td className="p-4 text-sm">約90分</td>
                                         </tr>
                                         <tr className="border-b border-stone-100">
                                             <td className="p-4 font-bold">お掃除機能付きタイプ</td>
