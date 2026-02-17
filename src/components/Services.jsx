@@ -22,7 +22,7 @@ const Services = () => {
             description: 'プロの技術で内部のカビやホコリを徹底洗浄。空気も気分もスッキリと。',
             merit: '節電効果・アレルギー対策・嫌なニオイの除去',
             items: [
-                { name: '壁掛けタイプ（お掃除機能なし）', price: '12,000円〜' },
+                { name: '壁掛けタイプ（お掃除機能なし）', price: '8,000円〜' },
                 { name: '壁掛けタイプ（お掃除機能付き）', price: '18,000円〜' },
                 { name: '天井埋め込みタイプ', price: '25,000円〜' },
                 { name: '室外機洗浄', price: '3,000円〜' },
@@ -208,8 +208,8 @@ const Services = () => {
                                     <tbody className="text-slate-700">
                                         <tr className="border-b border-stone-100">
                                             <td className="p-4 font-bold">通常壁掛けタイプ（お掃除機能なし）</td>
-                                            <td className="p-4 font-bold text-blue-600 text-lg">12,000円〜</td>
-                                            <td className="p-4 text-sm">約90分</td>
+                                            <td className="p-4 font-bold text-blue-600 text-lg">8,000円〜</td>
+                                            <td className="p-4 text-sm"></td>
                                         </tr>
                                         <tr className="border-b border-stone-100">
                                             <td className="p-4 font-bold">お掃除機能付きタイプ</td>

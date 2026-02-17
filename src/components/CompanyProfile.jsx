@@ -42,15 +42,40 @@ const CompanyProfile = () => {
                                     </ul>
                                 </td>
                             </tr>
-                            <tr>
-                                <th className="bg-slate-50 py-4 px-6 font-bold text-slate-600">加入保険</th>
-                                <td className="py-4 px-6 text-slate-800 font-bold text-blue-600 flex items-center gap-2">
-                                    <ShieldCheck size={18} />
-                                    三井住友海上 賠償責任保険加入
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
+                </div>
+
+                {/* Recruitment Section */}
+                <div className="mt-16 bg-slate-50 rounded-2xl p-8 md:p-10 border border-slate-200">
+                    <div className="flex items-center gap-4 mb-6">
+                        <div className="p-3 bg-primary/10 rounded-xl text-primary">
+                            <User size={32} />
+                        </div>
+                        <h3 className="text-2xl font-bold text-slate-800">アルバイト募集</h3>
+                    </div>
+                    <div className="space-y-4 text-slate-700 leading-relaxed">
+                        <p className="font-bold text-lg">一緒に働いてくれるスタッフを募集しています！</p>
+                        <ul className="grid gap-3">
+                            <li className="flex items-start gap-2">
+                                <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0"></div>
+                                <span>未経験者歓迎！丁寧に指導いたします。</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0"></div>
+                                <span>週1日から、短時間でもOK。主婦・主夫の方も活躍中。</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0"></div>
+                                <span>詳細については、お問い合わせフォームまたは公式LINEよりお気軽にご連絡ください。</span>
+                            </li>
+                        </ul>
+                        <div className="mt-8">
+                            <a href="#contact" className="inline-flex items-center gap-2 text-primary font-bold border-b-2 border-primary hover:text-primary-dark hover:border-primary-dark transition-all">
+                                採用について問い合わせる
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

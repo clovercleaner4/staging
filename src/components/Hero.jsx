@@ -53,10 +53,6 @@ const Hero = () => {
                             {/* Trust Badges */}
                             <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8 lg:mb-0">
                                 <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100">
-                                    <CheckCircle className="text-green-500" size={18} />
-                                    <span className="text-sm font-bold text-slate-600">損害保険加入済</span>
-                                </div>
-                                <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100">
                                     <Star className="text-yellow-400" size={18} />
                                     <span className="text-sm font-bold text-slate-600">口コミ高評価</span>
                                 </div>
