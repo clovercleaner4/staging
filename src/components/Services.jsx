@@ -66,13 +66,13 @@ const Services = () => {
         },
         {
             id: 'special',
-            title: '遺品整理・特殊清掃',
+            title: '遺品整理・生前整理',
             subtitle: 'Special Cleaning',
             icon: Briefcase,
             color: 'text-purple-500',
             bgColor: 'bg-purple-50',
             description: '「遠方で整理に行けない」「精神的に辛い」...そんなお悩みにも心に寄り添い対応します。',
-            merit: '秘密厳守・迅速丁寧・お墓掃除も対応',
+            merit: '【特徴】秘密厳守・迅速丁寧・お墓掃除も対応',
             items: [
                 { name: '遺品整理・生前整理', price: '要見積もり' },
                 { name: 'ゴミ屋敷の片付け', price: '要見積もり' },
