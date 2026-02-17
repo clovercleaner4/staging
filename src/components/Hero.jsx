@@ -36,8 +36,8 @@ const Hero = () => {
 
                             {/* Subtext */}
                             <p className="text-slate-600 mb-8 text-base md:text-xl font-medium leading-relaxed max-w-lg mx-auto lg:mx-0">
-                                お掃除から、プチ修繕・遺品整理まで。<br />
-                                フットワーク軽く対応いたします。
+                                お掃除・ビルメンテから遺品整理まで<br />
+                                フットワーク軽く対応させていただきます。
                             </p>
 
                             {/* CTA Buttons */}
