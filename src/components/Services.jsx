@@ -1,7 +1,11 @@
 'use client';
 import React, { useState } from 'react';
-import { Wind, Droplets, Home, Hammer, ChevronDown, Building2, Briefcase, ArrowRight, CheckCircle2, Phone } from 'lucide-react';
+import { Wind, Droplets, Home, Hammer, ChevronDown, Building2, Briefcase, ArrowRight, CheckCircle2, Phone, Camera } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
+import beranda from '../assets/beranda.jpg';
+import yukamae from '../assets/yukamae.jpg';
+import yukaato from '../assets/yukaato.jpg';
 
 const Services = () => {
     const [openCategory, setOpenCategory] = useState(null);
@@ -231,101 +235,11 @@ const Services = () => {
                             <p className="text-xs text-slate-400 mt-2">※汚れ具合や設置状況により、作業時間は前後する場合がございます。</p>
                         </div>
 
-                        {/* 3. Process Flow */}
-                        <div>
-                            <h4 className="text-xl font-bold text-slate-800 border-l-4 border-blue-500 pl-4 mb-6">作業の流れ</h4>
-                            <div className="grid md:grid-cols-4 gap-4">
-                                <div className="text-center">
-                                    <div className="bg-slate-100 rounded-xl aspect-video mb-3 flex items-center justify-center p-2 border-2 border-dashed border-slate-300">
-                                        <p className="font-bold text-slate-500 text-[10px] leading-tight">
-                                            ここに<br />
-                                            <span className="text-red-500 text-xs">【養生・分解中】</span><br />
-                                            の写真
-                                        </p>
-                                    </div>
-                                    <p className="font-bold text-slate-700 mb-1">1. 養生・分解</p>
-                                    <p className="text-xs text-slate-500">周りを汚さないようしっかり保護し、カバーを外します。</p>
-                                </div>
-                                <div className="text-center">
-                                    <div className="bg-slate-100 rounded-xl aspect-video mb-3 flex items-center justify-center p-2 border-2 border-dashed border-slate-300">
-                                        <p className="font-bold text-slate-500 text-[10px] leading-tight">
-                                            ここに<br />
-                                            <span className="text-red-500 text-xs">【高圧洗浄中】</span><br />
-                                            の写真
-                                        </p>
-                                    </div>
-                                    <p className="font-bold text-slate-700 mb-1">2. 高圧洗浄</p>
-                                    <p className="text-xs text-slate-500">専用の洗剤と高圧洗浄機で、内部の汚れを一気に洗い流します。</p>
-                                </div>
-                                <div className="text-center">
-                                    <div className="bg-slate-100 rounded-xl aspect-video mb-3 flex items-center justify-center p-2 border-2 border-dashed border-slate-300">
-                                        <p className="font-bold text-slate-500 text-[10px] leading-tight">
-                                            ここに<br />
-                                            <span className="text-red-500 text-xs">【パーツ洗浄中】</span><br />
-                                            の写真
-                                        </p>
-                                    </div>
-                                    <p className="font-bold text-slate-700 mb-1">3. パーツ洗浄</p>
-                                    <p className="text-xs text-slate-500">外したカバーなどのパーツも、浴室や外の洗い場をお借りしてきれいに洗います。</p>
-                                </div>
-                                <div className="text-center">
-                                    <div className="bg-slate-100 rounded-xl aspect-video mb-3 flex items-center justify-center p-2 border-2 border-dashed border-slate-300">
-                                        <p className="font-bold text-slate-500 text-[10px] leading-tight">
-                                            ここに<br />
-                                            <span className="text-red-500 text-xs">【防カビコーティング中】</span><br />
-                                            の写真
-                                        </p>
-                                    </div>
-                                    <p className="font-bold text-slate-700 mb-1">4. 防カビ・組立</p>
-                                    <p className="text-xs text-slate-500">仕上げに防カビコート（無料）を行い、元通りに組み立てます。</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Photo Opportunities for User */}
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                            {/* Left: Dirty Water */}
-                            <div className="text-center">
-                                <div className="bg-slate-200 rounded-xl aspect-video flex items-center justify-center border-2 border-dashed border-slate-400 relative overflow-hidden mb-4">
-                                    <div className="text-center p-4">
-                                        <p className="font-bold text-slate-600 mb-1">
-                                            <span className="text-xl block mb-2">😱</span>
-                                            ここに<span className="font-bold text-slate-800">【真っ黒な汚水】</span><br />
-                                            の写真
-                                        </p>
-                                        <p className="text-[10px] text-slate-500 mt-2">
-                                            （明るい場所で撮影すると◎）
-                                        </p>
-                                    </div>
-                                </div>
-                                <p className="font-bold text-slate-700 leading-relaxed text-sm md:text-base">
-                                    衝撃の黒い水！<br />
-                                    <span className="text-slate-600 font-normal text-xs md:text-sm">
-                                        これがカビや悪臭の正体です。根こそぎ洗い流しました。<br />
-                                        <span className="font-bold text-red-600">喘息の原因や、最近何故か体調が優れない…その理由はここにあるかもしれません。</span>
-                                    </span>
-                                </p>
-                            </div>
-
-                            {/* Right: Clean Parts */}
-                            <div className="text-center">
-                                <div className="bg-slate-200 rounded-xl aspect-video flex items-center justify-center border-2 border-dashed border-primary/50 relative overflow-hidden mb-4">
-                                    <div className="text-center p-4">
-                                        <p className="font-bold text-slate-600 mb-1">
-                                            <span className="text-xl block mb-2">✨</span>
-                                            ここに<span className="font-bold text-slate-800">【洗浄後の内部】</span><br />
-                                            の写真
-                                        </p>
-                                        <p className="text-[10px] text-slate-500 mt-2">
-                                            （輝きが伝わるように！）
-                                        </p>
-                                    </div>
-                                </div>
-                                <p className="font-bold text-primary leading-relaxed text-sm md:text-base">
-                                    新品のような輝き！<br />
-                                    <span className="text-slate-600 font-normal text-xs md:text-sm">風速も回復し、節電効果も期待できます。</span>
-                                </p>
-                            </div>
+                        {/* 3. Process Flow - Linked to Detail Section below */}
+                        <div className="mb-10 text-center">
+                            <p className="inline-flex items-center gap-2 bg-blue-50 text-blue-600 px-4 py-2 rounded-full text-sm font-bold mb-6">
+                                <Camera size={16} /> 下記にて実際の作業風景を詳しく解説しています
+                            </p>
                         </div>
 
                     </div>
@@ -402,6 +316,51 @@ const Services = () => {
                                                         </div>
                                                     ))}
                                                 </div>
+
+                                                {/* Category Specific Images */}
+                                                {category.id === 'room' && (
+                                                    <div className="mt-8 space-y-6">
+                                                        <div className="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 text-center">
+                                                            <h5 className="font-bold text-slate-700 mb-4 flex items-center justify-center gap-2">
+                                                                <Camera size={18} className="text-primary" /> フローリングワックス（施工事例）
+                                                            </h5>
+                                                            <div className="grid grid-cols-2 gap-4">
+                                                                <div className="space-y-2">
+                                                                    <div className="relative rounded-xl overflow-hidden shadow-md">
+                                                                        <Image src={yukamae} alt="Floor Before" className="w-full aspect-video object-cover" />
+                                                                        <div className="absolute top-2 left-2 bg-slate-800/80 text-white text-[10px] px-2 py-0.5 rounded font-bold">BEFORE</div>
+                                                                    </div>
+                                                                    <p className="text-[10px] text-slate-500 font-bold">施工前</p>
+                                                                </div>
+                                                                <div className="space-y-2">
+                                                                    <div className="relative rounded-xl overflow-hidden shadow-md border-2 border-primary/20">
+                                                                        <Image src={yukaato} alt="Floor After" className="w-full aspect-video object-cover" />
+                                                                        <div className="absolute top-2 left-2 bg-primary text-white text-[10px] px-2 py-0.5 rounded font-bold">AFTER</div>
+                                                                    </div>
+                                                                    <p className="text-[10px] text-primary font-bold">施工後</p>
+                                                                </div>
+                                                            </div>
+                                                            <p className="text-xs text-slate-500 mt-4 leading-relaxed">
+                                                                くすんでいた床が、ワックスがけで見違えるほどの輝きに。<br />
+                                                                お部屋全体もパッと明るい印象に変わります。
+                                                            </p>
+                                                        </div>
+
+                                                        <div className="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 text-center">
+                                                            <h5 className="font-bold text-slate-700 mb-4 flex items-center justify-center gap-2">
+                                                                <Camera size={18} className="text-primary" /> ベランダ掃除（施工事例）
+                                                            </h5>
+                                                            <div className="relative rounded-xl overflow-hidden shadow-md max-w-md mx-auto">
+                                                                <Image src={beranda} alt="Balcony Cleaning" className="w-full aspect-video object-cover" />
+                                                                <div className="absolute bottom-3 right-3 bg-primary text-white text-[10px] px-2 py-1 rounded font-bold">洗浄後</div>
+                                                            </div>
+                                                            <p className="text-xs text-slate-500 mt-4 leading-relaxed">
+                                                                砂埃や苔で汚れたベランダも、高圧洗浄で一気にスッキリ。<br />
+                                                                週末のティータイムが楽しみになる空間へと蘇らせます。
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                )}
                                             </div>
                                         </motion.div>
                                     )}
