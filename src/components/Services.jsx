@@ -18,23 +18,6 @@ const Services = () => {
     // Personal Services Data
     const individualServices = [
         {
-            id: 'ac',
-            title: 'エアコンクリーニング',
-            subtitle: 'Air Conditioner',
-            icon: Wind,
-            color: 'text-blue-500',
-            bgColor: 'bg-blue-50',
-            description: 'プロの技術で内部のカビやホコリを徹底洗浄。空気も気分もスッキリと。',
-            merit: '節電効果・アレルギー対策・嫌なニオイの除去',
-            items: [
-                { name: '壁掛けタイプ（お掃除機能なし）', price: '8,000円〜' },
-                { name: '壁掛けタイプ（お掃除機能付き）', price: '18,000円〜' },
-                { name: '天井埋め込みタイプ', price: '25,000円〜' },
-                { name: '室外機洗浄', price: '3,000円〜' },
-                { name: '防カビコート', price: '2,000円〜' },
-            ]
-        },
-        {
             id: 'water',
             title: '水回りクリーニング',
             subtitle: 'Water Area',
