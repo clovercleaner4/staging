@@ -10,7 +10,6 @@ import Footer from '../components/Footer';
 
 const Area = dynamic(() => import('../components/Area'), { ssr: false });
 import Services from '../components/Services';
-import CleaningProcess from '../components/CleaningProcess';
 import WhyUs from '../components/WhyUs';
 import InstagramFeed from '../components/InstagramFeed';
 import FAQ from '../components/FAQ';
@@ -28,7 +27,6 @@ export default function Home() {
         <Area />
         <InstagramFeed />
         <Services />
-        <CleaningProcess />
         <WhyUs />
         <Testimonials />
         <FAQ />

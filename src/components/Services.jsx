@@ -6,6 +6,7 @@ import Image from 'next/image';
 import beranda from '../assets/beranda.jpg';
 import yukamae from '../assets/yukamae.jpg';
 import yukaato from '../assets/yukaato.jpg';
+import CleaningProcess from './CleaningProcess';
 
 const Services = () => {
     const [openCategory, setOpenCategory] = useState(null);
@@ -196,30 +197,36 @@ const Services = () => {
                             </div>
                         </div>
 
-                        {/* 2. Pricing */}
-                        <div className="mb-10">
-                            <h4 className="text-xl font-bold text-slate-800 border-l-4 border-blue-500 pl-4 mb-6">料金表（税込）</h4>
-                            <div className="overflow-x-auto">
+                        <CleaningProcess />
+
+                        {/* 2. Pricing (Moved to end of section) */}
+                        <div className="mb-10 text-center">
+                        </div>
+
+                        {/* 2. Pricing - Relocated here */}
+                        <div className="mt-20 pt-20 border-t border-slate-100">
+                            <h4 className="text-xl font-bold text-slate-800 border-l-4 border-blue-500 pl-4 mb-8">エアコンクリーニング料金表（税込）</h4>
+                            <div className="overflow-x-auto bg-slate-50 rounded-2xl p-4 md:p-8">
                                 <table className="w-full text-left border-collapse">
                                     <thead>
-                                        <tr className="bg-slate-50 border-b border-slate-200 text-slate-500 text-sm">
+                                        <tr className="border-b border-slate-200 text-slate-500 text-sm">
                                             <th className="p-4 font-medium">タイプ</th>
                                             <th className="p-4 font-medium">料金目安</th>
                                             <th className="p-4 font-medium">作業時間</th>
                                         </tr>
                                     </thead>
                                     <tbody className="text-slate-700">
-                                        <tr className="border-b border-stone-100">
+                                        <tr className="border-b border-slate-100">
                                             <td className="p-4 font-bold">通常壁掛けタイプ（お掃除機能なし）</td>
                                             <td className="p-4 font-bold text-blue-600 text-lg">8,000円〜</td>
                                             <td className="p-4 text-sm">約90分</td>
                                         </tr>
-                                        <tr className="border-b border-stone-100">
+                                        <tr className="border-b border-slate-100">
                                             <td className="p-4 font-bold">お掃除機能付きタイプ</td>
                                             <td className="p-4 font-bold text-blue-600 text-lg">18,000円〜</td>
                                             <td className="p-4 text-sm">約120分〜</td>
                                         </tr>
-                                        <tr className="border-b border-stone-100">
+                                        <tr className="border-b border-slate-100">
                                             <td className="p-4 font-bold">天井埋め込みタイプ</td>
                                             <td className="p-4 font-bold text-blue-600 text-lg">25,000円〜</td>
                                             <td className="p-4 text-sm">約150分〜</td>
@@ -231,15 +238,8 @@ const Services = () => {
                                         </tr>
                                     </tbody>
                                 </table>
+                                <p className="text-xs text-slate-400 mt-6">※汚れ具合や設置状況により、作業時間は前後する場合がございます。</p>
                             </div>
-                            <p className="text-xs text-slate-400 mt-2">※汚れ具合や設置状況により、作業時間は前後する場合がございます。</p>
-                        </div>
-
-                        {/* 3. Process Flow - Linked to Detail Section below */}
-                        <div className="mb-10 text-center">
-                            <p className="inline-flex items-center gap-2 bg-blue-50 text-blue-600 px-4 py-2 rounded-full text-sm font-bold mb-6">
-                                <Camera size={16} /> 下記にて実際の作業風景を詳しく解説しています
-                            </p>
                         </div>
 
                     </div>
