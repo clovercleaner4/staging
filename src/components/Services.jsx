@@ -150,9 +150,9 @@ const Services = () => {
                                 <p className="text-sm text-slate-600">市販のスプレーでは落ちない奥のカビまで洗い流します。</p>
                             </div>
                             <div className="bg-blue-50 p-6 rounded-2xl text-center">
-                                <span className="text-4xl mb-3 block">🌱</span>
-                                <h4 className="font-bold text-slate-800 mb-2">エコ洗剤で安心</h4>
-                                <p className="text-sm text-slate-600">哺乳瓶も洗える安全な洗剤を使用。ペットや赤ちゃんにも安心です。</p>
+                                <span className="text-4xl mb-3 block">⚙️</span>
+                                <h4 className="font-bold text-slate-800 mb-2">プロ仕様の分解洗浄</h4>
+                                <p className="text-sm text-slate-600">お掃除機能付きや複雑な機種も、プロの技術で隅々まで分解して洗浄します。</p>
                             </div>
                             <div className="bg-blue-50 p-6 rounded-2xl text-center">
                                 <span className="text-4xl mb-3 block">🛡️</span>
@@ -166,19 +166,6 @@ const Services = () => {
                             </div>
                         </div>
 
-                        {/* Season Tip */}
-                        <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 flex items-start gap-3">
-                            <div className="bg-amber-100 p-2 rounded-full shrink-0 text-amber-600">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><line x1="12" x2="12" y1="8" y2="12" /><line x1="12" x2="12.01" y1="16" y2="16" /></svg>
-                            </div>
-                            <div>
-                                <h5 className="font-bold text-amber-800 mb-1">エアコン掃除は「今（2月）」がチャンス！</h5>
-                                <p className="text-sm text-amber-700 leading-relaxed">
-                                    夏本番（5月以降）は予約が殺到します。<br className="hidden md:block" />
-                                    <strong>今（2月）</strong>なら希望日で予約が取りやすく、本格的な暑さが来る前にカビをリセットできるベストシーズンです。
-                                </p>
-                            </div>
-                        </div>
 
                         <CleaningProcess />
 
@@ -307,7 +294,7 @@ const Services = () => {
                                                             <h5 className="font-bold text-slate-700 mb-4 flex items-center justify-center gap-2">
                                                                 <Camera size={18} className="text-primary" /> フローリングワックス（施工事例）
                                                             </h5>
-                                                            <div className="grid grid-cols-2 gap-4">
+                                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                                                 <div className="space-y-2">
                                                                     <div className="relative rounded-xl overflow-hidden shadow-md">
                                                                         <Image src={yukamae} alt="フローリングワックス施工前のくすんだ床の状態" className="w-full aspect-video object-cover" />
