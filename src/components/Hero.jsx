@@ -27,6 +27,7 @@ const Hero = () => {
 
                             {/* Main Headline */}
                             <h1 className="text-3xl md:text-5xl lg:text-5xl font-extrabold text-slate-800 mb-6 leading-[1.4] tracking-tight">
+                                <span className="text-sm md:text-base block text-primary font-bold mb-2">春日井市のエアコンクリーニングなら</span>
                                 エアコン・水回りの<span className="text-primary relative inline-block">
                                     汚れ
                                     <span className="absolute bottom-1 left-0 w-full h-3 bg-primary/20 -z-10 rounded-sm"></span>
@@ -76,7 +77,7 @@ const Hero = () => {
                             <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white transform rotate-1 hover:rotate-0 transition-transform duration-500 aspect-square max-w-md mx-auto">
                                 <Image
                                     src={topImage}
-                                    alt="代表：野村貴典"
+                                    alt="クローバークリーナー代表：野村貴典。春日井市のお掃除・エアコンクリーニングのプロ"
                                     fill
                                     className="object-cover object-top"
                                     priority

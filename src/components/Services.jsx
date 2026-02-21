@@ -310,14 +310,14 @@ const Services = () => {
                                                             <div className="grid grid-cols-2 gap-4">
                                                                 <div className="space-y-2">
                                                                     <div className="relative rounded-xl overflow-hidden shadow-md">
-                                                                        <Image src={yukamae} alt="Floor Before" className="w-full aspect-video object-cover" />
+                                                                        <Image src={yukamae} alt="フローリングワックス施工前のくすんだ床の状態" className="w-full aspect-video object-cover" />
                                                                         <div className="absolute top-2 left-2 bg-slate-800/80 text-white text-[10px] px-2 py-0.5 rounded font-bold">BEFORE</div>
                                                                     </div>
                                                                     <p className="text-[10px] text-slate-500 font-bold">施工前</p>
                                                                 </div>
                                                                 <div className="space-y-2">
                                                                     <div className="relative rounded-xl overflow-hidden shadow-md border-2 border-primary/20">
-                                                                        <Image src={yukaato} alt="Floor After" className="w-full aspect-video object-cover" />
+                                                                        <Image src={yukaato} alt="フローリングワックス施工後の輝きを取り戻した床の状態" className="w-full aspect-video object-cover" />
                                                                         <div className="absolute top-2 left-2 bg-primary text-white text-[10px] px-2 py-0.5 rounded font-bold">AFTER</div>
                                                                     </div>
                                                                     <p className="text-[10px] text-primary font-bold">施工後</p>
@@ -334,7 +334,7 @@ const Services = () => {
                                                                 <Camera size={18} className="text-primary" /> ベランダ掃除（施工事例）
                                                             </h5>
                                                             <div className="relative rounded-xl overflow-hidden shadow-md max-w-md mx-auto">
-                                                                <Image src={beranda} alt="Balcony Cleaning" className="w-full aspect-video object-cover" />
+                                                                <Image src={beranda} alt="高圧洗浄機で綺麗に清掃されたベランダの状態。カビや苔を徹底除去" className="w-full aspect-video object-cover" />
                                                                 <div className="absolute bottom-3 right-3 bg-primary text-white text-[10px] px-2 py-1 rounded font-bold">洗浄後</div>
                                                             </div>
                                                             <p className="text-xs text-slate-500 mt-4 leading-relaxed">
