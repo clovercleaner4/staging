@@ -322,7 +322,7 @@ const Services = () => {
                                                             </h5>
                                                             <div className="relative rounded-xl overflow-hidden shadow-md max-w-md mx-auto">
                                                                 <Image src={beranda} alt="高圧洗浄機で綺麗に清掃されたベランダの状態。カビや苔を徹底除去" className="w-full aspect-video object-cover" />
-                                                                <div className="absolute bottom-3 right-3 bg-primary text-white text-[10px] px-2 py-1 rounded font-bold">洗浄後</div>
+                                                                <div className="absolute bottom-3 right-3 bg-primary text-white text-[10px] px-2 py-1 rounded font-bold">洗浄中</div>
                                                             </div>
                                                             <p className="text-xs text-slate-500 mt-4 leading-relaxed">
                                                                 砂埃や苔で汚れたベランダも、高圧洗浄で一気にスッキリ。<br />
