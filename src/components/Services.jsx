@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { Wind, Droplets, Home, Hammer, ChevronDown, Building2, Briefcase, ArrowRight, CheckCircle2, Phone, Camera } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, LayoutGroup } from 'framer-motion';
 import Image from 'next/image';
 import beranda from '../assets/beranda.jpg';
 import yukamae from '../assets/yukamae.jpg';
@@ -229,115 +229,118 @@ const Services = () => {
                         </h3>
                     </div>
 
-                    <div className="grid gap-6">
-                        {individualServices.map((category, index) => (
-                            <motion.div
-                                key={category.id}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.1 }}
-                                className="bg-white border border-stone-100 rounded-2xl shadow-sm overflow-hidden group hover:border-primary/20 transition-all"
-                            >
-                                <button
-                                    onClick={() => toggleCategory(index)}
-                                    className="w-full flex flex-col md:flex-row items-start md:items-center justify-between p-6 md:p-8 hover:bg-stone-50 transition-colors text-left gap-6"
+                    <LayoutGroup>
+                        <div className="grid gap-6">
+                            {individualServices.map((category, index) => (
+                                <motion.div
+                                    key={category.id}
+                                    layout
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: index * 0.1 }}
+                                    className="bg-white border border-stone-100 rounded-2xl shadow-sm overflow-hidden group hover:border-primary/20 transition-all"
                                 >
-                                    <div className="flex items-center gap-6 w-full">
-                                        <div className={`hidden md:flex w-20 h-20 rounded-2xl ${category.bgColor} items-center justify-center ${category.color} group-hover:scale-110 transition-transform duration-300 shrink-0`}>
-                                            <category.icon size={40} />
-                                        </div>
-                                        <div className="flex-1">
-                                            <div className="flex items-center gap-3 md:hidden mb-3">
-                                                <div className={`p-3 rounded-xl ${category.bgColor} ${category.color}`}>
-                                                    <category.icon size={24} />
-                                                </div>
+                                    <button
+                                        onClick={() => toggleCategory(index)}
+                                        className="w-full flex flex-col md:flex-row items-start md:items-center justify-between p-6 md:p-8 hover:bg-stone-50 transition-colors text-left gap-6"
+                                    >
+                                        <div className="flex items-center gap-6 w-full">
+                                            <div className={`hidden md:flex w-20 h-20 rounded-2xl ${category.bgColor} items-center justify-center ${category.color} group-hover:scale-110 transition-transform duration-300 shrink-0`}>
+                                                <category.icon size={40} />
                                             </div>
-                                            <div className="flex flex-col md:flex-row md:items-baseline gap-2 mb-2">
-                                                <h3 className="text-xl md:text-2xl font-bold text-slate-800">{category.title}</h3>
-                                                <span className="text-sm font-bold text-slate-400 uppercase tracking-wider">{category.subtitle}</span>
-                                            </div>
-                                            <p className="text-slate-600 font-medium mb-2">{category.description}</p>
-                                            <div className="inline-flex items-center gap-1.5 text-xs md:text-sm text-primary font-bold bg-primary/5 px-3 py-1 rounded-full">
-                                                <CheckCircle2 size={14} />
-                                                {category.merit}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className={`p-3 rounded-full bg-stone-100 text-slate-400 transition-transform duration-300 self-end md:self-center ${openCategory === index ? 'rotate-180' : ''}`}>
-                                        <ChevronDown size={24} />
-                                    </div>
-                                </button>
-
-                                <AnimatePresence>
-                                    {openCategory === index && (
-                                        <motion.div
-                                            initial={{ height: 0, opacity: 0 }}
-                                            animate={{ height: 'auto', opacity: 1 }}
-                                            exit={{ height: 0, opacity: 0 }}
-                                            transition={{ duration: 0.3 }}
-                                        >
-                                            <div className="px-6 pb-6 md:px-8 md:pb-8 pt-0 border-t border-stone-100 bg-stone-50/50">
-                                                <div className="grid md:grid-cols-2 gap-4 mt-6">
-                                                    {category.items.map((item, i) => (
-                                                        <div key={i} className="flex items-center justify-between bg-white p-4 rounded-xl border border-stone-200 hover:border-primary/30 transition-colors">
-                                                            <span className="font-bold text-slate-700">{item.name}</span>
-                                                            <span className="font-bold text-primary">{item.price}</span>
-                                                        </div>
-                                                    ))}
-                                                </div>
-
-                                                {/* Category Specific Images */}
-                                                {category.id === 'room' && (
-                                                    <div className="mt-8 space-y-6">
-                                                        <div className="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 text-center">
-                                                            <h5 className="font-bold text-slate-700 mb-4 flex items-center justify-center gap-2">
-                                                                <Camera size={18} className="text-primary" /> フローリングワックス（施工事例）
-                                                            </h5>
-                                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                                                <div className="space-y-2">
-                                                                    <div className="relative rounded-xl overflow-hidden shadow-md">
-                                                                        <Image src={yukamae} alt="フローリングワックス施工前のくすんだ床の状態" className="w-full aspect-video object-cover" />
-                                                                        <div className="absolute top-2 left-2 bg-slate-800/80 text-white text-[10px] px-2 py-0.5 rounded font-bold">BEFORE</div>
-                                                                    </div>
-                                                                    <p className="text-[10px] text-slate-500 font-bold">施工前</p>
-                                                                </div>
-                                                                <div className="space-y-2">
-                                                                    <div className="relative rounded-xl overflow-hidden shadow-md border-2 border-primary/20">
-                                                                        <Image src={yukaato} alt="フローリングワックス施工後の輝きを取り戻した床の状態" className="w-full aspect-video object-cover" />
-                                                                        <div className="absolute top-2 left-2 bg-primary text-white text-[10px] px-2 py-0.5 rounded font-bold">AFTER</div>
-                                                                    </div>
-                                                                    <p className="text-[10px] text-primary font-bold">施工後</p>
-                                                                </div>
-                                                            </div>
-                                                            <p className="text-xs text-slate-500 mt-4 leading-relaxed">
-                                                                くすんでいた床が、ワックスがけで見違えるほどの輝きに。<br />
-                                                                お部屋全体もパッと明るい印象に変わります。
-                                                            </p>
-                                                        </div>
-
-                                                        <div className="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 text-center">
-                                                            <h5 className="font-bold text-slate-700 mb-4 flex items-center justify-center gap-2">
-                                                                <Camera size={18} className="text-primary" /> ベランダ掃除（施工事例）
-                                                            </h5>
-                                                            <div className="relative rounded-xl overflow-hidden shadow-md max-w-md mx-auto">
-                                                                <Image src={beranda} alt="高圧洗浄機で綺麗に清掃されたベランダの状態。カビや苔を徹底除去" className="w-full aspect-video object-cover" />
-                                                                <div className="absolute bottom-3 right-3 bg-primary text-white text-[10px] px-2 py-1 rounded font-bold">洗浄中</div>
-                                                            </div>
-                                                            <p className="text-xs text-slate-500 mt-4 leading-relaxed">
-                                                                砂埃や苔で汚れたベランダも、高圧洗浄で一気にスッキリ。<br />
-                                                                週末のティータイムが楽しみになる空間へと蘇らせます。
-                                                            </p>
-                                                        </div>
+                                            <div className="flex-1">
+                                                <div className="flex items-center gap-3 md:hidden mb-3">
+                                                    <div className={`p-3 rounded-xl ${category.bgColor} ${category.color}`}>
+                                                        <category.icon size={24} />
                                                     </div>
-                                                )}
+                                                </div>
+                                                <div className="flex flex-col md:flex-row md:items-baseline gap-2 mb-2">
+                                                    <h3 className="text-xl md:text-2xl font-bold text-slate-800">{category.title}</h3>
+                                                    <span className="text-sm font-bold text-slate-400 uppercase tracking-wider">{category.subtitle}</span>
+                                                </div>
+                                                <p className="text-slate-600 font-medium mb-2">{category.description}</p>
+                                                <div className="inline-flex items-center gap-1.5 text-xs md:text-sm text-primary font-bold bg-primary/5 px-3 py-1 rounded-full">
+                                                    <CheckCircle2 size={14} />
+                                                    {category.merit}
+                                                </div>
                                             </div>
-                                        </motion.div>
-                                    )}
-                                </AnimatePresence>
-                            </motion.div>
-                        ))}
-                    </div>
+                                        </div>
+                                        <div className={`p-3 rounded-full bg-stone-100 text-slate-400 transition-transform duration-300 self-end md:self-center ${openCategory === index ? 'rotate-180' : ''}`}>
+                                            <ChevronDown size={24} />
+                                        </div>
+                                    </button>
+
+                                    <AnimatePresence>
+                                        {openCategory === index && (
+                                            <motion.div
+                                                initial={{ height: 0, opacity: 0 }}
+                                                animate={{ height: 'auto', opacity: 1 }}
+                                                exit={{ height: 0, opacity: 0 }}
+                                                transition={{ duration: 0.3 }}
+                                            >
+                                                <div className="px-6 pb-6 md:px-8 md:pb-8 pt-0 border-t border-stone-100 bg-stone-50/50">
+                                                    <div className="grid md:grid-cols-2 gap-4 mt-6">
+                                                        {category.items.map((item, i) => (
+                                                            <div key={i} className="flex items-center justify-between bg-white p-4 rounded-xl border border-stone-200 hover:border-primary/30 transition-colors">
+                                                                <span className="font-bold text-slate-700">{item.name}</span>
+                                                                <span className="font-bold text-primary">{item.price}</span>
+                                                            </div>
+                                                        ))}
+                                                    </div>
+
+                                                    {/* Category Specific Images */}
+                                                    {category.id === 'room' && (
+                                                        <div className="mt-8 space-y-6">
+                                                            <div className="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 text-center">
+                                                                <h5 className="font-bold text-slate-700 mb-4 flex items-center justify-center gap-2">
+                                                                    <Camera size={18} className="text-primary" /> フローリングワックス（施工事例）
+                                                                </h5>
+                                                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                                    <div className="space-y-2">
+                                                                        <div className="relative rounded-xl overflow-hidden shadow-md">
+                                                                            <Image src={yukamae} alt="フローリングワックス施工前のくすんだ床の状態" className="w-full aspect-video object-cover" />
+                                                                            <div className="absolute top-2 left-2 bg-slate-800/80 text-white text-[10px] px-2 py-0.5 rounded font-bold">BEFORE</div>
+                                                                        </div>
+                                                                        <p className="text-[10px] text-slate-500 font-bold">施工前</p>
+                                                                    </div>
+                                                                    <div className="space-y-2">
+                                                                        <div className="relative rounded-xl overflow-hidden shadow-md border-2 border-primary/20">
+                                                                            <Image src={yukaato} alt="フローリングワックス施工後の輝きを取り戻した床の状態" className="w-full aspect-video object-cover" />
+                                                                            <div className="absolute top-2 left-2 bg-primary text-white text-[10px] px-2 py-0.5 rounded font-bold">AFTER</div>
+                                                                        </div>
+                                                                        <p className="text-[10px] text-primary font-bold">施工後</p>
+                                                                    </div>
+                                                                </div>
+                                                                <p className="text-xs text-slate-500 mt-4 leading-relaxed">
+                                                                    くすんでいた床が、ワックスがけで見違えるほどの輝きに。<br />
+                                                                    お部屋全体もパッと明るい印象に変わります。
+                                                                </p>
+                                                            </div>
+
+                                                            <div className="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 text-center">
+                                                                <h5 className="font-bold text-slate-700 mb-4 flex items-center justify-center gap-2">
+                                                                    <Camera size={18} className="text-primary" /> ベランダ掃除（施工事例）
+                                                                </h5>
+                                                                <div className="relative rounded-xl overflow-hidden shadow-md max-w-md mx-auto">
+                                                                    <Image src={beranda} alt="高圧洗浄機で綺麗に清掃されたベランダの状態。カビや苔を徹底除去" className="w-full aspect-video object-cover" />
+                                                                    <div className="absolute bottom-3 right-3 bg-primary text-white text-[10px] px-2 py-1 rounded font-bold">洗浄中</div>
+                                                                </div>
+                                                                <p className="text-xs text-slate-500 mt-4 leading-relaxed">
+                                                                    砂埃や苔で汚れたベランダも、高圧洗浄で一気にスッキリ。<br />
+                                                                    週末のティータイムが楽しみになる空間へと蘇らせます。
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </LayoutGroup>
                 </div>
 
 
