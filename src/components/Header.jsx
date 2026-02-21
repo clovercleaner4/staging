@@ -16,10 +16,11 @@ const Header = () => {
                 <a href="#" className="flex items-center gap-2 md:gap-3 group">
                     <Image src={logo} alt="Clover Cleaner Logo" className="w-10 h-10 md:w-12 md:h-12 object-contain" />
                     <div className="flex flex-col">
-                        <span className="text-[10px] md:text-xs font-bold text-slate-500 tracking-wider whitespace-nowrap">春日井のハウスクリーニング</span>
-                        <span className="text-base md:text-xl font-extrabold text-slate-800 tracking-tight leading-none group-hover:text-primary transition-colors whitespace-nowrap">
+                        <span className="text-[9px] md:text-[11px] font-bold text-primary tracking-widest leading-none mb-1">CLOVER CLEANER</span>
+                        <span className="text-lg md:text-2xl font-extrabold text-slate-800 tracking-tighter leading-none group-hover:text-primary transition-colors whitespace-nowrap">
                             クローバークリーナー
                         </span>
+                        <span className="text-[9px] md:text-[10px] font-medium text-slate-500 tracking-wider whitespace-nowrap mt-1">春日井のハウスクリーニング</span>
                     </div>
                 </a>
 
