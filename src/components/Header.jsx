@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import logo from '../assets/cloverlogo.png';
+import logo from '../assets/logo-v2.png';
 
 const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -16,7 +16,7 @@ const Header = () => {
                 <a href="#" className="flex items-center gap-2 md:gap-3 group">
                     <Image src={logo} alt="Clover Cleaner Logo" className="w-10 h-10 md:w-12 md:h-12 object-contain" />
                     <div className="flex flex-col">
-                        <span className="text-[9px] md:text-[11px] font-bold text-primary tracking-widest leading-none mb-1">CLOVER CLEANER</span>
+                        <span className="text-[9px] md:text-[11px] font-bold text-primary tracking-wider leading-none mb-1">Clover cleaner</span>
                         <span className="text-lg md:text-2xl font-extrabold text-slate-800 tracking-tighter leading-none group-hover:text-primary transition-colors whitespace-nowrap">
                             クローバークリーナー
                         </span>

@@ -13,7 +13,7 @@ const Footer = () => {
                         <div className="flex items-center gap-3 mb-4">
                             <Image src={logo} alt="Clover Cleaner Logo" className="w-10 h-10 object-contain" />
                             <div className="flex flex-col">
-                                <span className="text-lg font-bold text-white tracking-tight leading-tight">Clover Cleaner</span>
+                                <span className="text-lg font-bold text-white tracking-tight leading-tight">Clover cleaner</span>
                                 <span className="text-[10px] font-bold text-slate-400 tracking-widest leading-none">クローバークリーナー</span>
                             </div>
                         </div>

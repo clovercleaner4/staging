@@ -6,7 +6,7 @@ const JsonLd = () => {
     const businessData = {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": "Clover Cleaner（クローバークリーナー）",
+        "name": "Clover cleaner（クローバークリーナー）",
         "image": "https://clover-cleaner.com/cloverlogo.png",
         "@id": "https://clover-cleaner.com",
         "url": "https://clover-cleaner.com",
