@@ -1,4 +1,4 @@
-import { M_PLUS_Rounded_1c, Inter } from "next/font/google";
+import { M_PLUS_Rounded_1c } from "next/font/google";
 import Script from "next/script";
 import { LazyMotion, domAnimation } from "framer-motion";
 import "./globals.css";
@@ -8,12 +8,6 @@ const mPlusRounded = M_PLUS_Rounded_1c({
   weight: ["400", "700"],
   subsets: ["latin"],
   variable: "--font-m-plus-rounded",
-  display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
   display: "swap",
 });
 
@@ -78,7 +72,7 @@ export default function RootLayout({ children }) {
         </Script>
       </head>
       <body
-        className={`${mPlusRounded.variable} ${inter.variable} font-sans antialiased`}
+        className={`${mPlusRounded.variable} font-sans antialiased`}
       >
         <JsonLd />
         <LazyMotion features={domAnimation}>

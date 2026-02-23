@@ -24,9 +24,20 @@ const Footer = () => {
                             「エアコン・水回りの汚れ、プロの技術で徹底洗浄。」
                         </p>
                         <div className="mt-4 text-sm text-slate-200 font-medium">
+                            <div className="flex gap-4">
+                                <a
+                                    href="https://www.instagram.com/clovercleaner4/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="公式Instagramを見る"
+                                    className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"
+                                >
+                                    <Instagram size={20} className="text-white" />
+                                </a>
+                            </div>
                             <p>〒486-0808</p>
                             <p>愛知県春日井市堀ノ内町北1-65</p>
-                            <p className="mt-2 text-xs text-slate-400 font-bold">
+                            <p className="mt-2 text-xs text-slate-300 font-bold">
                                 対応エリア：春日井市、小牧市、名古屋市、多治見市、瀬戸市など
                             </p>
                         </div>

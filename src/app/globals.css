@@ -8,13 +8,6 @@
   ascent-override: 95%;
 }
 
-@font-face {
-  font-family: "Inter Fallback";
-  src: local("Arial"), local("Helvetica"), local("sans-serif");
-  size-adjust: 107%;
-  ascent-override: 90%;
-}
-
 @theme {
   --color-primary: #0ea5e9;
   --color-primary-dark: #0284c7;
@@ -23,7 +16,7 @@
   --color-secondary-light: #fdba74;
   --color-secondary-heavy: #c2410c;
   --color-accent: #86efac;
-  --font-sans: var(--font-m-plus-rounded), "M PLUS Rounded 1c Fallback", var(--font-inter), "Inter Fallback", sans-serif;
+  --font-sans: var(--font-m-plus-rounded), "M PLUS Rounded 1c Fallback", sans-serif;
 }
 
 html {

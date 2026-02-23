@@ -44,8 +44,8 @@ const Header = () => {
 
                     {/* Mobile Menu Button */}
                     <button
-                        className="md:hidden text-slate-800 p-2"
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        className="md:hidden p-2 -mr-2 text-slate-800 focus:outline-none"
                         aria-label={isMobileMenuOpen ? "メニューを閉じる" : "メニューを開く"}
                         aria-expanded={isMobileMenuOpen}
                     >
