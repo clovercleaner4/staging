@@ -2,9 +2,11 @@
 import React, { useState } from 'react';
 import Script from 'next/script';
 import { Instagram, Loader2 } from 'lucide-react';
+import { m } from 'framer-motion';
 
 const InstagramFeed = () => {
     const [isLoaded, setIsLoaded] = useState(false);
+    const [shouldLoad, setShouldLoad] = useState(false);
 
     return (
         <section id="instagram" className="py-20 bg-white relative overflow-hidden">
@@ -18,24 +20,29 @@ const InstagramFeed = () => {
                         作業実績・日々の様子
                     </h2>
 
-                    {/* Behold Widget Script - Loaded lazily to improve Performance score */}
-                    <Script
-                        src="https://w.behold.so/widget.js"
-                        type="module"
-                        strategy="lazyOnload"
-                        onLoad={() => setIsLoaded(true)}
-                    />
+                    {/* Behold Widget Script - Truly Lazy: Only load when component is visible */}
+                    {shouldLoad && (
+                        <Script
+                            src="https://w.behold.so/widget.js"
+                            type="module"
+                            strategy="afterInteractive"
+                            onLoad={() => setIsLoaded(true)}
+                        />
+                    )}
 
-                    {/* Behold Widget - Container with min-height to prevent CLS */}
-                    <div className="mt-8 min-h-[400px] md:min-h-[600px] w-full flex items-center justify-center bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden relative">
+                    {/* Behold Widget - Container with placeholder to unblock main thread */}
+                    <m.div
+                        onViewportEnter={() => setShouldLoad(true)}
+                        className="mt-8 min-h-[400px] md:min-h-[600px] w-full flex items-center justify-center bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden relative"
+                    >
                         {!isLoaded && (
                             <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-400 gap-3">
                                 <Loader2 className="animate-spin" size={32} />
-                                <p className="text-sm font-medium">Instagramを読み込んでいます...</p>
+                                <p className="text-sm font-medium">Instagramを準備中...</p>
                             </div>
                         )}
-                        <behold-widget feed-id="paIXvyuWhGgcRB2rhoS1"></behold-widget>
-                    </div>
+                        {shouldLoad && <behold-widget feed-id="paIXvyuWhGgcRB2rhoS1"></behold-widget>}
+                    </m.div>
 
                     <div className="mt-8 text-center">
                         <a
