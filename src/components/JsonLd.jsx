@@ -7,7 +7,7 @@ const JsonLd = () => {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Clover cleaner（クローバークリーナー）",
-        "image": "https://clover-cleaner.com/cloverlogo.png",
+        "image": "https://clover-cleaner.com/cloverlogo.webp",
         "@id": "https://clover-cleaner.com",
         "url": "https://clover-cleaner.com",
         "telephone": "080-XXXX-XXXX", // Placeholder

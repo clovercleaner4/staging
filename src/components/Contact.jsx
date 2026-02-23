@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { Mail, ArrowRight, MessageCircle, CheckCircle, AlertCircle, Building2 } from 'lucide-react';
 import { m } from 'framer-motion';
-import cleanLivingRoom from '../assets/clean_living_room.png';
+import cleanLivingRoom from '../assets/clean_living_room.webp';
 
 const Contact = () => {
     const [formData, setFormData] = useState({

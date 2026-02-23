@@ -168,11 +168,11 @@ const CleaningProcess = () => {
                             </p>
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="bg-slate-800/50 p-4 rounded-2xl border border-slate-700">
-                                    <div className="text-2xl mb-2">🤧</div>
+                                    <div className="text-2xl mb-2" role="img" aria-label="くしゃみをする顔">🤧</div>
                                     <div className="text-sm font-bold text-slate-300">アレルギー対策</div>
                                 </div>
                                 <div className="bg-slate-800/50 p-4 rounded-2xl border border-slate-700">
-                                    <div className="text-2xl mb-2">⚡</div>
+                                    <div className="text-2xl mb-2" role="img" aria-label="稲妻・電気">⚡</div>
                                     <div className="text-sm font-bold text-slate-300">電気代の節約</div>
                                 </div>
                             </div>

@@ -36,9 +36,9 @@ const InstagramFeed = () => {
                         className="mt-8 min-h-[400px] md:min-h-[600px] w-full flex items-center justify-center bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden relative"
                     >
                         {!isLoaded && (
-                            <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-400 gap-3">
-                                <Loader2 className="animate-spin" size={32} />
-                                <p className="text-sm font-medium">Instagramを準備中...</p>
+                            <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-600 gap-3">
+                                <Loader2 className="animate-spin text-primary" size={32} />
+                                <p className="text-sm font-bold">Instagramを準備中...</p>
                             </div>
                         )}
                         {shouldLoad && <behold-widget feed-id="paIXvyuWhGgcRB2rhoS1"></behold-widget>}
