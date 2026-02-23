@@ -1,15 +1,20 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { M_PLUS_Rounded_1c, Inter } from "next/font/google";
+import Script from "next/script";
+import { LazyMotion, domAnimation } from "framer-motion";
 import "./globals.css";
 import JsonLd from "../components/JsonLd";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const mPlusRounded = M_PLUS_Rounded_1c({
+  weight: ["400", "700"],
   subsets: ["latin"],
+  variable: "--font-m-plus-rounded",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
 });
 
 const SITE_URL = "https://clover-cleaner.com"; // Placeholder - update when domain is final
@@ -51,13 +56,34 @@ export const viewport = {
 };
 
 export default function RootLayout({ children }) {
+  const GA_MEASUREMENT_ID = "G-GLYE2VVLY1"; // clovercleaner4 official GA ID
+
   return (
     <html lang="ja">
+      <head>
+        {/* Google Analytics */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="lazyOnload"
+        />
+        <Script id="google-analytics" strategy="lazyOnload">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${mPlusRounded.variable} ${inter.variable} font-sans antialiased`}
       >
         <JsonLd />
-        {children}
+        <LazyMotion features={domAnimation}>
+          {children}
+        </LazyMotion>
       </body>
     </html>
   );

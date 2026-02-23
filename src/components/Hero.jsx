@@ -1,9 +1,9 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Phone, CheckCircle, Star, ShieldCheck } from 'lucide-react';
-import topImage from '../assets/top2.png';
+import topImage from '../assets/top2.webp';
 
 const Hero = () => {
     return (
@@ -15,11 +15,7 @@ const Hero = () => {
                     {/* Content Side (Left on Desktop, Bottom on Mobile) */}
                     <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left z-10 lg:pl-12 xl:pl-20">
 
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.7 }}
-                        >
+                        <div>
                             {/* Brand Tagline */}
                             <div className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full bg-green-100 text-green-800 font-bold border border-green-200">
                                 <span className="tracking-wide text-sm md:text-base">名古屋・近隣エリア相談可</span>
@@ -58,16 +54,13 @@ const Hero = () => {
                                     <span className="text-sm font-bold text-slate-600">口コミ高評価</span>
                                 </div>
                             </div>
-                        </motion.div>
+                        </div>
                     </div>
 
                     {/* Image Side (Right on Desktop, Top on Mobile) */}
                     <div className="w-full lg:w-1/2 relative z-0">
                         {/* Right Content - Hero Image */}
-                        <motion.div
-                            initial={{ opacity: 0, x: 20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.8, delay: 0.2 }}
+                        <div
                             className="relative w-full max-w-lg mx-auto lg:max-w-none lg:mx-0"
                         >
                             {/* Decorative Background for Profile */}
@@ -94,7 +87,7 @@ const Hero = () => {
                                     </p>
                                 </div>
                             </div>
-                        </motion.div>
+                        </div>
                     </div>
 
                 </div>

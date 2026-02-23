@@ -2,8 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Menu, X, Phone, Mail } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
-import logo from '../assets/logo-v2.png';
+import { m, AnimatePresence } from 'framer-motion';
+import logo from '../assets/logo-v2.webp';
+import SmartLink from './SmartLink';
 
 const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -26,10 +27,10 @@ const Header = () => {
 
                 {/* Desktop Navigation - Center */}
                 <div className="hidden md:flex items-center gap-8">
-                    <a href="#hero" className="text-base font-bold text-slate-600 hover:text-primary transition-colors">ホーム</a>
-                    <a href="#area" className="text-base font-bold text-slate-600 hover:text-primary transition-colors">対応エリア</a>
-                    <a href="#services" className="text-base font-bold text-slate-600 hover:text-primary transition-colors">サービス料金</a>
-                    <a href="#why-us" className="text-base font-bold text-slate-600 hover:text-primary transition-colors">選ばれる理由</a>
+                    <SmartLink href="#hero" className="text-base font-bold text-slate-600 hover:text-primary transition-colors">ホーム</SmartLink>
+                    <SmartLink href="#area" className="text-base font-bold text-slate-600 hover:text-primary transition-colors">対応エリア</SmartLink>
+                    <SmartLink href="#services" className="text-base font-bold text-slate-600 hover:text-primary transition-colors">サービス料金</SmartLink>
+                    <SmartLink href="#why-us" className="text-base font-bold text-slate-600 hover:text-primary transition-colors">選ばれる理由</SmartLink>
                 </div>
 
                 {/* Desktop CTA & Mobile Toggle - Right */}
@@ -56,7 +57,7 @@ const Header = () => {
             {/* Mobile Menu Overlay */}
             <AnimatePresence>
                 {isMobileMenuOpen && (
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
@@ -73,7 +74,7 @@ const Header = () => {
                                 </a>
                             </div>
                         </div>
-                    </motion.div>
+                    </m.div>
                 )}
             </AnimatePresence>
         </nav>

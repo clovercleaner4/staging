@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Star, Quote } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 const testimonials = [
     {
@@ -47,7 +47,7 @@ const Testimonials = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {testimonials.map((item, index) => (
-                        <motion.div
+                        <m.div
                             key={item.id}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -76,7 +76,7 @@ const Testimonials = () => {
                                     {item.tag}
                                 </span>
                             </div>
-                        </motion.div>
+                        </m.div>
                     ))}
                 </div>
 

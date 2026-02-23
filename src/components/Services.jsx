@@ -1,11 +1,11 @@
 'use client';
 import React, { useState } from 'react';
 import { Wind, Droplets, Home, Hammer, ChevronDown, Building2, Briefcase, ArrowRight, CheckCircle2, Phone, Camera } from 'lucide-react';
-import { motion, AnimatePresence, LayoutGroup } from 'framer-motion';
+import { m, AnimatePresence, LayoutGroup } from 'framer-motion';
 import Image from 'next/image';
-import beranda from '../assets/beranda.jpg';
-import yukamae from '../assets/yukamae.jpg';
-import yukaato from '../assets/yukaato.jpg';
+import beranda from '../assets/beranda.webp';
+import yukamae from '../assets/yukamae.webp';
+import yukaato from '../assets/yukaato.webp';
 import CleaningProcess from './CleaningProcess';
 
 const Services = () => {
@@ -232,7 +232,7 @@ const Services = () => {
                     <LayoutGroup>
                         <div className="grid gap-6">
                             {individualServices.map((category, index) => (
-                                <motion.div
+                                <m.div
                                     key={category.id}
                                     layout
                                     initial={{ opacity: 0, y: 20 }}
@@ -273,7 +273,7 @@ const Services = () => {
 
                                     <AnimatePresence>
                                         {openCategory === index && (
-                                            <motion.div
+                                            <m.div
                                                 initial={{ height: 0, opacity: 0 }}
                                                 animate={{ height: 'auto', opacity: 1 }}
                                                 exit={{ height: 0, opacity: 0 }}
@@ -334,10 +334,10 @@ const Services = () => {
                                                         </div>
                                                     )}
                                                 </div>
-                                            </motion.div>
+                                            </m.div>
                                         )}
                                     </AnimatePresence>
-                                </motion.div>
+                                </m.div>
                             ))}
                         </div>
                     </LayoutGroup>

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { Mail, ArrowRight, MessageCircle, CheckCircle, AlertCircle, Building2 } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import cleanLivingRoom from '../assets/clean_living_room.png';
 
 const Contact = () => {
@@ -71,7 +71,7 @@ const Contact = () => {
             <div className="absolute inset-x-0 bottom-0 h-2/3 bg-slate-900 z-0" />
 
             <div className="container mx-auto px-4 relative z-10">
-                <motion.div
+                <m.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -201,7 +201,7 @@ const Contact = () => {
                         </form>
                     </div>
 
-                </motion.div>
+                </m.div>
             </div>
         </section>
     );

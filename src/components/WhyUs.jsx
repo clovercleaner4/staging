@@ -1,9 +1,9 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Users, Zap, Smile } from 'lucide-react';
-import representative from '../assets/representative.jpg'; // Import custom image
+import representative from '../assets/representative.webp'; // Import custom image
 
 const WhyUs = () => {
     const reasons = [
@@ -29,7 +29,7 @@ const WhyUs = () => {
             <div className="container mx-auto px-4 lg:pl-16 relative z-10">
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -43,7 +43,7 @@ const WhyUs = () => {
                         </h2>
                         <div className="space-y-8">
                             {reasons.map((item, index) => (
-                                <motion.div
+                                <m.div
                                     key={index}
                                     initial={{ opacity: 0, x: -20 }}
                                     whileInView={{ opacity: 1, x: 0 }}
@@ -60,11 +60,11 @@ const WhyUs = () => {
                                             {item.text}
                                         </p>
                                     </div>
-                                </motion.div>
+                                </m.div>
                             ))}
 
                             {/* Qualifications Section */}
-                            <motion.div
+                            <m.div
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
@@ -79,12 +79,12 @@ const WhyUs = () => {
                                         </span>
                                     ))}
                                 </div>
-                            </motion.div>
+                            </m.div>
                         </div>
-                    </motion.div>
+                    </m.div>
 
                     {/* Right Image Composition */}
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
@@ -105,7 +105,7 @@ const WhyUs = () => {
                         </div>
 
                         {/* Text Card - Floating Effect */}
-                        <motion.div
+                        <m.div
                             initial={{ y: 20, opacity: 0 }}
                             whileInView={{ y: 0, opacity: 1 }}
                             transition={{ delay: 0.3 }}
@@ -116,9 +116,9 @@ const WhyUs = () => {
                             <p className="text-base font-bold text-slate-600 leading-relaxed">
                                 ひと仕事、ひと手間を<br />大切にします。
                             </p>
-                        </motion.div>
+                        </m.div>
 
-                    </motion.div>
+                    </m.div>
 
                 </div>
             </div>

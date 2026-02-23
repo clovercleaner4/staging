@@ -1,6 +1,6 @@
 'use client';
 import React, { useRef, useEffect } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { m, useInView } from 'framer-motion';
 import { MapPin, Navigation } from 'lucide-react';
 // import { MapContainer, TileLayer, Circle, Marker, Popup } from 'react-leaflet';
 // import 'leaflet/dist/leaflet.css';
@@ -50,7 +50,7 @@ const Area = () => {
 
                 <div className="grid md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
                     {/* Map Representation - Placeholder */}
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0, x: -30 }}
                         animate={isInView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 0.6 }}
@@ -70,10 +70,10 @@ const Area = () => {
                                 拡大地図を表示
                             </a>
                         </div>
-                    </motion.div>
+                    </m.div>
 
                     {/* Text / Promise */}
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0, x: 30 }}
                         animate={isInView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 0.6, delay: 0.2 }}
@@ -101,7 +101,7 @@ const Area = () => {
                                 </p>
                             </div>
                         </div>
-                    </motion.div>
+                    </m.div>
                 </div>
             </div>
         </section>

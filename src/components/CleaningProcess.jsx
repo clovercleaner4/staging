@@ -1,18 +1,18 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Image from 'next/image';
-import bunkai from '../assets/bunkai.jpg';
-import yojo from '../assets/yojo.jpg';
-import yojozentai from '../assets/yojozentai.jpg';
-import senjo from '../assets/senjo.jpg';
-import parts from '../assets/parts.jpg';
-import tearai from '../assets/tearai.jpg';
-import osuiato from '../assets/osuiato.jpg';
-import kabi from '../assets/kabi.jpg';
-import gaikanmae from '../assets/gaikanmae.jpg';
-import gaikanato from '../assets/gaikanato.jpg';
+import bunkai from '../assets/bunkai.webp';
+import yojo from '../assets/yojo.webp';
+import yojozentai from '../assets/yojozentai.webp';
+import senjo from '../assets/senjo.webp';
+import parts from '../assets/parts.webp';
+import tearai from '../assets/tearai.webp';
+import osuiato from '../assets/osuiato.webp';
+import kabi from '../assets/kabi.webp';
+import gaikanmae from '../assets/gaikanmae.webp';
+import gaikanato from '../assets/gaikanato.webp';
 
 const CleaningProcess = () => {
     const steps = [
@@ -71,7 +71,7 @@ const CleaningProcess = () => {
             {/* --- PROCESS STEPS --- */}
             <div className="space-y-12 mb-24">
                 {steps.map((step, index) => (
-                    <motion.div
+                    <m.div
                         key={step.id}
                         initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -113,7 +113,7 @@ const CleaningProcess = () => {
                                 {step.description}
                             </p>
                         </div>
-                    </motion.div>
+                    </m.div>
                 ))}
             </div>
 

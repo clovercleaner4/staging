@@ -1,5 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=Inter:wght@400;500;600&display=swap');
 @import "tailwindcss";
+
+/* Font Synthesis Fallbacks - Ensuring zero-CLS between standard and Google Fonts */
+@font-face {
+  font-family: "M PLUS Rounded 1c Fallback";
+  src: local("Arial Rounded MT Bold"), local("Helvetica Rounded"), local("sans-serif");
+  size-adjust: 105%;
+  ascent-override: 95%;
+}
+
+@font-face {
+  font-family: "Inter Fallback";
+  src: local("Arial"), local("Helvetica"), local("sans-serif");
+  size-adjust: 107%;
+  ascent-override: 90%;
+}
 
 @theme {
   --color-primary: #0ea5e9;
@@ -7,7 +21,7 @@
   --color-secondary: #f97316;
   --color-secondary-light: #fdba74;
   --color-accent: #86efac;
-  --font-sans: "M PLUS Rounded 1c", Inter, sans-serif;
+  --font-sans: var(--font-m-plus-rounded), "M PLUS Rounded 1c Fallback", var(--font-inter), "Inter Fallback", sans-serif;
 }
 
 html {

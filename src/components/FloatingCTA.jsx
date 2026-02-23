@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-motion';
 
 const FloatingCTA = () => {
     const [isVisible, setIsVisible] = React.useState(false);
@@ -24,7 +24,7 @@ const FloatingCTA = () => {
     return (
         <AnimatePresence>
             {isVisible && (
-                <motion.div
+                <m.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 20 }}
@@ -41,7 +41,7 @@ const FloatingCTA = () => {
                         <MessageCircle size={24} fill="white" />
                         <span className="text-base">LINEで見積もり</span>
                     </a>
-                </motion.div>
+                </m.div>
             )}
         </AnimatePresence>
     );

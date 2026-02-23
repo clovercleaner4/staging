@@ -2,6 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import logo from '../assets/cloverlogo.png';
+import SmartLink from './SmartLink';
 
 const Footer = () => {
     return (
@@ -36,10 +37,10 @@ const Footer = () => {
                         <div className="w-fit text-left">
                             <h4 className="font-bold text-lg mb-4 text-white">メニュー</h4>
                             <ul className="space-y-2 text-sm">
-                                <li><a href="#hero" className="hover:text-primary transition-colors">トップページ</a></li>
-                                <li><a href="#services" className="hover:text-primary transition-colors">サービス・料金</a></li>
-                                <li><a href="#area" className="hover:text-primary transition-colors">対応エリア</a></li>
-                                <li><a href="#why-us" className="hover:text-primary transition-colors">選ばれる理由</a></li>
+                                <li><SmartLink href="#hero" className="hover:text-primary transition-colors">トップページ</SmartLink></li>
+                                <li><SmartLink href="#services" className="hover:text-primary transition-colors">サービス・料金</SmartLink></li>
+                                <li><SmartLink href="#area" className="hover:text-primary transition-colors">対応エリア</SmartLink></li>
+                                <li><SmartLink href="#why-us" className="hover:text-primary transition-colors">選ばれる理由</SmartLink></li>
                             </ul>
                         </div>
                     </div>
