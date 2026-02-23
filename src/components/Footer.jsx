@@ -11,11 +11,13 @@ const Footer = () => {
                     {/* Brand Info - Left Column */}
                     <div className="flex flex-col items-center md:items-start">
                         <div className="flex items-center gap-3 mb-4">
-                            <Image src={logo} alt="Clover Cleaner Logo" className="w-10 h-10 object-contain" />
-                            <div className="flex flex-col">
-                                <span className="text-lg font-bold text-white tracking-tight leading-tight">Clover cleaner</span>
-                                <span className="text-[10px] font-bold text-slate-400 tracking-widest leading-none">クローバークリーナー</span>
-                            </div>
+                            <a href="#" className="flex items-center gap-3" aria-label="ページトップへ戻る">
+                                <Image src={logo} alt="Clover cleaner logo" className="w-10 h-10 object-contain" />
+                                <div className="flex flex-col">
+                                    <span className="text-lg font-bold text-white tracking-tight leading-tight">Clover cleaner</span>
+                                    <span className="text-[10px] font-bold text-slate-400 tracking-widest leading-none">クローバークリーナー</span>
+                                </div>
+                            </a>
                         </div>
                         <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
                             「エアコン・水回りの汚れ、プロの技術で徹底洗浄。」

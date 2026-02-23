@@ -13,8 +13,8 @@ const Header = () => {
             <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
 
                 {/* Logo - Left */}
-                <a href="#" className="flex items-center gap-2 md:gap-3 group">
-                    <Image src={logo} alt="Clover Cleaner Logo" className="w-10 h-10 md:w-12 md:h-12 object-contain" />
+                <a href="#" className="flex items-center gap-2 md:gap-3 group" aria-label="ホームへ戻る">
+                    <Image src={logo} alt="Clover cleaner logo" className="w-10 h-10 md:w-12 md:h-12 object-contain" priority />
                     <div className="flex flex-col">
                         <span className="text-[9px] md:text-[11px] font-bold text-primary tracking-wider leading-none mb-1">Clover cleaner</span>
                         <span className="text-lg md:text-2xl font-extrabold text-slate-800 tracking-tighter leading-none group-hover:text-primary transition-colors whitespace-nowrap">
@@ -43,8 +43,10 @@ const Header = () => {
 
                     {/* Mobile Menu Button */}
                     <button
-                        className="md:hidden text-slate-800"
+                        className="md:hidden text-slate-800 p-2"
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        aria-label={isMobileMenuOpen ? "メニューを閉じる" : "メニューを開く"}
+                        aria-expanded={isMobileMenuOpen}
                     >
                         {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
                     </button>

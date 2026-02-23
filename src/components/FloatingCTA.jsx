@@ -36,6 +36,7 @@ const FloatingCTA = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 bg-[#06C755] text-white px-5 py-3 rounded-full shadow-lg font-bold text-sm tracking-wide hover:opacity-90 transition-opacity active:scale-95"
+                        aria-label="LINEで見積もり相談"
                     >
                         <MessageCircle size={24} fill="white" />
                         <span className="text-base">LINEで見積もり</span>

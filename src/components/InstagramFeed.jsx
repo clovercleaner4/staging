@@ -22,8 +22,8 @@ const InstagramFeed = () => {
                         作業実績・日々の様子
                     </h2>
 
-                    {/* Behold Widget */}
-                    <div className="mt-8">
+                    {/* Behold Widget - Container with min-height to prevent CLS */}
+                    <div className="mt-8 min-h-[400px] md:min-h-[600px] w-full flex items-center justify-center bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
                         <behold-widget feed-id="paIXvyuWhGgcRB2rhoS1"></behold-widget>
                     </div>
 

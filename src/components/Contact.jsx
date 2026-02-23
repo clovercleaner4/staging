@@ -118,11 +118,13 @@ const Contact = () => {
                         </h3>
                         <form onSubmit={handleSubmit} className="space-y-4">
                             {/* Honeypot */}
-                            <input type="text" name="honeypot" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
+                            {/* Honeypot - hidden from sighted users and screen readers */}
+                            <input type="text" name="honeypot" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" aria-hidden="true" />
 
                             <div>
-                                <label className="block text-sm font-medium text-slate-700 mb-1">お名前 <span className="text-red-500">*</span></label>
+                                <label htmlFor="contact-name" className="block text-sm font-medium text-slate-700 mb-1">お名前 <span className="text-red-500">*</span></label>
                                 <input
+                                    id="contact-name"
                                     type="text"
                                     name="name"
                                     value={formData.name}
@@ -134,8 +136,9 @@ const Contact = () => {
                                 />
                             </div>
                             <div>
-                                <label className="block text-sm font-medium text-slate-700 mb-1">メールアドレス <span className="text-red-500">*</span></label>
+                                <label htmlFor="contact-email" className="block text-sm font-medium text-slate-700 mb-1">メールアドレス <span className="text-red-500">*</span></label>
                                 <input
+                                    id="contact-email"
                                     type="email"
                                     name="email"
                                     value={formData.email}
@@ -147,8 +150,9 @@ const Contact = () => {
                                 />
                             </div>
                             <div>
-                                <label className="block text-sm font-medium text-slate-700 mb-1">件名</label>
+                                <label htmlFor="contact-subject" className="block text-sm font-medium text-slate-700 mb-1">件名</label>
                                 <input
+                                    id="contact-subject"
                                     type="text"
                                     name="subject"
                                     value={formData.subject}
@@ -159,8 +163,9 @@ const Contact = () => {
                                 />
                             </div>
                             <div>
-                                <label className="block text-sm font-medium text-slate-700 mb-1">ご相談内容</label>
+                                <label htmlFor="contact-message" className="block text-sm font-medium text-slate-700 mb-1">ご相談内容</label>
                                 <textarea
+                                    id="contact-message"
                                     name="message"
                                     value={formData.message}
                                     onChange={handleChange}
