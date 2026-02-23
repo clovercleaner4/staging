@@ -3,17 +3,16 @@
 import React from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
-import dynamic from 'next/dynamic';
-import Testimonials from '../components/Testimonials';
-import Contact from '../components/Contact';
 import Footer from '../components/Footer';
-
+import dynamic from 'next/dynamic';
 const Area = dynamic(() => import('../components/Area'), { ssr: false });
-import Services from '../components/Services';
-import WhyUs from '../components/WhyUs';
-import InstagramFeed from '../components/InstagramFeed';
-import FAQ from '../components/FAQ';
-import CompanyProfile from '../components/CompanyProfile';
+const Services = dynamic(() => import('../components/Services'));
+const WhyUs = dynamic(() => import('../components/WhyUs'));
+const InstagramFeed = dynamic(() => import('../components/InstagramFeed'));
+const Testimonials = dynamic(() => import('../components/Testimonials'));
+const FAQ = dynamic(() => import('../components/FAQ'));
+const CompanyProfile = dynamic(() => import('../components/CompanyProfile'));
+const Contact = dynamic(() => import('../components/Contact'));
 
 import ScrollToTop from '../components/ScrollToTop';
 import FloatingCTA from '../components/FloatingCTA';

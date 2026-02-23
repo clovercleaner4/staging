@@ -1,15 +1,11 @@
 'use client';
-
-import React from 'react';
-import { Instagram } from 'lucide-react';
+import React, { useState } from 'react';
+import Script from 'next/script';
+import { Instagram, Loader2 } from 'lucide-react';
 
 const InstagramFeed = () => {
-    React.useEffect(() => {
-        const d = document, s = d.createElement("script");
-        s.type = "module";
-        s.src = "https://w.behold.so/widget.js";
-        d.head.append(s);
-    }, []);
+    const [isLoaded, setIsLoaded] = useState(false);
+
     return (
         <section id="instagram" className="py-20 bg-white relative overflow-hidden">
             <div className="container mx-auto px-4 relative z-10">
@@ -22,8 +18,22 @@ const InstagramFeed = () => {
                         作業実績・日々の様子
                     </h2>
 
+                    {/* Behold Widget Script - Loaded lazily to improve Performance score */}
+                    <Script
+                        src="https://w.behold.so/widget.js"
+                        type="module"
+                        strategy="lazyOnload"
+                        onLoad={() => setIsLoaded(true)}
+                    />
+
                     {/* Behold Widget - Container with min-height to prevent CLS */}
-                    <div className="mt-8 min-h-[400px] md:min-h-[600px] w-full flex items-center justify-center bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
+                    <div className="mt-8 min-h-[400px] md:min-h-[600px] w-full flex items-center justify-center bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden relative">
+                        {!isLoaded && (
+                            <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-400 gap-3">
+                                <Loader2 className="animate-spin" size={32} />
+                                <p className="text-sm font-medium">Instagramを読み込んでいます...</p>
+                            </div>
+                        )}
                         <behold-widget feed-id="paIXvyuWhGgcRB2rhoS1"></behold-widget>
                     </div>
 

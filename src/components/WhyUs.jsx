@@ -96,7 +96,12 @@ const WhyUs = () => {
 
                         {/* Profile Image Container - Rounded Rectangle */}
                         <div className="relative w-72 h-[26rem] md:w-80 md:h-[28rem] rounded-3xl overflow-hidden shadow-2xl border-4 border-white mb-6">
-                            <Image src={representative} alt="Representative Nomura" className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" />
+                            <Image
+                                src={representative}
+                                alt="Representative Nomura"
+                                className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
+                                sizes="(max-width: 768px) 300px, 400px"
+                            />
                         </div>
 
                         {/* Text Card - Floating Effect */}

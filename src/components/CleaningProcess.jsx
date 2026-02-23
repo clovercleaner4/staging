@@ -86,15 +86,16 @@ const CleaningProcess = () => {
                                         src={step.image}
                                         alt={step.title}
                                         className="w-full aspect-video object-cover transform scale-100 group-hover:scale-105 transition-transform duration-700"
+                                        sizes="(max-width: 768px) 100vw, 50vw"
                                     />
                                     {step.imageSub && (
                                         <div className="absolute bottom-4 right-4 w-1/3 rounded-lg overflow-hidden border-2 border-white shadow-lg">
-                                            <Image src={step.imageSub} alt={`${step.title}の作業詳細`} className="w-full" />
+                                            <Image src={step.imageSub} alt={`${step.title}の作業詳細`} className="w-full" sizes="20vw" />
                                         </div>
                                     )}
                                     {step.imageDetail && (
                                         <div className="absolute top-4 left-4 w-1/3 rounded-lg overflow-hidden border-2 border-white shadow-lg">
-                                            <Image src={step.imageDetail} alt="Overall" className="w-full" />
+                                            <Image src={step.imageDetail} alt="Overall" className="w-full" sizes="20vw" />
                                         </div>
                                     )}
                                     <div className="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
@@ -124,14 +125,24 @@ const CleaningProcess = () => {
                 <div className="grid md:grid-cols-2 gap-8">
                     <div className="space-y-4">
                         <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white">
-                            <Image src={gaikanmae} alt="エアコンクリーニング前の汚れが溜まった状態（施工前）" className="w-full aspect-[4/3] object-cover" />
+                            <Image
+                                src={gaikanmae}
+                                alt="エアコンクリーニング前の汚れが溜まった状態（施工前）"
+                                className="w-full aspect-[4/3] object-cover"
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                            />
                             <div className="absolute top-4 left-4 bg-slate-800/80 backdrop-blur-md text-white px-4 py-1 rounded-full text-sm font-bold">BEFORE</div>
                         </div>
                         <p className="text-center font-bold text-slate-500">洗浄前の様子</p>
                     </div>
                     <div className="space-y-4">
                         <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white">
-                            <Image src={gaikanato} alt="エアコンクリーニングで新品のように綺麗になった状態（施工後）" className="w-full aspect-[4/3] object-cover" />
+                            <Image
+                                src={gaikanato}
+                                alt="エアコンクリーニングで新品のように綺麗になった状態（施工後）"
+                                className="w-full aspect-[4/3] object-cover"
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                            />
                             <div className="absolute top-4 left-4 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold">AFTER</div>
                         </div>
                         <p className="text-center font-bold text-blue-600">洗浄後の驚きの結果</p>
@@ -168,7 +179,12 @@ const CleaningProcess = () => {
                         </div>
                         <div className="lg:w-1/2 w-full">
                             <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video transform lg:-rotate-3 hover:rotate-0 transition-transform duration-500">
-                                <Image src={osuiato} alt="エアコン洗浄後のバケツに溜まった真っ黒な汚水。カビとダニの温床を一掃しました" className="h-full w-full object-cover" />
+                                <Image
+                                    src={osuiato}
+                                    alt="エアコン洗浄後のバケツに溜まった真っ黒な汚水。カビとダニの温床を一掃しました"
+                                    className="h-full w-full object-cover"
+                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                />
                                 <div className="absolute inset-0 bg-black/20"></div>
                                 <div className="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[10px] px-2 py-1 rounded">洗浄後の汚水</div>
                             </div>
