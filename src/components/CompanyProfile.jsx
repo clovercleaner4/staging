@@ -26,15 +26,16 @@ const CompanyProfile = () => {
                             </tr>
                             <tr className="border-b border-slate-100">
                                 <th className="bg-slate-50 py-4 px-6 font-bold text-slate-600">所在地</th>
+                                <th className="bg-slate-50 py-4 px-6 font-bold text-slate-700">所在地</th>
                                 <td className="py-4 px-6 text-slate-800">
                                     〒486-0808<br />
                                     愛知県春日井市堀ノ内町北1-65
                                 </td>
                             </tr>
                             <tr className="border-b border-slate-100">
-                                <th className="bg-slate-50 py-4 px-6 font-bold text-slate-600">保有資格</th>
+                                <th className="bg-slate-50 py-4 px-6 font-bold text-slate-700">保有資格</th>
                                 <td className="py-4 px-6 text-slate-800">
-                                    <ul className="list-disc list-inside space-y-1 text-slate-600">
+                                    <ul className="list-disc list-inside space-y-1 text-slate-700">
                                         <li>ビルクリーニング技能士</li>
                                         <li>建築物環境衛生管理技術者</li>
                                         <li>防犯設備士</li>

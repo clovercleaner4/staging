@@ -33,14 +33,16 @@ const WhyUs = () => {
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
+                        transition={{ duration: 0.6 }}
                         className="order-2 lg:order-1"
                     >
-                        <span className="text-primary font-bold tracking-wider uppercase mb-2 block">Why Choose Us</span>
-                        <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight text-slate-800">
-                            選ばれる理由は、<br />
-                            <span className="text-primary">「人柄」</span>と<span className="text-primary">「技術」</span>です。
+                        <span className="text-primary-heavy font-extrabold tracking-wider uppercase mb-3 block">Why Choose Us</span>
+                        <h2 className="text-3xl md:text-4xl font-extrabold text-slate-800 mb-6 leading-tight">
+                            クローバークリーナーが<br />選ばれる理由
                         </h2>
+                        <p className="text-slate-700 text-lg mb-8 leading-relaxed font-medium">
+                            私たちは単に掃除をするだけでなく、お客様の「困った」を解決し、笑顔になっていただくことを大切にしています。
+                        </p>
                         <div className="space-y-8">
                             {reasons.map((item, index) => (
                                 <m.div
@@ -55,8 +57,8 @@ const WhyUs = () => {
                                         <item.icon size={24} />
                                     </div>
                                     <div>
-                                        <h3 className="text-lg font-bold mb-2 text-slate-800">{item.title}</h3>
-                                        <p className="text-slate-600 leading-relaxed text-sm">
+                                        <h3 className="text-xl font-bold text-slate-800 mb-2">{item.title}</h3>
+                                        <p className="text-slate-700 leading-relaxed font-medium">
                                             {item.text}
                                         </p>
                                     </div>

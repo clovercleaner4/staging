@@ -23,7 +23,7 @@ const Hero = () => {
 
                             {/* Main Headline */}
                             <h1 className="text-3xl md:text-5xl lg:text-5xl font-extrabold text-slate-800 mb-6 leading-[1.4] tracking-tight">
-                                <span className="text-sm md:text-base block text-primary font-bold mb-2">春日井市のエアコンクリーニングなら</span>
+                                <span className="text-sm md:text-base block text-primary-heavy font-extrabold mb-2">春日井市のエアコンクリーニングなら</span>
                                 エアコン・水回りの<span className="text-primary relative inline-block">
                                     汚れ
                                     <span className="absolute bottom-1 left-0 w-full h-3 bg-primary/20 -z-10 rounded-sm"></span>
@@ -32,7 +32,7 @@ const Hero = () => {
                             </h1>
 
                             {/* Subtext */}
-                            <p className="text-slate-600 mb-8 text-base md:text-xl font-medium leading-relaxed max-w-lg mx-auto lg:mx-0">
+                            <p className="text-slate-700 mb-8 text-base md:text-xl font-medium leading-relaxed max-w-lg mx-auto lg:mx-0">
                                 お掃除・ビルメンテから遺品整理まで<br />
                                 フットワーク軽く対応させていただきます。
                             </p>
@@ -51,7 +51,7 @@ const Hero = () => {
                             <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8 lg:mb-0">
                                 <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100">
                                     <Star className="text-yellow-400" size={18} />
-                                    <span className="text-sm font-bold text-slate-600">口コミ高評価</span>
+                                    <span className="text-sm font-bold text-slate-700">口コミ高評価</span>
                                 </div>
                             </div>
                         </div>
@@ -82,7 +82,7 @@ const Hero = () => {
                                     <h3 className="font-bold text-slate-800 text-xs md:text-sm border-b border-slate-200 pb-1 mb-0.5">
                                         夫婦で営む、地域密着のお掃除屋さん
                                     </h3>
-                                    <p className="text-[10px] md:text-xs text-slate-600 leading-normal font-medium">
+                                    <p className="text-[10px] md:text-xs text-slate-700 leading-normal font-bold">
                                         春日井で夫婦で活動するアットホームなお店です。大手にはない<br className="md:hidden" />家族のような親しみやすさと責任感で、丁寧に作業します。
                                     </p>
                                 </div>

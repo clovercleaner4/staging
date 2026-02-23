@@ -29,17 +29,17 @@ const FloatingCTA = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 20 }}
                     transition={{ duration: 0.3 }}
-                    className="fixed bottom-6 left-6 z-40 md:hidden"
+                    className="fixed bottom-6 left-6 right-6 z-40 md:hidden"
                 >
                     <a
                         href="https://lin.ee/0KObu0H"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 bg-[#06C755] text-white px-5 py-3 rounded-full shadow-lg font-bold text-sm tracking-wide hover:opacity-90 transition-opacity active:scale-95"
-                        aria-label="LINEで見積もり相談"
+                        aria-label="LINEでお問い合わせ・お見積り"
+                        className="flex items-center justify-center gap-3 w-full py-4 bg-[#06C755] text-white rounded-2xl font-extrabold text-lg shadow-2xl border-2 border-white/20"
                     >
                         <MessageCircle size={24} fill="white" />
-                        <span className="text-base">LINEで見積もり</span>
+                        <span className="text-base font-extrabold tracking-wider">LINEで見積もり</span>
                     </a>
                 </m.div>
             )}

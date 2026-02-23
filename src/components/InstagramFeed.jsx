@@ -12,7 +12,7 @@ const InstagramFeed = () => {
         <section id="instagram" className="py-20 bg-white relative overflow-hidden">
             <div className="container mx-auto px-4 relative z-10">
                 <div className="text-center mb-12">
-                    <span className="text-secondary font-bold tracking-wider uppercase mb-2 block flex items-center justify-center gap-2">
+                    <span className="text-secondary-heavy font-bold tracking-wider uppercase mb-2 block flex items-center justify-center gap-2">
                         <Instagram size={20} />
                         Official Instagram
                     </span>
@@ -49,7 +49,7 @@ const InstagramFeed = () => {
                             href="https://www.instagram.com/clovercleaner4/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center gap-2 text-primary font-bold hover:underline"
+                            className="inline-flex items-center justify-center gap-2 text-primary-heavy font-extrabold hover:underline"
                         >
                             <Instagram size={20} />
                             @clovercleaner4 をフォローする

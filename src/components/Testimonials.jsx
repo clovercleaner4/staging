@@ -63,8 +63,8 @@ const Testimonials = () => {
                                 ))}
                             </div>
 
-                            <p className="text-slate-700 leading-relaxed font-medium mb-6 min-h-[5rem]">
-                                "{item.text}"
+                            <p className="text-slate-700 italic leading-relaxed mb-6 font-bold">
+                                「{item.text}」
                             </p>
 
                             <div className="border-t border-stone-100 pt-4 flex items-center justify-between">

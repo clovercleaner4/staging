@@ -77,8 +77,8 @@ const FAQ = () => {
                                         exit={{ height: 0, opacity: 0 }}
                                         transition={{ duration: 0.3 }}
                                     >
-                                        <div className="px-6 pb-6 pl-[4.5rem]">
-                                            <p className="text-slate-600 leading-relaxed text-sm md:text-base">
+                                        <div className="px-6 pb-6 pl-4 md:pl-[4.5rem]">
+                                            <p className="text-slate-700 leading-relaxed font-bold italic">
                                                 {item.a}
                                             </p>
                                         </div>

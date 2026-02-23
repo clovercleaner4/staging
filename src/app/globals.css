@@ -18,8 +18,10 @@
 @theme {
   --color-primary: #0ea5e9;
   --color-primary-dark: #0284c7;
+  --color-primary-heavy: #0369a1;
   --color-secondary: #f97316;
   --color-secondary-light: #fdba74;
+  --color-secondary-heavy: #c2410c;
   --color-accent: #86efac;
   --font-sans: var(--font-m-plus-rounded), "M PLUS Rounded 1c Fallback", var(--font-inter), "Inter Fallback", sans-serif;
 }

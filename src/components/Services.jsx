@@ -257,16 +257,16 @@ const Services = () => {
                                                 </div>
                                                 <div className="flex flex-col md:flex-row md:items-baseline gap-2 mb-2">
                                                     <h3 className="text-xl md:text-2xl font-bold text-slate-800">{category.title}</h3>
-                                                    <span className="text-sm font-bold text-slate-400 uppercase tracking-wider">{category.subtitle}</span>
+                                                    <span className="text-sm font-extrabold text-slate-700 uppercase tracking-wider">{category.subtitle}</span>
                                                 </div>
-                                                <p className="text-slate-600 font-medium mb-2">{category.description}</p>
+                                                <p className="text-slate-700 font-bold mb-2">{category.description}</p>
                                                 <div className="inline-flex items-center gap-1.5 text-xs md:text-sm text-primary font-bold bg-primary/5 px-3 py-1 rounded-full">
                                                     <CheckCircle2 size={14} />
                                                     {category.merit}
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className={`p-3 rounded-full bg-stone-100 text-slate-400 transition-transform duration-300 self-end md:self-center ${openCategory === index ? 'rotate-180' : ''}`}>
+                                        <div className={`p-3 rounded-full bg-stone-100 text-slate-700 transition-transform duration-300 self-end md:self-center ${openCategory === index ? 'rotate-180' : ''}`}>
                                             <ChevronDown size={24} />
                                         </div>
                                     </button>
@@ -349,7 +349,7 @@ const Services = () => {
                     <div className="flex items-center gap-4 mb-10 pb-4 border-b border-stone-200">
                         <Building2 className="text-slate-700" size={32} />
                         <h3 className="text-2xl md:text-3xl font-bold text-slate-800">
-                            法人・店舗様 <span className="text-base font-normal text-slate-500 ml-2">Corporate Services</span>
+                            法人・店舗様 <span className="text-base font-bold text-slate-700 ml-2">Corporate Services</span>
                         </h3>
                     </div>
 
@@ -359,12 +359,12 @@ const Services = () => {
                                 <div className="h-2 bg-slate-800 w-full"></div>
                                 <div className="p-8 flex-1 flex flex-col">
                                     <h4 className="text-xl md:text-2xl font-bold text-slate-800 mb-4">{service.title}</h4>
-                                    <p className="text-slate-600 mb-6 leading-relaxed flex-grow">
+                                    <p className="text-slate-700 mb-6 leading-relaxed flex-grow font-bold">
                                         {service.description}
                                     </p>
 
                                     <div className="mb-6">
-                                        <h5 className="text-sm font-bold text-slate-400 mb-3 uppercase tracking-wider">主な作業内容</h5>
+                                        <h5 className="text-sm font-bold text-slate-700 mb-3 uppercase tracking-wider">主な作業内容</h5>
                                         <ul className="grid grid-cols-1 gap-2">
                                             {service.items.map((item, idx) => (
                                                 <li key={idx} className="flex items-center gap-2 text-slate-700 text-sm font-medium">
@@ -376,12 +376,12 @@ const Services = () => {
                                     </div>
 
                                     <div className="bg-slate-50 rounded-xl p-5 border border-slate-100">
-                                        <h5 className="text-sm font-bold text-primary mb-2 flex items-center gap-2">
+                                        <h5 className="text-sm font-bold text-primary-heavy mb-2 flex items-center gap-2">
                                             <CheckCircle2 size={16} /> 導入メリット
                                         </h5>
                                         <ul className="space-y-1">
                                             {service.merits.map((merit, mIdx) => (
-                                                <li key={mIdx} className="text-xs md:text-sm text-slate-600 pl-6 indent-[-1.5em] before:content-['・'] before:mr-1">
+                                                <li key={mIdx} className="text-xs md:text-sm text-slate-700 font-bold pl-6 indent-[-1.5em] before:content-['・'] before:mr-1">
                                                     {merit}
                                                 </li>
                                             ))}

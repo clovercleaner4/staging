@@ -17,7 +17,7 @@ const Header = () => {
                 <a href="#" className="flex items-center gap-2 md:gap-3 group" aria-label="ホームへ戻る">
                     <Image src={logo} alt="Clover cleaner logo" className="w-10 h-10 md:w-12 md:h-12 object-contain" priority />
                     <div className="flex flex-col">
-                        <span className="text-[9px] md:text-[11px] font-bold text-primary tracking-wider leading-none mb-1">Clover cleaner</span>
+                        <span className="text-[9px] md:text-[11px] font-bold text-primary-heavy tracking-wider leading-none mb-1">Clover cleaner</span>
                         <span className="text-lg md:text-2xl font-extrabold text-slate-800 tracking-tighter leading-none group-hover:text-primary transition-colors whitespace-nowrap">
                             クローバークリーナー
                         </span>
@@ -27,10 +27,10 @@ const Header = () => {
 
                 {/* Desktop Navigation - Center */}
                 <div className="hidden md:flex items-center gap-8">
-                    <SmartLink href="#hero" className="text-base font-bold text-slate-600 hover:text-primary transition-colors">ホーム</SmartLink>
-                    <SmartLink href="#area" className="text-base font-bold text-slate-600 hover:text-primary transition-colors">対応エリア</SmartLink>
-                    <SmartLink href="#services" className="text-base font-bold text-slate-600 hover:text-primary transition-colors">サービス料金</SmartLink>
-                    <SmartLink href="#why-us" className="text-base font-bold text-slate-600 hover:text-primary transition-colors">選ばれる理由</SmartLink>
+                    <SmartLink href="#hero" className="text-base font-bold text-slate-700 hover:text-primary transition-colors">ホーム</SmartLink>
+                    <SmartLink href="#area" className="text-base font-bold text-slate-700 hover:text-primary transition-colors">対応エリア</SmartLink>
+                    <SmartLink href="#services" className="text-base font-bold text-slate-700 hover:text-primary transition-colors">サービス料金</SmartLink>
+                    <SmartLink href="#why-us" className="text-base font-bold text-slate-700 hover:text-primary transition-colors">選ばれる理由</SmartLink>
                 </div>
 
                 {/* Desktop CTA & Mobile Toggle - Right */}

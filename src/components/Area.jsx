@@ -43,7 +43,7 @@ const Area = () => {
                     <p className="text-sm md:text-xl font-bold text-slate-700 bg-white/80 inline-block px-4 md:px-8 py-3 rounded-full shadow-sm backdrop-blur-sm border border-slate-100 whitespace-nowrap">
                         春日井市を中心におよそ30km圏内
                     </p>
-                    <p className="mt-4 text-slate-600">
+                    <p className="mt-4 text-slate-700 font-medium">
                         ※エリア外でも対応できる場合がございます。<br className="md:hidden" />まずはお気軽にご相談ください。
                     </p>
                 </div>
@@ -85,7 +85,7 @@ const Area = () => {
                             </div>
                             <div>
                                 <h3 className="text-xl font-bold text-slate-800 mb-2">フットワークの軽さが自慢です</h3>
-                                <p className="text-slate-600 leading-relaxed">
+                                <p className="text-slate-700 leading-relaxed font-medium">
                                     「今日来てほしい」「急ぎで頼みたい」そんなご要望にも、スケジュールの許す限り全力で対応いたします。
                                 </p>
                             </div>

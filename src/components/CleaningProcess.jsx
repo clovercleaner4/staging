@@ -59,12 +59,12 @@ const CleaningProcess = () => {
     return (
         <div className="mt-12">
             <div className="text-center mb-16">
-                <span className="text-blue-600 font-bold text-sm block mb-2 tracking-wider">CLEANING PROCESS</span>
-                <h3 className="text-2xl md:text-3xl font-extrabold text-slate-800 mb-6">
-                    プロの「こだわり」工程
-                </h3>
-                <p className="text-slate-600 max-w-2xl mx-auto leading-relaxed">
-                    長年の経験に基づいた確かな技術で、エアコン本来の性能と清潔な空気を引き出します。
+                <span className="text-secondary-heavy font-extrabold tracking-wider uppercase mb-2 block">Our Process</span>
+                <h2 className="text-3xl md:text-5xl font-extrabold text-slate-800 mb-6">
+                    お掃除の流れ
+                </h2>
+                <p className="text-slate-700 max-w-2xl mx-auto text-lg font-medium">
+                    プロの技術と専用の機材で、カビや汚れを根こそぎリセットします。
                 </p>
             </div>
 

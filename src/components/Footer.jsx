@@ -23,10 +23,10 @@ const Footer = () => {
                         <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
                             「エアコン・水回りの汚れ、プロの技術で徹底洗浄。」
                         </p>
-                        <div className="mt-4 text-sm text-slate-300 font-medium">
+                        <div className="mt-4 text-sm text-slate-200 font-medium">
                             <p>〒486-0808</p>
                             <p>愛知県春日井市堀ノ内町北1-65</p>
-                            <p className="mt-2 text-xs text-slate-400">
+                            <p className="mt-2 text-xs text-slate-400 font-bold">
                                 対応エリア：春日井市、小牧市、名古屋市、多治見市、瀬戸市など
                             </p>
                         </div>
@@ -49,8 +49,8 @@ const Footer = () => {
                     <div className="flex flex-col items-center md:items-start md:pl-12">
                         <h4 className="font-bold text-lg mb-4 text-white">お問い合わせ</h4>
                         <div className="flex flex-col gap-3 items-center md:items-start">
-                            <a href="#contact" className="hover:text-primary transition-colors">お問い合わせフォーム</a>
-                            <p className="text-slate-500 text-xs mt-2">
+                            <a href="#contact" className="text-primary-heavy font-bold hover:underline transition-colors">お問い合わせフォーム</a>
+                            <p className="text-slate-400 text-xs mt-2 font-bold">
                                 LINEまたはフォームよりご連絡ください。
                             </p>
                         </div>
