@@ -14,7 +14,7 @@ const Footer = () => {
                     <div className="flex flex-col items-center md:items-start">
                         <div className="flex items-center gap-3 mb-4">
                             <a href="#hero" className="flex items-center gap-3" aria-label="クローバークリーナー ホームへ">
-                                <Image src={logo} alt="Clover cleaner logo" className="w-10 h-10 object-contain" />
+                                <Image src={logo} alt="" className="w-10 h-10 object-contain" />
                                 <div className="flex flex-col">
                                     <span className="text-lg font-bold text-white tracking-tight leading-tight">Clover cleaner</span>
                                     <span className="text-[10px] font-bold text-slate-300 tracking-widest leading-none">クローバークリーナー</span>

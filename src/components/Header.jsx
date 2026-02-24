@@ -15,7 +15,7 @@ const Header = () => {
 
                 {/* Logo - Left */}
                 <a href="#hero" className="flex items-center gap-2 md:gap-3 group" aria-label="クローバークリーナー ホームへ">
-                    <Image src={logo} alt="Clover cleaner logo" className="w-10 h-10 md:w-12 md:h-12 object-contain" priority />
+                    <Image src={logo} alt="" className="w-10 h-10 md:w-12 md:h-12 object-contain" priority />
                     <div className="flex flex-col">
                         <span className="text-[9px] md:text-[11px] font-bold text-primary-heavy tracking-wider leading-none mb-1">Clover cleaner</span>
                         <span className="text-lg md:text-2xl font-extrabold text-slate-800 tracking-tighter leading-none group-hover:text-primary transition-colors whitespace-nowrap">

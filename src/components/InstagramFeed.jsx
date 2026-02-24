@@ -24,9 +24,7 @@ const InstagramFeed = () => {
                     {shouldLoad && (
                         <Script
                             src="https://w.behold.so/widget.js"
-                            type="module"
                             strategy="afterInteractive"
-                            crossOrigin="anonymous"
                             onLoad={() => setIsLoaded(true)}
                         />
                     )}

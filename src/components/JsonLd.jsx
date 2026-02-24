@@ -40,7 +40,7 @@ const JsonLd = () => {
             "closes": "18:00"
         },
         "sameAs": [
-            "https://www.instagram.com/clover_cleaner/"
+            "https://www.instagram.com/clovercleaner4/"
         ]
     };
 
