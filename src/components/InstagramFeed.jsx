@@ -34,7 +34,7 @@ const InstagramFeed = () => {
                     {/* Behold Widget - Container with placeholder to unblock main thread */}
                     <m.div
                         onViewportEnter={() => setShouldLoad(true)}
-                        className="mt-8 min-h-[400px] md:min-h-[600px] w-full flex items-center justify-center bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden relative"
+                        className="mt-8 min-h-[400px] md:min-h-[600px] w-full flex items-center justify-center bg-slate-50 rounded-2xl border border-slate-100 relative"
                     >
                         {!isLoaded && (
                             <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-800 gap-3">
@@ -42,7 +42,7 @@ const InstagramFeed = () => {
                                 <p className="text-sm font-bold">Instagramを準備中...</p>
                             </div>
                         )}
-                        {shouldLoad && <behold-widget feed-id="paIXvyuWhGgcRB2rhoS1"></behold-widget>}
+                        {shouldLoad && <behold-widget feed-id="paIXvyuWhGgcRB2rhoS1" num-posts="6"></behold-widget>}
                     </m.div>
 
                     <div className="mt-8 text-center">
