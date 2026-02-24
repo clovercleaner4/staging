@@ -41,7 +41,7 @@ const InViewLoader = ({ children, threshold = 0.1, rootMargin = '200px', placeho
     };
 
     return (
-        <div ref={containerRef} onPointerEnter={handlePointerEnter} className="contents">
+        <div ref={containerRef} onPointerEnter={handlePointerEnter}>
             {shouldRender ? children : placeholder || <div className="min-h-[100px]" />}
         </div>
     );
