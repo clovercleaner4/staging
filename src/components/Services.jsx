@@ -138,7 +138,7 @@ const Services = () => {
                     <div className="bg-blue-600 text-white p-6 md:p-8 text-center relative overflow-hidden">
                         <div className="absolute top-0 left-0 w-full h-full bg-blue-500 opacity-50 pattern-grid-lg"></div>
                         <h3 className="text-2xl md:text-4xl font-extrabold relative z-10 mb-2">エアコンクリーニング</h3>
-                        <p className="text-blue-100 font-bold relative z-10">春日井市内で年間実績多数！<br className="md:hidden" />カビとニオイを徹底除去</p>
+                        <p className="text-blue-100 font-bold relative z-10">春日井市内で地域安値に挑戦中！<br className="md:hidden" />プロの技術を激安・お値打ち価格で</p>
                     </div>
 
                     <div className="p-6 md:p-10">

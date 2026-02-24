@@ -16,9 +16,10 @@ const Hero = () => {
                     <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left z-10 lg:pl-12 xl:pl-20">
 
                         <div>
-                            {/* Brand Tagline */}
-                            <div className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full bg-green-100 text-green-800 font-bold border border-green-200">
-                                <span className="tracking-wide text-sm md:text-base">名古屋・近隣エリア相談可</span>
+                            <div className="inline-flex flex-wrap items-center gap-2 mb-6 px-4 py-1.5 rounded-full bg-green-100 text-green-800 font-bold border border-green-200">
+                                <span className="tracking-wide text-sm md:text-base whitespace-nowrap">名古屋・近隣エリア相談可</span>
+                                <div className="w-1 h-1 rounded-full bg-green-400"></div>
+                                <span className="tracking-wide text-sm md:text-base text-primary-heavy whitespace-nowrap">激安・地域安値に挑戦中！</span>
                             </div>
 
                             {/* Main Headline */}
