@@ -24,9 +24,9 @@ export default function Home() {
       <Header />
       <Hero />
       <div className="bg-slate-50 relative z-10">
-        <InViewLoader rootMargin="200px"><Area /></InViewLoader>
-        <InViewLoader rootMargin="100px"><InstagramFeed /></InViewLoader>
-        <InViewLoader rootMargin="100px"><Services /></InViewLoader>
+        <InViewLoader rootMargin="100px"><Area /></InViewLoader>
+        <InViewLoader rootMargin="50px"><InstagramFeed /></InViewLoader>
+        <InViewLoader rootMargin="150px"><Services /></InViewLoader>
         <InViewLoader rootMargin="100px"><WhyUs /></InViewLoader>
         <InViewLoader rootMargin="50px"><Testimonials /></InViewLoader>
         <InViewLoader rootMargin="50px"><FAQ /></InViewLoader>

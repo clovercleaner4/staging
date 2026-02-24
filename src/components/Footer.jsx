@@ -13,7 +13,7 @@ const Footer = () => {
                     {/* Brand Info - Left Column */}
                     <div className="flex flex-col items-center md:items-start">
                         <div className="flex items-center gap-3 mb-4">
-                            <a href="#" className="flex items-center gap-3" aria-label="ホーム（トップページ）へ戻る">
+                            <a href="#hero" className="flex items-center gap-3" aria-label="クローバークリーナー ホームへ戻る">
                                 <Image src={logo} alt="Clover cleaner logo" className="w-10 h-10 object-contain" />
                                 <div className="flex flex-col">
                                     <span className="text-lg font-bold text-white tracking-tight leading-tight">Clover cleaner</span>
@@ -21,7 +21,7 @@ const Footer = () => {
                                 </div>
                             </a>
                         </div>
-                        <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
+                        <p className="text-sm text-slate-400 leading-relaxed max-w-sm font-bold">
                             「エアコン・水回りの汚れ、プロの技術で徹底洗浄。」
                         </p>
                         <div className="mt-6 text-sm text-slate-200 font-medium">
@@ -61,8 +61,8 @@ const Footer = () => {
                     <div className="flex flex-col items-center md:items-start md:pl-12">
                         <h4 className="font-bold text-lg mb-4 text-white">お問い合わせ</h4>
                         <div className="flex flex-col gap-3 items-center md:items-start">
-                            <a href="#contact" className="text-primary-heavy font-bold hover:underline transition-colors">お問い合わせフォーム</a>
-                            <p className="text-slate-400 text-xs mt-2 font-bold">
+                            <a href="#contact" className="text-primary-heavy font-bold hover:underline transition-colors" aria-label="お問い合わせフォームへ">お問い合わせフォーム</a>
+                            <p className="text-slate-300 text-xs mt-2 font-bold">
                                 LINEまたはフォームよりご連絡ください。
                             </p>
                         </div>

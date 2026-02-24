@@ -74,7 +74,8 @@ const Hero = () => {
                                     fill
                                     className="object-cover object-top"
                                     priority
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                                    fetchPriority="high"
+                                    sizes="(max-width: 480px) 100vw, (max-width: 768px) 80vw, (max-width: 1200px) 50vw, 600px"
                                 />
 
                                 {/* Floating Badge on Image - Expanded for Couple Info */}

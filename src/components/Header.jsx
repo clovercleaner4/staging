@@ -14,14 +14,14 @@ const Header = () => {
             <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
 
                 {/* Logo - Left */}
-                <a href="#" className="flex items-center gap-2 md:gap-3 group" aria-label="ホームへ戻る">
+                <a href="#hero" className="flex items-center gap-2 md:gap-3 group" aria-label="クローバークリーナー ホームへ">
                     <Image src={logo} alt="Clover cleaner logo" className="w-10 h-10 md:w-12 md:h-12 object-contain" priority />
                     <div className="flex flex-col">
                         <span className="text-[9px] md:text-[11px] font-bold text-primary-heavy tracking-wider leading-none mb-1">Clover cleaner</span>
                         <span className="text-lg md:text-2xl font-extrabold text-slate-800 tracking-tighter leading-none group-hover:text-primary transition-colors whitespace-nowrap">
                             クローバークリーナー
                         </span>
-                        <span className="text-[9px] md:text-[10px] font-medium text-slate-500 tracking-wider whitespace-nowrap mt-1">春日井のハウスクリーニング</span>
+                        <span className="text-[9px] md:text-[10px] font-bold text-slate-700 tracking-wider whitespace-nowrap mt-1">春日井のハウスクリーニング</span>
                     </div>
                 </a>
 
