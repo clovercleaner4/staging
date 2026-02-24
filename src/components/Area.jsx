@@ -64,6 +64,7 @@ const Area = () => {
                             allowFullScreen=""
                             loading="lazy"
                             title="春日井市周辺30km対応エリア"
+                            sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
                         ></iframe>
                         <div className="absolute bottom-2 left-2 bg-white/90 px-2 py-1 rounded text-xs text-blue-600 underline pointer-events-auto">
                             <a href="https://www.google.com/maps/d/viewer?mid=1RB8Kk5MjcRDpgjQA88QSfVv62N2_mug&ehbc=2E312F" target="_blank" rel="noopener noreferrer">

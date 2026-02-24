@@ -9,6 +9,7 @@ const mPlusRounded = M_PLUS_Rounded_1c({
   subsets: ["latin"],
   variable: "--font-m-plus-rounded",
   display: "swap",
+  preload: false,
 });
 
 const inter = Inter({
