@@ -26,6 +26,7 @@ const InstagramFeed = () => {
                             src="https://w.behold.so/widget.js"
                             type="module"
                             strategy="afterInteractive"
+                            crossOrigin="anonymous"
                             onLoad={() => setIsLoaded(true)}
                         />
                     )}

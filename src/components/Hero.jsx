@@ -80,9 +80,9 @@ const Hero = () => {
 
                                 {/* Floating Badge on Image - Expanded for Couple Info */}
                                 <div className="absolute bottom-3 left-3 right-3 bg-white/90 backdrop-blur-md p-3 rounded-xl shadow-xl border border-white/50 flex flex-col gap-1">
-                                    <h3 className="font-bold text-slate-800 text-xs md:text-sm border-b border-slate-200 pb-1 mb-0.5">
+                                    <p className="font-bold text-slate-800 text-xs md:text-sm border-b border-slate-200 pb-1 mb-0.5">
                                         夫婦で営む、地域密着のお掃除屋さん
-                                    </h3>
+                                    </p>
                                     <p className="text-[10px] md:text-xs text-slate-700 leading-normal font-bold">
                                         春日井で夫婦で活動するアットホームなお店です。大手にはない<br className="md:hidden" />家族のような親しみやすさと責任感で、丁寧に作業します。
                                     </p>

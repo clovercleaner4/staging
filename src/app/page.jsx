@@ -12,7 +12,7 @@ const Testimonials = dynamic(() => import('../components/Testimonials'), { ssr: 
 const FAQ = dynamic(() => import('../components/FAQ'), { ssr: false });
 const CompanyProfile = dynamic(() => import('../components/CompanyProfile'), { ssr: false });
 const Contact = dynamic(() => import('../components/Contact'), { ssr: false });
-const Footer = dynamic(() => import('../components/Footer'), { ssr: false });
+import Footer from '../components/Footer';
 const ScrollToTop = dynamic(() => import('../components/ScrollToTop'), { ssr: false });
 const FloatingCTA = dynamic(() => import('../components/FloatingCTA'), { ssr: false });
 

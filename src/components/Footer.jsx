@@ -61,7 +61,7 @@ const Footer = () => {
                     <div className="flex flex-col items-center md:items-start md:pl-12">
                         <h4 className="font-bold text-lg mb-4 text-slate-300">お問い合わせ</h4>
                         <div className="flex flex-col gap-3 items-center md:items-start">
-                            <a href="#contact" className="text-primary-heavy font-bold hover:underline transition-colors" aria-label="お問い合わせフォームへ">お問い合わせフォーム</a>
+                            <a href="#contact" className="text-primary-light font-bold hover:underline transition-colors" aria-label="お問い合わせフォームへ">お問い合わせフォーム</a>
                             <p className="text-slate-300 text-xs mt-2 font-bold">
                                 LINEまたはフォームよりご連絡ください。
                             </p>
