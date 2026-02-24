@@ -13,7 +13,7 @@ const Footer = () => {
                     {/* Brand Info - Left Column */}
                     <div className="flex flex-col items-center md:items-start">
                         <div className="flex items-center gap-3 mb-4">
-                            <a href="#hero" className="flex items-center gap-3" aria-label="クローバークリーナー ホームへ戻る">
+                            <a href="#hero" className="flex items-center gap-3" aria-label="クローバークリーナー ホームへ">
                                 <Image src={logo} alt="Clover cleaner logo" className="w-10 h-10 object-contain" />
                                 <div className="flex flex-col">
                                     <span className="text-lg font-bold text-white tracking-tight leading-tight">Clover cleaner</span>
@@ -47,7 +47,7 @@ const Footer = () => {
                     {/* Links - Center Column (Block Centered, Text Left) */}
                     <div className="flex flex-col items-center">
                         <div className="w-fit text-left">
-                            <h4 className="font-bold text-lg mb-4 text-white">メニュー</h4>
+                            <h4 className="font-bold text-lg mb-4 text-slate-300">メニュー</h4>
                             <ul className="space-y-2 text-sm">
                                 <li><SmartLink href="#hero" className="hover:text-primary transition-colors">トップページ</SmartLink></li>
                                 <li><SmartLink href="#services" className="hover:text-primary transition-colors">サービス・料金</SmartLink></li>
@@ -59,7 +59,7 @@ const Footer = () => {
 
                     {/* Contact Info - Right Column */}
                     <div className="flex flex-col items-center md:items-start md:pl-12">
-                        <h4 className="font-bold text-lg mb-4 text-white">お問い合わせ</h4>
+                        <h4 className="font-bold text-lg mb-4 text-slate-300">お問い合わせ</h4>
                         <div className="flex flex-col gap-3 items-center md:items-start">
                             <a href="#contact" className="text-primary-heavy font-bold hover:underline transition-colors" aria-label="お問い合わせフォームへ">お問い合わせフォーム</a>
                             <p className="text-slate-300 text-xs mt-2 font-bold">
