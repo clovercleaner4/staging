@@ -69,8 +69,14 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="border-t border-slate-800 pt-8 flex flex-col justify-center items-center gap-4 text-xs text-slate-500 text-center">
-                    <p>&copy; 2026 Clover Cleaner. All rights reserved.</p>
+                <div className="border-t border-slate-800 pt-8 flex flex-col justify-center items-center gap-1 md:gap-2 text-[10px] md:text-xs text-slate-500 text-center">
+                    <p>
+                        <span className="block md:inline">&copy; 2026 Clover Cleaner. All rights reserved.</span>
+                        <span className="hidden md:inline mx-2 text-slate-700">|</span>
+                        <span className="block md:inline mt-1 md:mt-0">
+                            Produced by <a href="https://showtimeboxx.com/creative/" target="_blank" rel="noopener noreferrer" className="hover:text-slate-400 transition-colors">SHOWTIMEBOXX CRIATIVE</a>
+                        </span>
+                    </p>
                 </div>
             </div>
         </footer >
